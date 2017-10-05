@@ -73,14 +73,43 @@
         <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
 
   <header class="post-header">
-      <div class="js-social-button pull-right">
-      <a class="twitter-share-button" data-size="large"
-        href="https://twitter.com/intent/tweet">
-      /Git-Repository-uzerinden-proje-nasil-cekilir/</a>
-      <!--<div class="fb-share-button" data-href="/Git-Repository-uzerinden-proje-nasil-cekilir/" data-layout="button" data-size="small" data-mobile-iframe="true"><a class="fb-xfbml-parse-ignore" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=/Git-Repository-uzerinden-proje-nasil-cekilir/ ">Share</a></div>-->
-      </div>
-    <h1 class="post-title" itemprop="name headline">Git Repository üzerinden proje nasıl çekilir?</h1>
 
+    <h1 class="post-title" itemprop="name headline">Git Repository üzerinden proje nasıl çekilir?</h1>
+      <div class="js-social-button pull-right">
+      <a class="twitter-share-button" data-via="rootturk" 
+      data-lang="tr" data-size="large"
+        href="https://twitter.com/share">
+      /Git-Repository-uzerinden-proje-nasil-cekilir/</a> <p>Merhaba arkadaşlar, git yazılarımın devamı olan bu yazımda yine sizlere ufak bilgiler aktarmaya çalışacağım. Hatırlarsanız önceki yazı serilerimde bitbucket üzerinde repository oluşturmayı, bir proje örneğini git server üzerine aktarmayı ve gitignore tanımlamasının nasıl yapıldığına dair yazılar paylaşmıştım. Bugün ise daha önceden sunucuya aktarılmış olan bir git repository’sini kendi bilgisayarımıza nasıl aktarılacağını inceleyeceğiz. Öncelikle bitbucket üzerinde çalışma yapıyorsak eğer repository detayındaki clone menüsüne tıkladığımızda bize bir <strong>git clone</strong> linki veriyor ve her oluşturduğumuz repo içinde bir .<strong>git</strong> uzantılı benzersiz bir link oluşturuyor.  Önceki projemizden bir ekran görüntüsü olan linki aşağıdaki şekilde görebilirsiniz.</p>
+
+<p><img src="/Images/2016/05/clone.png" alt="enter image description here" /></p>
+
+<p>Var olan bir repository’i bilgisayarımıza almak için kullanmamız gereken komut git clone komutudur. Adından da anlaşılacağı üzere linki verilen proje reposunun clone’unu alarak bilgisayarımızdaki çalıştığımız dizine almamızı sağlar. Tüm ignore tanımlaması, config yapılandırılması ile birlikte tüm özellikleri barındırır.</p>
+
+<p>Ben çalışmalarımı <strong>CMDER.exe</strong>  uygulaması üzerinden yaptığımdan dolayı örneklendirmeyi de onun üzerinden gerçekleştireceğim. <strong>CMDER.exe</strong>‘yi çalıştırarak projeyi almak istediğimiz working directory’mize gidelim.</p>
+
+<p>Aşağıdaki gif imajını açarak uygulamanız gereken komutu örnek olarak görebilirsiniz.
+<img src="/Images/2016/05/bitbucket-git-clone.gif" alt="enter image description here" /></p>
+
+<p>Gördüğünüz gibi artık uzan sunucuda bulunan proje dosyalarımız <strong>C:\Projects</strong> altında ve artık ortak bir projeyi bilgiayar dosya sistemine bağımlı kalmadan güvenli bir şekilde geliştirebiliriz.</p>
+
+<p>Dikkat etmeniz gereken noktalar ile ilgili ileride bir yazı yayımlayacağım fakat şimdilik aklıma gelen birkaç hususu belirteyim.</p>
+
+<p>Eğer projeyi sunucudan almışsak ve çalışıyorsak bu projemizde farklı bir arkadaşta geliştirme yapıyorsa ve o commit‘ini master branch‘e göndermişse ve bizde kendimiz farklı dosyalarda geliştirme yapıyorsak yapmamız gereken aşamalar aşağıdaki gibidir.</p>
+
+<p><code class="highlighter-rouge">git add *</code> veya . bu tüm dosyaları baz alarak ekleme yapar. <code class="highlighter-rouge">git add – filename</code> vererek sadece spesifik dosya aktarımı da yapabiliriz. Öncelikle add ile local repository’mize dosyalarımızı ekleyelim, sonrasında ise git commit -m “commit mesajınız” ile local commitimizi tamamlayalım. Sonrasında ise git pull –rebase origin master komutu ile var olan repository’mize master branch’imizin güncel halini alalım. Dosyalar güncellendikten sonra projemizi kontrol edip, son push ilemini gerçekleştirerek master branch üzerine dosyaların aktarımını sağlayalım.</p>
+
+<p><code class="highlighter-rouge">git push origin master</code> komutunu kullanarak lokal repomuzdaki dosyalarımızı uzak sunucudaki repomuza göndererek <strong>master branch</strong>‘imizi güncel tutalım.</p>
+
+<p>Bir yazının daha sonuna geldik umarım sizlere bir şeyler aktarabilmişimdir.</p>
+
+<p>Sorularınız, önerileriniz ve düzeltmeleriniz olur ise her zaman yorumlarınızı bekliyorum.</p>
+
+<p>Yazımı sevdiğim bir Barış Manço parçası ile sonlandırıyorum.</p>
+
+<iframe width="420" height="315" src="https://www.youtube.com/embed/DxCLKJE7FVU?ecver=1" frameborder="0" allowfullscreen=""></iframe>
+
+ Follow me on <a href="http://twitter.com/rootturk">Twitter</a>
+      </div>
     <p class="post-meta">
       <time datetime="2016-05-04T17:35:41+03:00" itemprop="datePublished">
         

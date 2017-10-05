@@ -73,14 +73,122 @@
         <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
 
   <header class="post-header">
-      <div class="js-social-button pull-right">
-      <a class="twitter-share-button" data-size="large"
-        href="https://twitter.com/intent/tweet">
-      /Bitbucket-%C3%BCzerinde-Repository-Olu%C5%9Fturma-ve-Commit-%C4%B0%C5%9Flemleri/</a>
-      <!--<div class="fb-share-button" data-href="/Bitbucket-%C3%BCzerinde-Repository-Olu%C5%9Fturma-ve-Commit-%C4%B0%C5%9Flemleri/" data-layout="button" data-size="small" data-mobile-iframe="true"><a class="fb-xfbml-parse-ignore" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=/Bitbucket-%C3%BCzerinde-Repository-Olu%C5%9Fturma-ve-Commit-%C4%B0%C5%9Flemleri/ ">Share</a></div>-->
-      </div>
-    <h1 class="post-title" itemprop="name headline">Bitbucket kullanarak git repository oluşturma ve commit işlemleri </h1>
 
+    <h1 class="post-title" itemprop="name headline">Bitbucket kullanarak git repository oluşturma ve commit işlemleri </h1>
+      <div class="js-social-button pull-right">
+      <a class="twitter-share-button" data-via="rootturk" 
+      data-lang="tr" data-size="large"
+        href="https://twitter.com/share">
+      /Bitbucket-%C3%BCzerinde-Repository-Olu%C5%9Fturma-ve-Commit-%C4%B0%C5%9Flemleri/</a> <p>Merhaba arkadaşlar önceki yazım olan Bitbucket Nedir? yazısının serisine devam olan bu yazımda Bitbucket üzerinde bir repository oluşturup ilk projemizi bu repomuza göndereceğiz. Öncelikle izlenilmesi gereken adımları tekrar hatırlayalım.</p>
+
+<p><img src="/Images/2016/03/bitbucket.gif" alt="Bitbucket logo" /></p>
+
+<ul>
+  <li>Bitbucket’a üye olmak</li>
+  <li>Bitbucket üyeliğinin aktif edilmesi</li>
+  <li>Bitbucket’a giriş yapılması</li>
+</ul>
+
+<p><strong>Dashboard</strong> ekranına giriş yaptıktan sonra <strong>Repositories</strong> menüsünden Create Repository sekmesine tıklıyoruz.</p>
+
+<p>Aşağıdaki gibi bir pencere karşımıza çıkıyor.</p>
+
+<p><img src="/Images/2016/04/first-training-1.png" alt="Create Repository Screen" /></p>
+
+<p><strong>Owner</strong> : bu oluşturacağımız repository’e yani projemizin kaynak kodlarının sahibini seçiyoruz. Kaldırma ve ana konfigürasyonları yapabilecek kullanıcı yada kullanıcıları. Çoğul kullanıcı seçimi yapılacaksa Team oluşturulması gerekmektedir.</p>
+
+<p><strong>Repository Name</strong> : Kaynak kodlarımızın tutulacağı deponun adı yani aslında projemizin adı diyebiliriz. Buraya verilen isim alias olarak unique bir şekilde kullanılacaktır. Örn : <code class="highlighter-rouge">rootturk@bitbucket.org/test-project.git</code></p>
+
+<p>Access level : This is a private repository 
+Bu seçenek işaretlenirse repomuz gizli olur ve sadece owner grubunda olanlar ya da sonradan erişim verdiğimiz kullanıcılar projemize erişim sağlayabilir.</p>
+
+<p>Repository Type : Tutulacak repository’nin .git mi yoksa mercurial mi olacağının seçimini yapıyoruz. Ben .git kullanıyorum ve bu yazımda .git üzerinden örneklendirerek devam edeceğim. Mercurial hakkında bilgiler için https://www.mercurial-scm.org/ kendi sitesinden detaylarına bakabilirsiniz. Bu da TFS, SVN, GIT, Sub-Version gibi bir source-control management aracıdır.</p>
+
+<p>Description : Projemiz hakkında açıklama alanı.</p>
+
+<p><strong>Forking</strong> :</p>
+
+<p><strong>Allow Only Private Forking</strong> : Yetkili kullanıcıların projeyi kendi kullanıcı adı altındaki projelere kopya olarak oluşturulmasına izin verir.
+<strong>Allow Forks</strong> : Tüm erişim izni olan ya da olmayan kullanıcıların projeyi kendi kullanıcı adı altındaki repository’e kopyasının oluşturabilmesine izin verir.
+No Forks : Kopyalama erişimi sağlamaz</p>
+
+<p><strong>Project Management</strong> :</p>
+
+<p><strong>Issue Tracking</strong> : Oluşturulan projenin JIRA tarzı bir bug-tracking özelliğini aktif ederek hata yönetiminin yapılmasına olanak sağlar.
+Wiki : Projenin dökümantasyonunu ve yapısının yazılı olarak sağlanabileceği bir döküman yönetimi modülüdür.</p>
+
+<p><strong>Language</strong> : Projenin yazıldığı programlama dili seçimi, sanırım proje detayında açıklama olarak gösterilmesini sağlamakta.</p>
+
+<p><strong>Enable HipChat notifications</strong> : bu seçim işaretlenirse Atlassian ürünü olan HipChat mesajlaşma uygulamasına bu projeyi entegre ederek üzerinde Conversation(Sohbet) tarzı bir yaklaşım uygulanabilir.</p>
+
+<p>Alanları kendimize göre doldurup Create butonuna bastıktan sonra eğer eksik ya da yanlış bilgi girişi olmamış ise aşağıdaki şekilde bir ekran karşımıza çıkacaktır.</p>
+
+<p><img src="/Images/2016/04/first-training-2.png" alt="enter image description here" /></p>
+
+<p>Görüldüğü gibi artık kendi kullanıcı adımız altında bir .git repomuz oldu. Artık bilgisayarımızda bulunan kaynak kodlarımızı bu repo’ya yükleyebiliriz. Ama tabii ki bunu yapmamız için öncelikle Windows için Git eklentisini kurmamız gerekmektedir.</p>
+
+<p>Aşağıdaki link’e giderek işletim sisteminiz için uyumlu olan .git sürümünü indirebilirsiniz.</p>
+
+<p>https://git-scm.com/downloads</p>
+
+<p>Kurulumu basit olduğundan dolayı bu detaya girmiyorum. Kurulumu yaptıktan sonra artık bilgisayarımıza .git server üzerinde tutulan repo’ları çekip- gönderebiliriz. Şimdi sıra geldi kodlarımızı nasıl göndereceğimiz sorusuna.</p>
+
+<p>Bunun için çeşitli <strong>GUI(Graphic User Interface)</strong> yani görsel arayüzü olan uygulamalar ya da konsol uygulamaları mevcut. Bitbucket‘ın kendi ürünü olan SourceTree entegre bir şekilde başarıyla çalışmaktadır. Fakat bana cmder.exe uygulaması ya da git yükledikten sonra çalışabileceğimiz konsol uygulaması pratik geliyor ve harici bir programa henüz gereksinim duymadım. Zaten çoğu IDE için .git eklentisi uygulama içerisinde başarıyla çalışmaktadır. Intellij olsun Visual Studio olsun hepsinde çalışabilirsiniz ama temel mantığı öğrenmek ve daha detaylı işlemlerde ya da hatalı durumlarda düzeltme yapmak konsol kullanımında kolayca çözülebiliyor.</p>
+
+<p><strong>CMDER Nedir?</strong></p>
+
+<p>CMDER.exe bir konsol emülator uygulamasıdır, kendi içerisinde windows’un konsol uygulamasından özelleştirilmiş bir çok özelliğini barındırır ve özelleştirilebilir yapısıyla kullanıcıya pratiklik kazandırır.</p>
+
+<p><strong>http://cmder.net/</strong> linki üzerinden daha detaylı olarak bakabilirsiniz. .git repolarinizi bu konsol uygulaması içerisinden rahat bir şekilde kullanabilirsiniz.</p>
+
+<p>Örnek olarak aşağıdaki gibi bir proje üzerinden ilerleyelim.</p>
+
+<p><img src="/Images/2016/04/first-training-3.png" alt="enter image description here" /></p>
+
+<p><strong>CMDER.exe</strong>‘yi indirdiğimizi düşünerek ilerliyorum. <strong>Standart konsol komutları + unix</strong> komutlarını da kullanabiliyorsunuz. <strong>CMDER.exe</strong>‘yi çalıştırdıktan sonra aşağıdaki gibi bir ekran ile karşılaşıyoruz. cd komutu ile projemin bulunduğu dizine gidiyorum.</p>
+
+<p><img src="/Images/2016/04/first-training-4.png" alt="enter image description here" /></p>
+
+<p>Sonrasında yapmamız gerek local bir git reposu oluşturmak olacaktır. Bunu yapmak için yazmamız gereken komut.</p>
+
+<p><code class="highlighter-rouge">git init</code> komutudur.</p>
+
+<p>Aşağıdaki resim uzantılıdır hareketli olarak görmek için yeni pencerede açınız.</p>
+
+<p><img src="/Images/2016/04/bitbucket-gif.gif" alt="enter image description here" /></p>
+
+<p>Komutu yazdıktan sonra proje klasörüne gittiğimizde .git isimli bir klasör oluştuğunu görürüz.
+<img src="/Images/2016/04/bitbucket-gif-2.gif" alt="enter image description here" /></p>
+
+<p><code class="highlighter-rouge">git init</code> yaptıktan sonra kendi sistem dosyalarını repository altına oluşturur ve bu kısımdan sonra her şey bu dosyalara bağımlı bir şekilde ilerler. Şimdi yapmamız gereken ise bu oluşturduğumuz repomuzun uzak sunucudaki alanını tanıtmak olacaktır. Bunu ise şu komut ile yapıyor olacağız, Bitbucket ekranında ilk repo ekledikten sonra açılan pencerede görebiliriz.</p>
+
+<p><img src="/Images/2016/04/bitbucket-remote-add.png" alt="enter image description here" /></p>
+
+<p><strong>Komut</strong> : git remote add origin <code class="highlighter-rouge">https://rootturk@bitbucket.org/rootturk/first-bitbucket-project.git</code> şeklindedir. Her kullanıcının kendi repository ve kullanıcı adına göre değişkenlik gösterir.</p>
+
+<p>Bu komutu çalıştırdıktan sonra bitbucket üzerindeki etki alanımızı lokalde bulunan git etki alanımıza tanıtmış oluyoruz ve artık kaynak kod dosyalarımızı repomuza ekleyip commit ve push işlemlerini gerçekleştirebiliriz.(Detaylarını <strong>.git config</strong> içerisinden görebilirsiniz.)</p>
+
+<p><code class="highlighter-rouge">git add .</code> ya da <code class="highlighter-rouge">git add *</code> kullanarak kaynak kodlarımızı lokal repository’mize ekliyoruz.</p>
+
+<p>sonrasında <code class="highlighter-rouge">git commit -m “yaptığımız değişiklik detayı”</code> kendinize göre bir mesaj yazarak komutu çalıştırıyoruz. Artık dosyalarımız gönderilmeye hazır ve son kalan komut <code class="highlighter-rouge">push</code> komutunu kullanmak olacaktır.</p>
+
+<p><code class="highlighter-rouge">git push origin master</code> komutunu yazarak kaynak kodlarımızı bitbucket hesabımız altındaki repository’mize gönderme isteğini iletiyoruz. Sonrasında bize bir mesaj ile <code class="highlighter-rouge">remote-add</code> yaptığımız için şifremizi soruyor. Şifremizi de girdikten sonra kendi compress işlemlerinden sonra kaynak kodlarımız artık bitbucket üzerindeki repository’mize gönderiliyor.</p>
+
+<p><img src="/Images/2016/04/bitbucket-add-commit-push.gif" alt="enter image description here" /></p>
+
+<p>Şimdi bitbucket hesabımızdan repository’mize bakalım ki kodlarımız gitmiş mi? :D</p>
+
+<p><img src="/Images/uploads/2016/04/bitbucket-source-commits.gif" alt="enter image description here" /></p>
+
+<p>Gördüğümüz gibi kaynak kodlarımız artık bitbucket hesabımız üzerinde.</p>
+
+<p>Genel olarak ilk yazının devamı olan bu yazımda bir repository oluşturmayı ve kaynak kodlarımızı bu repository altına göndermeyi işlemeye çalıştım.Sonraki yazı serilerimde yine bitbucket’a devam edeceğim. Umarım yararlı bir yazı olmuştur. Her türlü yanlış kullanım, hatalı gördüğünüz yerlerle ilgili bilgi ve istekleri, sorularınızı yorum ya da email olarak iletebilirsiniz.</p>
+
+<p>Okuduğunuz için teşekkür ederim.</p>
+
+<iframe width="420" height="315" src="https://www.youtube.com/embed/79vCiXg3njY?ecver=1" frameborder="0" allowfullscreen=""></iframe>
+ Follow me on <a href="http://twitter.com/rootturk">Twitter</a>
+      </div>
     <p class="post-meta">
       <time datetime="2016-04-03T17:35:41+03:00" itemprop="datePublished">
         

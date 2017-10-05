@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <link rel="canonical" href=" http://localhost:4000">
   <title>
-     Abstract Class Interface Arasindaki Fark?
+     Abstract Class ve Interface Arasindaki Fark?
     
   </title>
   <meta name="description" content="Yazılım Geliştiricisi, Blogger, Open-Source Lover">
@@ -73,14 +73,71 @@
         <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
 
   <header class="post-header">
-      <div class="js-social-button pull-right">
-      <a class="twitter-share-button" data-size="large"
-        href="https://twitter.com/intent/tweet">
-      /Abstract-Class-ve-Interface-Nedir/</a>
-      <!--<div class="fb-share-button" data-href="/Abstract-Class-ve-Interface-Nedir/" data-layout="button" data-size="small" data-mobile-iframe="true"><a class="fb-xfbml-parse-ignore" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=/Abstract-Class-ve-Interface-Nedir/ ">Share</a></div>-->
-      </div>
-    <h1 class="post-title" itemprop="name headline">Abstract Class Interface Arasindaki Fark?</h1>
 
+    <h1 class="post-title" itemprop="name headline">Abstract Class ve Interface Arasindaki Fark?</h1>
+      <div class="js-social-button pull-right">
+      <a class="twitter-share-button" data-via="rootturk" 
+      data-lang="tr" data-size="large"
+        href="https://twitter.com/share">
+      /Abstract-Class-ve-Interface-Nedir/</a> <p>Merhaba arkadaşlar, bugün sizlerle paylaşmak istediğim konu C# programlama dili içerisinde bulunan <strong>Class</strong> ve <strong>Interface</strong> yapıları ve aralarındaki farklar hakkında olacak. Öncelikle <strong>Class</strong>(Sınıf) nedir bu konuya değinelim, Class içerisinde metotlar, değişkenler hatta yine sınıf tanımlarının yapılabildiği Object Oriented Programlama dilinin temelini oluşturan bir yapıdır. Aşağıdaki örnekte bir Users adında bir sınıfımız ve içerisinde <strong>getter</strong> ve <strong>setter</strong> tanımlı olan iki public değişkenimiz var.</p>
+
+<figure class="highlight"><pre><code class="language-csharp" data-lang="csharp"> <span class="k">public</span> <span class="k">class</span> <span class="nc">Users</span> <span class="p">{</span>
+
+<span class="k">public</span> <span class="kt">string</span> <span class="n">userName</span> <span class="p">{</span><span class="k">get</span><span class="p">;</span><span class="k">set</span><span class="p">;}</span>
+
+<span class="k">public</span> <span class="kt">string</span> <span class="n">userEmail</span> <span class="p">{</span><span class="k">get</span><span class="p">;</span><span class="k">set</span><span class="p">;}</span>
+
+<span class="p">}</span></code></pre></figure>
+
+<p><strong>Class</strong> yapısı hakkında kısa bir açıklama yaptıktan sonra şimdi <strong>Interface</strong>(Arayüz) yapısına gelelim, Interface’de Class yapısına benzer bir yapıdadır, en kritik farklarından birisi içerisine metodun sadece tanımı eklenir burası biraz kafa karıştırıcı olabilir ama örnek ile anlaşılacağını düşünüyorum.</p>
+
+<figure class="highlight"><pre><code class="language-csharp" data-lang="csharp"> <span class="k">public</span> <span class="n">Interface</span> <span class="n">IUsers</span><span class="p">{</span>
+
+<span class="n">User</span> <span class="nf">getUsersByName</span><span class="p">(</span><span class="kt">string</span> <span class="n">name</span><span class="p">);</span>
+
+<span class="n">User</span> <span class="nf">getUsersByEmail</span><span class="p">(</span><span class="kt">string</span> <span class="n">email</span><span class="p">);</span>
+
+<span class="n">User</span> <span class="nf">getUsersById</span><span class="p">(</span><span class="kt">int</span> <span class="n">id</span><span class="p">)</span>
+
+<span class="p">}</span></code></pre></figure>
+
+<p>Yukarıda ki örnekte görüldüğü gibi <strong>Interface</strong> tanımı <strong>Class</strong> tanımına benziyor fakat en önemli özelliklerinden birisi sadece metod tanımlarını içermeleridir. Peki diyeceksiniz ki neden <strong>interface</strong> kullanmamız gerekiyor? bu sorunun cevabını ancak fazlaca kod yazarak, deneyerek tecrübe ederek verebilirsiniz. Bir proje içerisinde kod yapısı arttıkça ve aynı kodlar kendini tekrarlamaya başlayınca çeşitli çözümler aranır, işte bu yapılar da dili işlevsel kullanmak için bir nevi araçtır. <strong>Interface</strong> kullanmak geliştirme düzenli sağlar, <strong>Domain</strong>(Proje iş yapısı) yapısına göre tasarlandıktan sonra ve metod tanımlarını <strong>implement</strong> edildiği <strong>Class</strong> içerisinde zorunlu kılar, bu da bir zorunluluk olduğundan daha düzenli bir geliştirmeye zorlar. <strong>Genel olarak birbirlerine göre farkları:</strong> *Interface içerisinde metod tanımlarını barındırırken, Class içerisinde metodun kendisi vardır. * Abstract class base class olma özelliği taşır ve instance edilemez. <a href="http://www.akinabdullahoglu.com/wp-content/uploads/2016/09/abstract-class-instance-error.png">Bknz</a>: *Abstract olmayan class instance edilebilir ve implement de edilebilir. *Abstract class bir defa implement edilir fakat bir class’a birden fazla Interface implement edilebilir. <a href="http://www.akinabdullahoglu.com/wp-content/uploads/2016/09/abstract-class-birden-fazla-implement-edilemez.png">Bknz-1</a> , <a href="http://www.akinabdullahoglu.com/wp-content/uploads/2016/09/interface-birden-fazla-implement-edilebilir.png">Bknz-2</a> *Interface içerisine tanımlanan metod implement edildiği Class içerisinde tanımlanmak zorundadır. <strong>Örnek</strong> : public class UserService:<span style="color: #99cc00;"><strong>IUser</strong></span>, <strong><span style="color: #008080;">IUserLogs</span></strong>{ } Yukarıdaki örnekte <strong>IUser</strong> ve <strong>IUserLogs</strong> interface(arayüzleri) UserService class’ına <strong>implement</strong> edilmiştir. Interface tanımlarken ilk harf olarak <strong>I</strong> harfini kod zorunlu kılmaz fakat geliştirici kuralları açısından doğru kullanım bu şekildedir. <strong>Interface ile ilgili basit bir örnek :</strong></p>
+
+<figure class="highlight"><pre><code class="language-csharp" data-lang="csharp"> <span class="k">interface</span> <span class="nc">IUser</span>
+    <span class="p">{</span>
+        <span class="k">void</span> <span class="nf">getUsers</span><span class="p">(</span><span class="kt">string</span> <span class="n">name</span><span class="p">);</span>
+        <span class="kt">string</span> <span class="nf">getUserEmailById</span><span class="p">(</span><span class="kt">string</span> <span class="n">id</span><span class="p">);</span>
+    <span class="p">}</span>
+    <span class="k">interface</span> <span class="nc">IUserLogs</span>
+    <span class="p">{</span>
+        <span class="kt">int</span> <span class="nf">getUserEntryCountById</span><span class="p">(</span><span class="kt">int</span> <span class="n">id</span><span class="p">);</span>
+    <span class="p">}</span>
+
+    <span class="k">class</span> <span class="nc">UserService</span><span class="p">:</span><span class="n">IUser</span><span class="p">,</span> <span class="n">IUserLogs</span>
+    <span class="p">{</span>
+        <span class="n">DBEntities</span> <span class="n">db</span> <span class="p">=</span> <span class="k">new</span> <span class="nf">DBEntities</span><span class="p">();</span>
+        <span class="k">public</span> <span class="k">void</span> <span class="nf">getUsers</span><span class="p">(</span><span class="kt">string</span> <span class="n">name</span><span class="p">)</span>
+        <span class="p">{</span>
+
+        <span class="p">}</span>
+
+        <span class="k">public</span> <span class="kt">string</span> <span class="nf">getUserEmailById</span><span class="p">(</span><span class="kt">string</span> <span class="n">id</span><span class="p">)</span>
+        <span class="p">{</span>
+            <span class="k">return</span> <span class="n">db</span><span class="p">.</span><span class="n">tblUsers</span><span class="p">.</span><span class="nf">Where</span><span class="p">(</span><span class="n">x</span><span class="p">=&gt;</span><span class="n">x</span><span class="p">.</span><span class="n">userID</span><span class="p">==</span><span class="n">id</span><span class="p">).</span><span class="n">EmailAddress</span><span class="p">;</span>
+        <span class="p">}</span>
+
+        <span class="k">public</span> <span class="kt">int</span> <span class="nf">getUserEntryCountById</span><span class="p">(</span><span class="kt">int</span> <span class="n">id</span><span class="p">)</span>
+        <span class="p">{</span>
+            <span class="k">return</span> <span class="n">db</span><span class="p">.</span><span class="n">tblUserPosts</span><span class="p">.</span><span class="nf">Where</span><span class="p">(</span><span class="n">x</span><span class="p">=&gt;</span><span class="n">x</span><span class="p">.</span><span class="n">userID</span><span class="p">==</span><span class="n">id</span><span class="p">).</span><span class="nf">Count</span><span class="p">();</span>
+        <span class="p">}</span>
+    <span class="p">}</span></code></pre></figure>
+
+<p>Biraz kafa karıştırıcı olabilir fakat kendiniz pratikler ve örnekler yaparak daha anlamlı yapılar ortaya çıkarabilirsiniz. Bir de vereceğim kavramları da araştırmanızı rica ediyorum. <a href="https://en.wikipedia.org/wiki/KISS_principle"><strong>K.I.S.S.(Keep İt Simple Stupid)</strong></a>, <a href="https://en.wikipedia.org/wiki/Single_responsibility_principle"><strong>Single Responsebility</strong></a>, <strong><a href="https://en.wikipedia.org/wiki/Separation_of_concerns">Seperation of Concerns</a>, <a href="https://en.wikipedia.org/wiki/Inversion_of_control">Inversion of Control</a></strong> bu kavramları araştırdıkça ve okudukça kafanıza daha iyi şeyler oturacağına eminim. Sevgilerle.</p>
+
+<iframe src="https://www.youtube.com/embed/d27gTrPPAyk" allowfullscreen="allowfullscreen" width="560" height="315" frameborder="0"></iframe>
+
+ Follow me on <a href="http://twitter.com/rootturk">Twitter</a>
+      </div>
     <p class="post-meta">
       <time datetime="2016-10-22T17:35:41+03:00" itemprop="datePublished">
         
