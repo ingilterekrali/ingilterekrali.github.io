@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <link rel="canonical" href=" http://www.akinabdullahoglu.com">
   <title>
-     Akın Abdullahoğlu - Software Developer
+     C# Erişim Belirleyicileri (Access Modifiers)
     
   </title>
   <meta name="description" content="Yazılım Geliştiricisi, Blogger, Open-Source Lover">
@@ -72,27 +72,77 @@
 
     <main class="page-content" aria-label="Content">
       <div class="wrapper">
-        <style type="text/css" media="screen">
-  .container {
-    margin: 10px auto;
-    max-width: 600px;
-    text-align: center;
-  }
-  h1 {
-    margin: 30px 0;
-    font-size: 4em;
-    line-height: 1;
-    letter-spacing: -1px;
-  }
-</style>
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
 
-<div class="container">
-  <h1>404</h1>
+  <header class="post-header">
 
-  <p><strong>Sayfa Bulunamadi :(</strong></p>
-  <p>The requested page could not be found.</p>
-</div>
+    <h1 class="post-title" itemprop="name headline">C# Erişim Belirleyicileri (Access Modifiers)</h1>
+      <div class="js-social-button pull-right">
+      <a class="twitter-share-button" data-via="rootturk" 
+      data-lang="tr" data-url ="http://www.akinabdullahoglu.com/Csharp-Erisim-Belirleyicileri/" data-size="large"
+        href="https://twitter.com/share">
+      </a></a>
+      </div>
+    <p class="post-meta">
+      <time datetime="2016-01-20T16:35:41+02:00" itemprop="datePublished">
+        
+        Jan 20, 2016
+      </time>
+      </p>
+  </header>
+  <div class="post-content" itemprop="articleBody">
+    <p><img src="/Images/2016/01/image12.png" alt="enter image description here" /></p>
 
+<p>Merhabalar arkadaşlar bugün ki yazımda <strong>C#</strong> Programlama dilinin yapısında bulunan erişim belirleyiciler hakkında konuşacağız. Öncelikle ne demek bu erişim belirleyicisi? sorusu ile başlayabiliriz. Erişim belirleyicileri dilin yapısında kullanılan tüm tanımlı yapılara uygulanabilen bir özelliktir. Amacı tanımlanan bir varlığın(<strong>variable</strong>, <strong>object</strong>, <strong>struct</strong>,  <strong>method</strong> etc.) erişimini kontrol ederek dil yapısını en rahat ve düzenli şekilde kullanmayı amaçlayan ve daha güvenli bir uygulama geliştirmemizi sağlayan bir özellik bütünüdür.</p>
+
+<p>Nedir bu erişim belirleyicileri?</p>
+
+<p><strong>Public</strong>, <strong>Private</strong>, <strong>Protected</strong>, <strong>Internal</strong>, Sealed şimdi kafanızda bir şeyler oluştuğuna eminim. Çünkü kesinlikle bir yazılım geliştirirken bu erişim belirleyicilerinden yardım almaktayız ve kendimize göre bu değerlere göre yapılar oluşturmaktayız.</p>
+
+<p>Şimdi sırasına göre gidecek olursak.</p>
+
+<p><strong>Public</strong> :  Tanımlanan değer o Class‘ı çağıran(instance eden) her yerden erişime açık olacaktır.</p>
+
+<p><strong>Private</strong> : Sadece tanımlanan class içerisinde erişime açıktır.</p>
+
+<p><strong>Protected</strong> : Kullanılan sınıf içerisinde ve bulunduğu sınıfı türeten yani base olarak tanımlayan sınıf içerisinde erişilebilir durumdadır.(Önceki yazımda detaylı olarak anlatılmaktadır.)</p>
+
+<p><strong>Internal</strong> : Kullanılan proje içerisinde yani Assembly, Dll veya exe içerisinde erişilebilir durumdadır başka bir assembly tarafından erişilemez.</p>
+
+<p><strong>Protected Internal</strong> : Bu tipte tanımlanmış değer aynı class içerisinde ve ondan türetilen sınıfların içerisinden erişilebilir durumdadır. Türetilen sınıfın aynı program içerisinde olmaması problem teşkil etmez.</p>
+
+<p>Yararlandığım kaynaklar :</p>
+
+<p>*http://aydinpolat.net/article/c-erisim-belirleyicileri-access-modifiers
+*http://bidb.itu.edu.tr/seyirdefteri/blog/2013/09/06/c-dilinde-eri%C5%9Fim-belirleyiciler-(access-modifiers)</p>
+
+<p>Umarım faydalı bir yazı olmuştur.</p>
+
+<iframe width="420" height="315" src="https://www.youtube.com/embed/0W3MpOU3OUU?ecver=1" frameborder="0" allowfullscreen=""></iframe>
+
+  </div>
+    <a href="https://twitter.com/rootturk?ref_src=twsrc%5Etfw" class="twitter-follow-button" data-show-count="false">Follow @rootturk</a><script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+  
+    
+
+  <div id="disqus_thread"></div>
+  <script>
+    var disqus_config = function () {
+      this.page.url = 'http://www.akinabdullahoglu.com/Csharp-Erisim-Belirleyicileri/';
+      this.page.identifier = 'http://www.akinabdullahoglu.com/Csharp-Erisim-Belirleyicileri/';
+    };
+    (function() {
+      var d = document, s = d.createElement('script');
+      s.src = 'https://akinabdullahoglu.disqus.com/embed.js';
+      s.setAttribute('data-timestamp', +new Date());
+      (d.head || d.body).appendChild(s);
+    })();
+  </script>
+  <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+
+  
+</article>
       </div>
     </main>
 
