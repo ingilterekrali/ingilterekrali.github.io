@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <link rel="canonical" href=" http://localhost:4000">
   <title>
-     ben
+     C# Var vs Dynamic Tiplerinin Karşılaştırması
     
   </title>
   <meta name="description" content="Yazılım Geliştiricisi, Blogger, Open-Source Lover">
@@ -72,20 +72,86 @@
 
     <main class="page-content" aria-label="Content">
       <div class="wrapper">
-        <article class="post">
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
 
   <header class="post-header">
-    <h1 class="post-title">ben</h1>
-  </header>
 
-  <div class="post-content">
-    <p>Merhaba Arkadaş!</p>
+    <h1 class="post-title" itemprop="name headline">C# Var vs Dynamic Tiplerinin Karşılaştırması</h1>
+      <div class="js-social-button pull-right">
+      <a class="twitter-share-button" data-via="rootturk" 
+      data-lang="tr" data-url ="http://www.akinabdullahoglu.com/Csharp-Var-vs-Dynamic-Tiplerinin-Karsilastirilmasi/" data-size="large"
+        href="https://twitter.com/share">
+      </a></a>
+      </div>
+    <p class="post-meta">
+      <time datetime="2016-01-18T16:35:41+02:00" itemprop="datePublished">
+        
+        Jan 18, 2016
+      </time>
+      </p>
+  </header>
+  <div class="post-content" itemprop="articleBody">
+    <p>Merhabalar arkadaşlar, bugün ki yazımda <strong>C#</strong> Programlama dilinde kullanılan <strong>Var</strong> ve <strong>Dynamic</strong> tipleri arasında bir karşılaştırma yaparak özelliklerine bakacağız. <strong>Var</strong> keyword u <strong>C# 3.0</strong> sürümünde kazanılmış bir tiptir. <strong>Dynamic</strong> tipi ise <strong>C# 4.0</strong> sürümünde kazanılmıştır. <strong>Var</strong> tipi ile dynamic tipinin farkını aşağıdaki örnek üzerinde anlaşılabileceğini düşünüyorum. var tipinde olan data değişkenine “<strong>Text</strong>” metni string formatında atanıyor ve data değişkeni artık <strong>string</strong> türünden bir değişken oluyor fakat sonraki satırda data değişkenine <strong>integer</strong> 5 atamaya çalıştığımızda hataya düşüyor, sebebi ise derleme anında var tipi aldığı tipi bilmek zorundadır. <strong>Dynamic</strong> tipine baktığımızda ilk olarak string “<strong>Text</strong>” metnini alıyor ve sonrasında <strong>integer</strong> 5 alıyor, en son da string tipinden list atanarak hatasız bir şekilde derlenecek hale geliyor. Sebebi dynamic tipi dinamik olarak gelen değer türüne dönüşmektedir ve bu özellikte bir çok yerde gerçekten kullanışlı olmaktadır.</p>
+
+<p><img src="/Images/2016/01/dynamic-var.png" alt="enter image description here" /></p>
+
+<p><strong>Var Keyword :</strong>
+https://msdn.microsoft.com/tr-tr/library/bb383973.aspx</p>
+
+<p><strong>Dynamic Keyword :</strong>
+https://msdn.microsoft.com/en-us/library/dd264741.aspx</p>
+
+<p>Detaylı olarak Karşılaştırma:</p>
+
+<table class="ArticleTable" style="height: 631px;" width="747">
+<thead>
+<tr>
+<td width="399" valign="top">var</td>
+<td width="399" valign="top">dynamic</td>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>C# 3.0 sürümünde gelmiştir.</td>
+<td>C# 4.0 Sürümünde gelmiştir.</td>
+</tr>
+<tr>
+<td><strong>Statik bir tiptir.</strong>&nbsp;– Derlenme anında set edilen tipi bilir ve hafızada o tipe göre yer ayırır.</td>
+<td><strong>Dinamik bir tiptir.</strong>&nbsp;– Gelen tipi bilmese de çalışma zamanında set edilen tipi&nbsp;belirler.</td>
+</tr>
+<tr>
+<td valign="top"><strong>Değer set edilmeden tanımlanamaz hata verir.</strong><p></p>
+<p>var str = “Merhaba”;</p>
+<p>str tipi string tipinden bir değer aldı ve artık hafızada string olarak tutulmaktadır. Sonradan değer ataması yapılır ise derleme anında hata verir.</p></td>
+<td><strong>Değer set edilmeden tanımlama yapılabilir.</strong><p></p>
+<p>dynamic str;</p>
+<p><code>str = "Merhaba";</code></p>
+<p><span style="font-family: monospace;">str = 2;</span></p>
+<p>&nbsp;</p>
+<p>Dynamic ilk olarak string değer alıp sonradan integer bir değişken alabilir. Derlenme anında hataya düşmez.</p></td>
+</tr>
+</tbody>
+</table>
+
+<p>Detaylı olarak farklarına ve kullanımlarını açıklamaya çalıştım. Kafanıza takılan bir yer olur ise ve yanlışlar var ise her zaman yorumlarınızı bekliyorum.</p>
+
+<p>Bu yazıyı Yunanca bir parça ile sonlandırmak istiyorum.</p>
+
+<p>Okuduğunuz için teşekkürler.</p>
+
+<iframe width="420" height="315" src="https://www.youtube.com/embed/DozVdtbMuM8?ecver=1" frameborder="0" allowfullscreen=""></iframe>
+
+<p><strong>Alıntı yaptığım kaynaklar.</strong>
+<a href="http://www.codeproject.com/Tips/460614/Difference-between-var-and-dynamic-in-Csharp">Code Project : Var Type Vs Dynamic Type</a></p>
 
 
   </div>
+    <a href="https://twitter.com/rootturk?ref_src=twsrc%5Etfw" data-url ="http://www.akinabdullahoglu.com/Csharp-Var-vs-Dynamic-Tiplerinin-Karsilastirilmasi/" class="twitter-follow-button" data-show-count="false">Follow @rootturk</a><script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
 
+  
+    
+  
 </article>
-
       </div>
     </main>
 

@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <link rel="canonical" href=" http://localhost:4000">
   <title>
-     C# Erişim Belirleyicileri (Access Modifiers)
+     Csharp Override ve Overloading Nedir?
     
   </title>
   <meta name="description" content="Yazılım Geliştiricisi, Blogger, Open-Source Lover">
@@ -76,52 +76,99 @@
 
   <header class="post-header">
 
-    <h1 class="post-title" itemprop="name headline">C# Erişim Belirleyicileri (Access Modifiers)</h1>
+    <h1 class="post-title" itemprop="name headline">Csharp Override ve Overloading Nedir?</h1>
       <div class="js-social-button pull-right">
       <a class="twitter-share-button" data-via="rootturk" 
-      data-lang="tr" data-url ="http://www.akinabdullahoglu.com/Csharp-Erisim-Belirleyicileri/" data-size="large"
+      data-lang="tr" data-url ="http://www.akinabdullahoglu.com/Csharp-Override-ve-Overloading-Nedir/" data-size="large"
         href="https://twitter.com/share">
       </a></a>
       </div>
     <p class="post-meta">
-      <time datetime="2016-01-20T16:35:41+02:00" itemprop="datePublished">
+      <time datetime="2016-01-19T16:35:41+02:00" itemprop="datePublished">
         
-        Jan 20, 2016
+        Jan 19, 2016
       </time>
       </p>
   </header>
   <div class="post-content" itemprop="articleBody">
-    <p><img src="/Images/2016/01/image12.png" alt="enter image description here" /></p>
+    <p>Merhaba arkadaşlar, bugün ki yazımda <strong>C#</strong> Programlama dili üzerinde Method Overloading(Metotların aşırı yüklenmesi) ve Override edilmesi ile ilgili bir şeyler aktarmaya çalışacağım. Öncelikle <strong>Method Overloading</strong> ile başlayalım. Bir tane Class düşünün içerisinde bir tane method tanımlamışsınız ve bunu kullanıyorsunuz fakat bir tane daha method yazmanız gerekli oldu ve isimlendirme olarak aynı method ismini kullanmanız gerekiyor. İşte burada Method Overloading devreye giriyor aşağıdaki örnek üzerinden ilerleyecek olursak.</p>
 
-<p>Merhabalar arkadaşlar bugün ki yazımda <strong>C#</strong> Programlama dilinin yapısında bulunan erişim belirleyiciler hakkında konuşacağız. Öncelikle ne demek bu erişim belirleyicisi? sorusu ile başlayabiliriz. Erişim belirleyicileri dilin yapısında kullanılan tüm tanımlı yapılara uygulanabilen bir özelliktir. Amacı tanımlanan bir varlığın(<strong>variable</strong>, <strong>object</strong>, <strong>struct</strong>,  <strong>method</strong> etc.) erişimini kontrol ederek dil yapısını en rahat ve düzenli şekilde kullanmayı amaçlayan ve daha güvenli bir uygulama geliştirmemizi sağlayan bir özellik bütünüdür.</p>
+<figure class="highlight"><pre><code class="language-csharp" data-lang="csharp"> 
+<span class="k">public</span> <span class="k">class</span> <span class="nc">Member</span> <span class="p">{</span>
+ 
+<span class="k">protected</span> <span class="n">User</span> <span class="nf">getUserDetail</span><span class="p">(</span><span class="kt">int</span> <span class="n">id</span><span class="p">)</span>
+<span class="p">{</span>
+  <span class="k">return</span> <span class="n">db</span><span class="p">.</span><span class="k">where</span><span class="p">(</span><span class="n">id</span><span class="p">);</span>
+<span class="p">}</span>
+ 
+<span class="k">protected</span> <span class="n">User</span> <span class="nf">getUserDetail</span><span class="p">(</span><span class="kt">string</span> <span class="n">name</span><span class="p">)</span>
+<span class="p">{</span>
+  <span class="k">return</span> <span class="n">db</span><span class="p">.</span><span class="k">where</span><span class="p">(</span><span class="n">name</span><span class="p">);</span>
+<span class="p">}</span></code></pre></figure>
 
-<p>Nedir bu erişim belirleyicileri?</p>
+<p>Yukarıda görüldüğü gibi Member isimli <strong>Class</strong>’ımızda iki tane aynı isimden, farklı tipte parametreler alan methodumuz oldu.</p>
 
-<p><strong>Public</strong>, <strong>Private</strong>, <strong>Protected</strong>, <strong>Internal</strong>, Sealed şimdi kafanızda bir şeyler oluştuğuna eminim. Çünkü kesinlikle bir yazılım geliştirirken bu erişim belirleyicilerinden yardım almaktayız ve kendimize göre bu değerlere göre yapılar oluşturmaktayız.</p>
+<p>Burada dikkat etmemiz gereken ana hususlar.</p>
 
-<p>Şimdi sırasına göre gidecek olursak.</p>
+<ul>
+  <li>Metotların dönüş tipleri aynı olmalıdır.</li>
+  <li>Metotlar farklı tipte parametreler almalıdır.</li>
+</ul>
 
-<p><strong>Public</strong> :  Tanımlanan değer o Class‘ı çağıran(instance eden) her yerden erişime açık olacaktır.</p>
+<p>Genel olarak Method Overloading‘i bu şekilde tanımlayabiliriz.</p>
 
-<p><strong>Private</strong> : Sadece tanımlanan class içerisinde erişime açıktır.</p>
+<p>Şimdi Method Override anlatımına geçelim. Yine bir tane Class’ımız olsun ve bu Class’a base(temel) bir Class inherit edelim yani temel işlemleri yapmak için tasarladığımız bir tane alt Class olsun ve bu Class içerisinde getDetail isimli bir tane methodumuz olsun. Ama bu base Class’ı base olarak aldığımız Class’ta da getDetail() isimli bir method’da tanımlamamız gerektiğini varsayalım. Kod olarak yazarsam daha açıklayıcı olacaktır. Çünkü bu anlatımlar ve kullanımlar genelde çok soyut kalıyor örneklendirmekte kolay olmuyor, belki kod üzerinden devam edersem daha açıklayıcı olabilirim.</p>
 
-<p><strong>Protected</strong> : Kullanılan sınıf içerisinde ve bulunduğu sınıfı türeten yani base olarak tanımlayan sınıf içerisinde erişilebilir durumdadır.(Önceki yazımda detaylı olarak anlatılmaktadır.)</p>
+<figure class="highlight"><pre><code class="language-csharp" data-lang="csharp"> 
+<span class="k">public</span>  <span class="k">class</span> <span class="nc">BaseMethods</span>
+    <span class="p">{</span>
+        <span class="k">public</span> <span class="k">void</span> <span class="nf">getDetail</span><span class="p">()</span>
+        <span class="p">{</span>
+ 
+    <span class="p">}</span>
+   <span class="p">}</span></code></pre></figure>
 
-<p><strong>Internal</strong> : Kullanılan proje içerisinde yani Assembly, Dll veya exe içerisinde erişilebilir durumdadır başka bir assembly tarafından erişilemez.</p>
+<p>Yukarıda göreceğiniz üzere bir tane Class tanımım ve içerisinde de bir adet getDetail isimli void dönüş tipli metodum var. Bu  Class’ı başka bir class’a inherit edelim.</p>
 
-<p><strong>Protected Internal</strong> : Bu tipte tanımlanmış değer aynı class içerisinde ve ondan türetilen sınıfların içerisinden erişilebilir durumdadır. Türetilen sınıfın aynı program içerisinde olmaması problem teşkil etmez.</p>
+<figure class="highlight"><pre><code class="language-csharp" data-lang="csharp"> 
+<span class="k">public</span> <span class="k">class</span> <span class="nc">Users</span> <span class="p">:</span> <span class="n">BaseMethods</span>
+<span class="p">{</span>
+ 
+<span class="p">}</span></code></pre></figure>
 
-<p>Yararlandığım kaynaklar :</p>
+<p>Göreceğiniz üzere Users isimli sınıfımıza BaseMethods sınıfımızı inherit ettik. Şu anda ana problemimize dönecek olursak iki sınıf içerisinde de getDetail isimli method tanımlaması yapmamız gerekmektedir.Bunu yapmak için bize gerekli olan virtual anahtarıdır. virtual anahlarını atadığımız metot sanal olur ve aynı isimde farklı bir metot tarafından override edilebilir.</p>
 
-<p>*http://aydinpolat.net/article/c-erisim-belirleyicileri-access-modifiers
-*http://bidb.itu.edu.tr/seyirdefteri/blog/2013/09/06/c-dilinde-eri%C5%9Fim-belirleyiciler-(access-modifiers)</p>
+<figure class="highlight"><pre><code class="language-csharp" data-lang="csharp"> 
+<span class="k">public</span> <span class="k">class</span> <span class="nc">Users</span> <span class="p">:</span> <span class="n">BaseMethods</span>
+<span class="p">{</span>
+    <span class="k">public</span> <span class="k">override</span> <span class="k">void</span>  <span class="nf">getDetail</span><span class="p">()</span>
+    <span class="p">{</span>
+        
+    <span class="p">}</span>
+     
+<span class="p">}</span>
+ 
+<span class="k">public</span> <span class="k">class</span> <span class="nc">BaseMethods</span>
+<span class="p">{</span>
+    <span class="k">public</span> <span class="k">virtual</span> <span class="k">void</span> <span class="nf">getDetail</span><span class="p">()</span>
+    <span class="p">{</span>
+ 
+    <span class="p">}</span>
+<span class="p">}</span></code></pre></figure>
 
-<p>Umarım faydalı bir yazı olmuştur.</p>
+<p>Yukarıda ki örnekte gördüğünüz üzere <strong>BaseMethods</strong> sınıfını miras alan Users sınıfı BaseMethods sınıfındaki <strong>getDetail</strong> isimli metodu kendi metoduna atadığı override anahtarı ile ezmektedir. Yani kendi içerisinde tanımladığı getDetail artık geçerli bir method olmuş <strong>BaseMethods</strong>’daki <strong>getDetail</strong> metodu bu sınıfta ezilmiştir. Bu konu biraz soyut olabilir ve belki benim örneğim kafa karıştırabilir bunun için daha farklı kaynaklara bakmanızda fayda da var. Ben genel olarak açıklamaya çalıştım, umarım kafanızda bir şeyler oluşturabilmişimdir. Eğer gördüğünüz hatalı yerler veya sorularınız var ise her zaman yorumlarınızı bekliyorum.</p>
 
-<iframe width="420" height="315" src="https://www.youtube.com/embed/0W3MpOU3OUU?ecver=1" frameborder="0" allowfullscreen=""></iframe>
+<p>Son olarak bir resimde eklemek istedim.</p>
+
+<p><img src="http://www.akinabdullahoglu.com/Images/2016/01/metod.png" alt="enter image description here" /></p>
+
+<p>Bu yazıya veda ederken sizlere Badfinger’dan bir parça armağan ediyorum.</p>
+
+<iframe width="420" height="315" src="https://www.youtube.com/embed/-btv-7GkVk0?ecver=1" frameborder="0" allowfullscreen=""></iframe>
+
 
   </div>
-    <a href="https://twitter.com/rootturk?ref_src=twsrc%5Etfw" data-url ="http://www.akinabdullahoglu.com/Csharp-Erisim-Belirleyicileri/" class="twitter-follow-button" data-show-count="false">Follow @rootturk</a><script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+    <a href="https://twitter.com/rootturk?ref_src=twsrc%5Etfw" data-url ="http://www.akinabdullahoglu.com/Csharp-Override-ve-Overloading-Nedir/" class="twitter-follow-button" data-show-count="false">Follow @rootturk</a><script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
 
   
     

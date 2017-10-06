@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="canonical" href=" http://localhost:4000">
+  <title>
+     Repeater Kontrolünün Detaylarına Giriş
+    
+  </title>
+  <meta name="description" content="Yazılım Geliştiricisi, Blogger, Open-Source Lover">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="/assets/main.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="alternate" type="application/rss+xml" title="Akin Abdullahoglu" href="/feed.xml">
+</head>
+
+
+
+
+
+  <body>
+
+    <header class="site-header" role="banner">
+
+  <div class="wrapper">
+    
+    
+    <a class="site-title" href="/">Akın Abdullahoğlu - Software Developer</a>
+
+    
+      <nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path fill="#424242" d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.031C17.335,0,18,0.665,18,1.484L18,1.484z"/>
+              <path fill="#424242" d="M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0c0-0.82,0.665-1.484,1.484-1.484 h15.031C17.335,6.031,18,6.696,18,7.516L18,7.516z"/>
+              <path fill="#424242" d="M18,13.516C18,14.335,17.335,15,16.516,15H1.484C0.665,15,0,14.335,0,13.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.031C17.335,12.031,18,12.696,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger">
+          
+            
+            
+          
+            
+            
+            <a class="page-link" href="/ben/">ben</a>
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+        <a target="_blank" class="page-link" href="https://docs.google.com/forms/d/e/1FAIpQLSebtzndGQg9M_w_LEx17PhaN2MD61Ay9a96aJpuYh38Q-RE-g/viewform?embedded=true">iletişim</a>
+        <a target="_blank" class="page-link" href="http://www.twitter.com/rootturk">twitter</a>
+                <a target="_blank" class="page-link" href="mailto:akin@akinabdullahoglu.com">email</a>
+        </div>
+      </nav>
+    
+  </div>
+</header>
+
+    <main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+
+    <h1 class="post-title" itemprop="name headline">Repeater Kontrolünün Detaylarına Giriş</h1>
+      <div class="js-social-button pull-right">
+      <a class="twitter-share-button" data-via="rootturk" 
+      data-lang="tr" data-url ="http://www.akinabdullahoglu.com/Repeater-Kontrolunun-Detaylarina-Giris/" data-size="large"
+        href="https://twitter.com/share">
+      </a></a>
+      </div>
+    <p class="post-meta">
+      <time datetime="2016-01-18T16:35:41+02:00" itemprop="datePublished">
+        
+        Jan 18, 2016
+      </time>
+      </p>
+  </header>
+  <div class="post-content" itemprop="articleBody">
+    <p>Merhaba arkadaşlar, bundan önceki yazım olan zaman kazandırabilecek kısa bilgilerde jquery ile masterpage içerisinde Id yakalama ile ilgili basit bir öneride bulunmuştum. Bu yazım da aslında onun devamı niteliğinde olacak diye düşünüyorum fakat orada biraz farklı konulara da değindiğim için, yeni bir başlık altında bu makaleyi yazmak istedim. Her ne kadar projelerde ASP.NET Webforms çatısı bize kolaylıklar sağlasa da proje büyüdükçe ve web taraflı işlemler artmaya başladıkça proje üzerindeki hakimiyetimizi gerçekten kaybetme noktasına gelebilmekteyiz. Aslında bunun tabii ki temel sebebini Webforms mimarisinde aramak yanlış olur. Projeye başlangıçta izlenecek yollar, adımlar ve belirli geliştirme süreçlerine girmeden, bilimsel ve benzer open-source projeler örnek alınmadan başlanılan ve giderek bir hengame içerisine giren birçok proje ülkemizde mevcuttur diye düşünmekteyim.</p>
+
+<p><img src="/Images/2014/12/Complexity.jpg" alt="enter image description here" /></p>
+
+<p>Bunun sebebi aslında yazılımcının veya proje yöneticisinin hatası olmayabiliyor. Proje geliştirmede normal deadline’dan kısa sürede ortaya bir şeyler çıkmasının istenmesi, müşteri tarafındaki analiz sıkıntıları, ekibin sürekli sirkülasyon içerisinde olması bir projenin temel süreçlerini ve gidişatını etkileyen büyük etmenlerden birisidir. Birde Webforms mimarisinin Masaüstü programlama mantığı ile web üzerinde yazılım geliştirme olanağı sağlaması da her ne kadar yazılımcı için artı olsa da bazı durumlarda gerçekten çok sıkıntıya yol açmaktadır. Örnek verecek olursak, Javascript kullanımının proje üzerinde yaygınlaşması, Client taraflı kodların artması, Ajax Request işlemlerinin proje içerisinde kullanılması kendi yapısını her ne kadar desteklese de benim görüşüm olarak, yazılımcının proje hakimiyetini fazlasıyla etkilemektedir. Bunlar için yapılan eklentiler, Script Manager, Ajax Toolkit gibi uygulamalarda aynı şekilde her ne kadar kolaylık sağlasa da, bazı noktalarda sonradan eklenilen Client taraflı Javascript, Jquery tabanlı işlemlerde sıkıntılar yaratmaktadır. Zaten <strong>ASP.NET MVC</strong> mimarisinin de ortaya çıkma sebeplerinden en iyisi Web ailesine yakın olmasıdır.</p>
+
+<p>onuyu fazla uzatmadan arkadaşlar çok sıkta olsa fazla verimli olamadığım zamanlarda başıma gelen ve gerçekten çok basit ama farkedilene kadar zaman kayıbı olacak bir kullanıcı hatasından bahsetmeye çalışacağım. WebForms mimarisinde kullandığımız Repeater kontrolümüzü önceki konularda bahsetmiştik. Repeater kullandığımız durumlarda içerisindeki nesneler .Cs tarafında erişmemiz gerekebilir. Bunun içinde Repeater kontrolümüzün OnItemDataBound özelliğinden yararlanmamız gerekir.</p>
+
+<p>Nedir bu OnItemDataBound?</p>
+
+<p>Repeater OnItemDataBound, Repeater kontrolünün<code class="highlighter-rouge">&lt;Header Template&gt; &lt;Item Template&gt;</code> ve <code class="highlighter-rouge">&lt;Footer Template&gt;</code> Section’ları içerisinde dönen satırlarda buton, link, img ve diğer html etiketlerinin döndüğü bir event yani olaydır diye kendim yorumlayabilirim. Ama farklı kaynaklara göz atmakta her zaman fayda vardır diye düşünüyorum.  :)</p>
+
+<p>Örnek olarak aşağıdaki gibi bir Repeater kontrolümüz olsun.</p>
+
+<figure class="highlight"><pre><code class="language-csharp" data-lang="csharp"> 
+<span class="p">&lt;</span><span class="n">asp</span><span class="p">:</span><span class="n">Repeater</span> <span class="n">ID</span><span class="p">=</span><span class="s">"rptUserList"</span> <span class="n">runat</span><span class="p">=</span><span class="s">"server"</span> <span class="n">OnItemDataBound</span><span class="p">=</span><span class="s">"rptUserList_ItemDataBound"</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="n">HeaderTemplate</span><span class="p">&gt;</span>
+       <span class="p">&lt;</span><span class="n">table</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="n">tr</span><span class="p">&gt;</span>
+            <span class="p">&lt;</span><span class="n">td</span><span class="p">&gt;</span>
+                <span class="p">&lt;</span><span class="n">asp</span><span class="p">:</span><span class="n">label</span> <span class="n">ID</span><span class="p">=</span><span class="s">"lblTitleUserIdNumber"</span> <span class="n">runat</span><span class="p">=</span><span class="s">"server"</span> <span class="n">Text</span><span class="p">=</span><span class="s">"Üye ID Numarası"</span><span class="p">&gt;&lt;/</span><span class="n">asp</span><span class="p">:</span><span class="n">label</span><span class="p">&gt;</span>
+            <span class="p">&lt;/</span><span class="n">td</span><span class="p">&gt;</span>
+            <span class="p">&lt;</span><span class="n">td</span><span class="p">&gt;</span>
+                <span class="p">&lt;</span><span class="n">asp</span><span class="p">:</span><span class="n">label</span> <span class="n">ID</span><span class="p">=</span><span class="s">"lbTitlelUserName"</span> <span class="n">runat</span><span class="p">=</span><span class="s">"server"</span> <span class="n">Text</span><span class="p">=</span><span class="s">"Üye Adı"</span><span class="p">&gt;&lt;/</span><span class="n">asp</span><span class="p">:</span><span class="n">label</span><span class="p">&gt;</span>
+            <span class="p">&lt;/</span><span class="n">td</span><span class="p">&gt;</span>
+            <span class="p">&lt;</span><span class="n">td</span><span class="p">&gt;&lt;</span><span class="n">asp</span><span class="p">:</span><span class="n">label</span> <span class="n">ID</span><span class="p">=</span><span class="s">"lblTitleUserEmailAddress"</span> <span class="n">runat</span><span class="p">=</span><span class="s">"server"</span> <span class="n">Text</span><span class="p">=</span><span class="s">"Üye Mail Adresi"</span><span class="p">&gt;&lt;/</span><span class="n">asp</span><span class="p">:</span><span class="n">label</span><span class="p">&gt;&lt;/</span><span class="n">td</span><span class="p">&gt;</span>
+        <span class="p">&lt;/</span><span class="n">tr</span><span class="p">&gt;</span>
+    <span class="p">&lt;/</span><span class="n">HeaderTemplate</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="n">ItemTemplate</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="n">tr</span><span class="p">&gt;</span>
+            <span class="p">&lt;</span><span class="n">td</span><span class="p">&gt;</span>
+                <span class="p">&lt;</span><span class="n">asp</span><span class="p">:</span><span class="n">Label</span> <span class="n">ID</span><span class="p">=</span><span class="s">"lblUserId"</span> <span class="n">runat</span><span class="p">=</span><span class="s">"server"</span><span class="p">&gt;&lt;/</span><span class="n">asp</span><span class="p">:</span><span class="n">Label</span><span class="p">&gt;</span>
+            <span class="p">&lt;/</span><span class="n">td</span><span class="p">&gt;</span>
+            <span class="p">&lt;</span><span class="n">td</span><span class="p">&gt;</span>
+                <span class="p">&lt;</span><span class="n">asp</span><span class="p">:</span><span class="n">Label</span> <span class="n">ID</span><span class="p">=</span><span class="s">"lblUserName"</span> <span class="n">runat</span><span class="p">=</span><span class="s">"server"</span><span class="p">&gt;&lt;/</span><span class="n">asp</span><span class="p">:</span><span class="n">Label</span><span class="p">&gt;</span>
+            <span class="p">&lt;/</span><span class="n">td</span><span class="p">&gt;</span>
+            <span class="p">&lt;</span><span class="n">td</span><span class="p">&gt;</span>
+                <span class="p">&lt;</span><span class="n">asp</span><span class="p">:</span><span class="n">Label</span> <span class="n">ID</span><span class="p">=</span><span class="s">"lblUserEmailAddress"</span> <span class="n">runat</span><span class="p">=</span><span class="s">"server"</span><span class="p">&gt;&lt;/</span><span class="n">asp</span><span class="p">:</span><span class="n">Label</span><span class="p">&gt;</span>
+            <span class="p">&lt;/</span><span class="n">td</span><span class="p">&gt;</span>
+        <span class="p">&lt;/</span><span class="n">tr</span><span class="p">&gt;</span>
+    <span class="p">&lt;/</span><span class="n">ItemTemplate</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="n">FooterTemplate</span><span class="p">&gt;</span>
+        <span class="p">&lt;/</span><span class="n">table</span><span class="p">&gt;</span>
+    <span class="p">&lt;/</span><span class="n">FooterTemplate</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="n">asp</span><span class="p">:</span><span class="n">Repeater</span><span class="p">&gt;</span></code></pre></figure>
+
+<p>Gördüğünüz gibi &lt;Header Template&gt; <Item Template=""> ve &lt;Footer Template&gt;  üç Section’ı da Repeater kontrolümüzde kullandık. Yukarıdaki koda bakacak olursak &lt;Header Template&gt; kısmında Tablo başlıkları ve Tablo başlangıcı var, <Item Template=""> kısmında satırlar ve &lt;Footer Template&gt;  kısmında, tablonun kapanış kısmını yazdık. Bunların dışında birkaç section özelliği daha kullanabiliyoruz. Aşağıdaki resimde görebilirsiniz. Bunların detayına girmeyeceğim fakat araştırdığınızda rahatça bulabileceğiniz konulardır, konu sonunda yorum kısmına sorularınızı da yazabilirsiniz.</Item></Item></p>
+
+<p><img src="/Images/2014/12/repeater-sections.png" alt="enter image description here" /></p>
+
+<p>Yukarıdaki Repeater kontrolümüze vereceğimiz datamızın yapısı aşağıdaki gibidir.</p>
+
+<p>Users.cs</p>
+
+<figure class="highlight"><pre><code class="language-csharp" data-lang="csharp"> 
+<span class="k">public</span> <span class="k">class</span> <span class="nc">Users</span>
+    <span class="p">{</span>
+        <span class="k">public</span> <span class="kt">string</span> <span class="n">ID</span> <span class="p">{</span> <span class="k">get</span><span class="p">;</span> <span class="k">set</span><span class="p">;</span> <span class="p">}</span>
+        <span class="k">public</span> <span class="kt">string</span> <span class="n">Name</span> <span class="p">{</span> <span class="k">get</span><span class="p">;</span> <span class="k">set</span><span class="p">;</span> <span class="p">}</span>
+        <span class="k">public</span> <span class="kt">string</span> <span class="n">Email</span> <span class="p">{</span> <span class="k">get</span><span class="p">;</span> <span class="k">set</span><span class="p">;</span> <span class="p">}</span>
+ 
+    <span class="p">}</span>
+<span class="p">}</span></code></pre></figure>
+
+<p>Bu tipte Class’ı kullanan bir öyle random metod yazdım, listeye manuel bir user ekliyor ve bunu da Repeater kontrolümüze vereceğiz.</p>
+
+<figure class="highlight"><pre><code class="language-csharp" data-lang="csharp"> 
+<span class="k">public</span> <span class="n">List</span><span class="p">&lt;</span><span class="n">Users</span><span class="p">&gt;</span> <span class="nf">CreateRandomUser</span><span class="p">()</span>
+<span class="p">{</span>
+            <span class="n">Users</span> <span class="n">user</span> <span class="p">=</span> <span class="k">new</span> <span class="nf">Users</span><span class="p">();</span>
+            <span class="n">user</span><span class="p">.</span><span class="n">ID</span> <span class="p">=</span> <span class="n">Guid</span><span class="p">.</span><span class="nf">NewGuid</span><span class="p">().</span><span class="nf">ToString</span><span class="p">();</span>
+            <span class="n">user</span><span class="p">.</span><span class="n">Name</span> <span class="p">=</span> <span class="s">"Akın"</span><span class="p">;</span>
+            <span class="n">user</span><span class="p">.</span><span class="n">Email</span> <span class="p">=</span> <span class="s">"akin@akinabdullahoglu.com"</span><span class="p">;</span>
+            <span class="n">List</span><span class="p">&lt;</span><span class="n">Users</span><span class="p">&gt;</span> <span class="n">myUsers</span> <span class="p">=</span> <span class="k">new</span> <span class="n">List</span><span class="p">&lt;</span><span class="n">Users</span><span class="p">&gt;();</span>
+            <span class="n">myUsers</span><span class="p">.</span><span class="nf">Add</span><span class="p">(</span><span class="n">user</span><span class="p">);</span>
+            <span class="k">return</span> <span class="n">myUsers</span><span class="p">;</span>
+<span class="p">}</span></code></pre></figure>
+
+<p>Evet yukarıda List tipinde döndürdüğümüz User Tipindeki Class’ımızı Repeater kontrolümüzün Datasource özelliğine bağlayıp, Repeater kontrolümüzü Databind() methodunu çağırarak dolduruyoruz.</p>
+
+<figure class="highlight"><pre><code class="language-csharp" data-lang="csharp"> 
+<span class="k">private</span> <span class="k">void</span> <span class="nf">GeneratePageItem</span><span class="p">()</span>
+<span class="p">{</span>
+    <span class="n">rptUserList</span><span class="p">.</span><span class="n">DataSource</span> <span class="p">=</span> <span class="nf">CreateRandomUser</span><span class="p">();</span>
+    <span class="n">rptUserList</span><span class="p">.</span><span class="nf">DataBind</span><span class="p">();</span>
+<span class="p">}</span></code></pre></figure>
+
+<p>Evet şu anda listemizde bir kayıt dönüyor ve 3 tane alanımızın olduğunu anlıyoruz. Burada değineceğimiz asıl nokta gelen kayıtlar içerisinden kullanıcı tarafından bizden farklı talepler istenilebilir, örneğin gelen UserName şu ise Kalın renkte olsun veya renkli olsun gibi bir çok şart daha eklenebilir bu listeye. Önceki konulardaki örneklerde Aspx tarafında repeater içerisinde if ve else kullanımına değinmiştim, fakat bazı durumlarda Aspx tarafındaki karmaşadan dolayı .Cs tarafında kontrol etmek gerekebiliyor. Bu kontrolü sağlamak için ise bize lazım olan özelliği Asp.Net Repeater kontrolümüze OnItemDataBound özelliği olarak vermiş bulunuyor. Yukarıda tanımladığım bu özelliğin kullanımında en çok hata yapılan noktalardan birisi direkt olarak kodu aşağıdaki gibi kullanıp, Repeater içerisindeki Html elementlerimizin sürekli null dönmesi ve bu problemi bazen bulmamız gerçekten fazlasıyla zor olmaktadır.</p>
+
+<p><img src="/Images/2014/12/repeater-on-item-databound-error.png" alt="enter image description here" /></p>
+
+<p>Bu hatanın sebebi ItemDataBound özelliğinin bizden hangi Section<code class="highlighter-rouge">(&lt;Header Template&gt; &lt;Item Template&gt;  &lt;Footer Template)</code> Itemları aradığımızı bizden şart olarak istemesinden kaynaklanmaktadır. Burada bir if şartında aradığımız html kontrollerinin hangi satırlarda döneceğini belirtmemiz gerekmektedir. Aşağıdaki örnekte göreceğiniz gibidir.</p>
+
+<p><img src="/Images/2014/12/repeater-on-item-databound-error1.png" alt="enter image description here" /></p>
+
+<p>Yukarıda gördüğünüz gibi Repeater içerisindeki <Item Template=""> section’ı içerisinde tanımladığımız kontrollerimize Repeater kontrolümüzün OnItemDataBound kısmında erişmiş bulunmaktayız. Artık HiddenField alanlarımıza eriştiğimize göre, Label kontrollerimize burada yakaladığımız değerlerin atamasını yapalım.</Item></p>
+
+<p>CreateRandomUser metodumuza aşağıdaki gibi ikinci kayıtımızı ekliyoruz.</p>
+
+<figure class="highlight"><pre><code class="language-csharp" data-lang="csharp"> 
+<span class="k">public</span> <span class="n">List</span><span class="p">&lt;</span><span class="n">Users</span><span class="p">&gt;</span> <span class="nf">CreateRandomUser</span><span class="p">()</span>
+<span class="p">{</span>
+    <span class="n">Users</span> <span class="n">user</span> <span class="p">=</span> <span class="k">new</span> <span class="nf">Users</span><span class="p">();</span>
+    <span class="n">user</span><span class="p">.</span><span class="n">ID</span> <span class="p">=</span> <span class="n">Guid</span><span class="p">.</span><span class="nf">NewGuid</span><span class="p">().</span><span class="nf">ToString</span><span class="p">();</span>
+    <span class="n">user</span><span class="p">.</span><span class="n">Name</span> <span class="p">=</span> <span class="s">"Akın"</span><span class="p">;</span>
+    <span class="n">user</span><span class="p">.</span><span class="n">Email</span> <span class="p">=</span> <span class="s">"akin@akinabdullahoglu.com"</span><span class="p">;</span>
+    <span class="n">List</span><span class="p">&lt;</span><span class="n">Users</span><span class="p">&gt;</span> <span class="n">myUsers</span> <span class="p">=</span> <span class="k">new</span> <span class="n">List</span><span class="p">&lt;</span><span class="n">Users</span><span class="p">&gt;();</span>
+    <span class="n">myUsers</span><span class="p">.</span><span class="nf">Add</span><span class="p">(</span><span class="n">user</span><span class="p">);</span>
+ 
+    <span class="n">Users</span> <span class="n">user2</span> <span class="p">=</span> <span class="k">new</span> <span class="nf">Users</span><span class="p">();</span>
+    <span class="n">user2</span><span class="p">.</span><span class="n">ID</span> <span class="p">=</span> <span class="n">Guid</span><span class="p">.</span><span class="nf">NewGuid</span><span class="p">().</span><span class="nf">ToString</span><span class="p">();</span>
+    <span class="n">user2</span><span class="p">.</span><span class="n">Name</span> <span class="p">=</span> <span class="s">"Yavuz Çetin"</span><span class="p">;</span>
+    <span class="n">user2</span><span class="p">.</span><span class="n">Email</span> <span class="p">=</span> <span class="s">"yavuz.cetin@yavuzcetin.com"</span><span class="p">;</span>
+    <span class="n">myUsers</span><span class="p">.</span><span class="nf">Add</span><span class="p">(</span><span class="n">user2</span><span class="p">);</span>
+    <span class="k">return</span> <span class="n">myUsers</span><span class="p">;</span>
+<span class="p">}</span></code></pre></figure>
+
+<p>Yukarıdaki gibi artık Repeater kontrolümüzde dönen iki tane kayıt oldu. Şimdi bu kayıtlardan ismi akın olanın belirli özelliklerini değiştirelim.</p>
+
+<figure class="highlight"><pre><code class="language-csharp" data-lang="csharp"> 
+
+<span class="k">protected</span> <span class="k">void</span> <span class="nf">rptUserList_ItemDataBound</span><span class="p">(</span><span class="kt">object</span> <span class="n">sender</span><span class="p">,</span> <span class="n">RepeaterItemEventArgs</span> <span class="n">e</span><span class="p">)</span>
+       <span class="p">{</span>
+           <span class="k">if</span> <span class="p">(</span><span class="n">e</span><span class="p">.</span><span class="n">Item</span><span class="p">.</span><span class="n">ItemType</span> <span class="p">==</span> <span class="n">ListItemType</span><span class="p">.</span><span class="n">Item</span> <span class="p">||</span> <span class="n">e</span><span class="p">.</span><span class="n">Item</span><span class="p">.</span><span class="n">ItemType</span> <span class="p">==</span> <span class="n">ListItemType</span><span class="p">.</span><span class="n">AlternatingItem</span><span class="p">)</span>
+           <span class="p">{</span>
+               <span class="n">HiddenField</span> <span class="n">hdnUserId</span> <span class="p">=</span> <span class="p">(</span><span class="n">HiddenField</span><span class="p">)</span><span class="n">e</span><span class="p">.</span><span class="n">Item</span><span class="p">.</span><span class="nf">FindControl</span><span class="p">(</span><span class="s">"hdnUserId"</span><span class="p">);</span>
+               <span class="n">HiddenField</span> <span class="n">hdnUserName</span> <span class="p">=</span> <span class="p">(</span><span class="n">HiddenField</span><span class="p">)</span><span class="n">e</span><span class="p">.</span><span class="n">Item</span><span class="p">.</span><span class="nf">FindControl</span><span class="p">(</span><span class="s">"hdnUserName"</span><span class="p">);</span>
+               <span class="n">HiddenField</span> <span class="n">hdnUserEmailAddress</span> <span class="p">=</span> <span class="p">(</span><span class="n">HiddenField</span><span class="p">)</span><span class="n">e</span><span class="p">.</span><span class="n">Item</span><span class="p">.</span><span class="nf">FindControl</span><span class="p">(</span><span class="s">"hdnUserEmailAddress"</span><span class="p">);</span>
+ 
+               <span class="n">Label</span> <span class="n">lblUserId</span> <span class="p">=</span> <span class="p">(</span><span class="n">Label</span><span class="p">)</span><span class="n">e</span><span class="p">.</span><span class="n">Item</span><span class="p">.</span><span class="nf">FindControl</span><span class="p">(</span><span class="s">"lblUserId"</span><span class="p">);</span>
+               <span class="n">Label</span> <span class="n">lblUserName</span> <span class="p">=</span> <span class="p">(</span><span class="n">Label</span><span class="p">)</span><span class="n">e</span><span class="p">.</span><span class="n">Item</span><span class="p">.</span><span class="nf">FindControl</span><span class="p">(</span><span class="s">"lblUserName"</span><span class="p">);</span>
+               <span class="n">Label</span> <span class="n">lblUserEmailAddress</span> <span class="p">=</span> <span class="p">(</span><span class="n">Label</span><span class="p">)</span><span class="n">e</span><span class="p">.</span><span class="n">Item</span><span class="p">.</span><span class="nf">FindControl</span><span class="p">(</span><span class="s">"lblUserEmailAddress"</span><span class="p">);</span>
+ 
+               <span class="n">lblUserId</span><span class="p">.</span><span class="n">Text</span> <span class="p">=</span> <span class="n">hdnUserId</span><span class="p">.</span><span class="n">Value</span><span class="p">;</span>
+               <span class="n">lblUserName</span><span class="p">.</span><span class="n">Text</span> <span class="p">=</span> <span class="n">hdnUserName</span><span class="p">.</span><span class="n">Value</span><span class="p">;</span>
+               <span class="n">lblUserEmailAddress</span><span class="p">.</span><span class="n">Text</span> <span class="p">=</span> <span class="n">hdnUserEmailAddress</span><span class="p">.</span><span class="n">Value</span><span class="p">;</span>
+ 
+               <span class="k">if</span><span class="p">(</span><span class="n">lblUserName</span><span class="p">.</span><span class="n">Text</span><span class="p">==</span><span class="s">"Akın"</span><span class="p">)</span>
+               <span class="p">{</span>
+                   <span class="n">lblUserName</span><span class="p">.</span><span class="n">ForeColor</span> <span class="p">=</span> <span class="n">System</span><span class="p">.</span><span class="n">Drawing</span><span class="p">.</span><span class="n">ColorTranslator</span><span class="p">.</span><span class="nf">FromHtml</span><span class="p">(</span><span class="s">"#ff6230"</span><span class="p">);</span>
+                   <span class="n">lblUserEmailAddress</span><span class="p">.</span><span class="n">ForeColor</span> <span class="p">=</span> <span class="n">System</span><span class="p">.</span><span class="n">Drawing</span><span class="p">.</span><span class="n">ColorTranslator</span><span class="p">.</span><span class="nf">FromHtml</span><span class="p">(</span><span class="s">"#ff6230"</span><span class="p">);</span>
+                   <span class="n">lblUserId</span><span class="p">.</span><span class="n">ForeColor</span> <span class="p">=</span> <span class="n">System</span><span class="p">.</span><span class="n">Drawing</span><span class="p">.</span><span class="n">ColorTranslator</span><span class="p">.</span><span class="nf">FromHtml</span><span class="p">(</span><span class="s">"#ff6230"</span><span class="p">);</span>
+               <span class="p">}</span>
+ 
+           <span class="p">}</span>
+<span class="p">}</span></code></pre></figure>
+
+<p>Yukarıda gördüğünüz gibi satırların her dönüşünde bir kontrolümüz var artık gelen kayıtlarımızı kontrol edip, Name özelliği “Akın” olan kayıt satırının, bazı özelliklerini örnek olarak değiştirdim. Siz bu örnekten çıkarak farklı ve mantığınıza göre yüzlerce senaryo üretebilirsiniz diye düşünüyorum.Şimdide eklediğimiz &lt;Header Template&gt; section’ımızı kontrol edelim. Aynı mantık ile yola çıkarak ListItemType Enum özelliğindeki gelen değerleri If kontrolümüze alarak, istediğimiz Sectiondaki satırları kontrol edebiliriz.</p>
+
+<figure class="highlight"><pre><code class="language-csharp" data-lang="csharp"> 
+
+<span class="k">protected</span> <span class="k">void</span> <span class="nf">rptUserList_ItemDataBound</span><span class="p">(</span><span class="kt">object</span> <span class="n">sender</span><span class="p">,</span> <span class="n">RepeaterItemEventArgs</span> <span class="n">e</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="k">if</span><span class="p">(</span><span class="n">e</span><span class="p">.</span><span class="n">Item</span><span class="p">.</span><span class="n">ItemType</span><span class="p">==</span><span class="n">ListItemType</span><span class="p">.</span><span class="n">Header</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="n">Label</span> <span class="n">lblTitleUserIdNumber</span> <span class="p">=</span> <span class="p">(</span><span class="n">Label</span><span class="p">)</span><span class="n">e</span><span class="p">.</span><span class="n">Item</span><span class="p">.</span><span class="nf">FindControl</span><span class="p">(</span><span class="s">"lblTitleUserIdNumber"</span><span class="p">);</span>
+        <span class="n">Label</span> <span class="n">lbTitlelUserName</span> <span class="p">=</span> <span class="p">(</span><span class="n">Label</span><span class="p">)</span><span class="n">e</span><span class="p">.</span><span class="n">Item</span><span class="p">.</span><span class="nf">FindControl</span><span class="p">(</span><span class="s">"lbTitlelUserName"</span><span class="p">);</span>
+        <span class="n">Label</span> <span class="n">lblTitleUserEmailAddress</span> <span class="p">=</span> <span class="p">(</span><span class="n">Label</span><span class="p">)</span><span class="n">e</span><span class="p">.</span><span class="n">Item</span><span class="p">.</span><span class="nf">FindControl</span><span class="p">(</span><span class="s">"lblTitleUserEmailAddress"</span><span class="p">);</span>
+ 
+        <span class="n">lblTitleUserIdNumber</span><span class="p">.</span><span class="n">Font</span><span class="p">.</span><span class="n">Bold</span> <span class="p">=</span> <span class="k">true</span><span class="p">;</span>
+        <span class="n">lbTitlelUserName</span><span class="p">.</span><span class="n">Font</span><span class="p">.</span><span class="n">Bold</span> <span class="p">=</span> <span class="k">true</span><span class="p">;</span>
+        <span class="n">lblTitleUserEmailAddress</span><span class="p">.</span><span class="n">Font</span><span class="p">.</span><span class="n">Bold</span> <span class="p">=</span> <span class="k">true</span><span class="p">;</span>
+    <span class="p">}</span>
+ 
+    <span class="k">if</span> <span class="p">(</span><span class="n">e</span><span class="p">.</span><span class="n">Item</span><span class="p">.</span><span class="n">ItemType</span> <span class="p">==</span> <span class="n">ListItemType</span><span class="p">.</span><span class="n">Item</span> <span class="p">||</span> <span class="n">e</span><span class="p">.</span><span class="n">Item</span><span class="p">.</span><span class="n">ItemType</span> <span class="p">==</span> <span class="n">ListItemType</span><span class="p">.</span><span class="n">AlternatingItem</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="n">HiddenField</span> <span class="n">hdnUserId</span> <span class="p">=</span> <span class="p">(</span><span class="n">HiddenField</span><span class="p">)</span><span class="n">e</span><span class="p">.</span><span class="n">Item</span><span class="p">.</span><span class="nf">FindControl</span><span class="p">(</span><span class="s">"hdnUserId"</span><span class="p">);</span>
+        <span class="n">HiddenField</span> <span class="n">hdnUserName</span> <span class="p">=</span> <span class="p">(</span><span class="n">HiddenField</span><span class="p">)</span><span class="n">e</span><span class="p">.</span><span class="n">Item</span><span class="p">.</span><span class="nf">FindControl</span><span class="p">(</span><span class="s">"hdnUserName"</span><span class="p">);</span>
+        <span class="n">HiddenField</span> <span class="n">hdnUserEmailAddress</span> <span class="p">=</span> <span class="p">(</span><span class="n">HiddenField</span><span class="p">)</span><span class="n">e</span><span class="p">.</span><span class="n">Item</span><span class="p">.</span><span class="nf">FindControl</span><span class="p">(</span><span class="s">"hdnUserEmailAddress"</span><span class="p">);</span>
+ 
+        <span class="n">Label</span> <span class="n">lblUserId</span> <span class="p">=</span> <span class="p">(</span><span class="n">Label</span><span class="p">)</span><span class="n">e</span><span class="p">.</span><span class="n">Item</span><span class="p">.</span><span class="nf">FindControl</span><span class="p">(</span><span class="s">"lblUserId"</span><span class="p">);</span>
+        <span class="n">Label</span> <span class="n">lblUserName</span> <span class="p">=</span> <span class="p">(</span><span class="n">Label</span><span class="p">)</span><span class="n">e</span><span class="p">.</span><span class="n">Item</span><span class="p">.</span><span class="nf">FindControl</span><span class="p">(</span><span class="s">"lblUserName"</span><span class="p">);</span>
+        <span class="n">Label</span> <span class="n">lblUserEmailAddress</span> <span class="p">=</span> <span class="p">(</span><span class="n">Label</span><span class="p">)</span><span class="n">e</span><span class="p">.</span><span class="n">Item</span><span class="p">.</span><span class="nf">FindControl</span><span class="p">(</span><span class="s">"lblUserEmailAddress"</span><span class="p">);</span>
+ 
+        <span class="n">lblUserId</span><span class="p">.</span><span class="n">Text</span> <span class="p">=</span> <span class="n">hdnUserId</span><span class="p">.</span><span class="n">Value</span><span class="p">;</span>
+        <span class="n">lblUserName</span><span class="p">.</span><span class="n">Text</span> <span class="p">=</span> <span class="n">hdnUserName</span><span class="p">.</span><span class="n">Value</span><span class="p">;</span>
+        <span class="n">lblUserEmailAddress</span><span class="p">.</span><span class="n">Text</span> <span class="p">=</span> <span class="n">hdnUserEmailAddress</span><span class="p">.</span><span class="n">Value</span><span class="p">;</span>
+ 
+        <span class="k">if</span><span class="p">(</span><span class="n">lblUserName</span><span class="p">.</span><span class="n">Text</span><span class="p">==</span><span class="s">"Akın"</span><span class="p">)</span>
+        <span class="p">{</span>
+            <span class="n">lblUserName</span><span class="p">.</span><span class="n">ForeColor</span> <span class="p">=</span> <span class="n">System</span><span class="p">.</span><span class="n">Drawing</span><span class="p">.</span><span class="n">ColorTranslator</span><span class="p">.</span><span class="nf">FromHtml</span><span class="p">(</span><span class="s">"#ff6230"</span><span class="p">);</span>
+            <span class="n">lblUserEmailAddress</span><span class="p">.</span><span class="n">ForeColor</span> <span class="p">=</span> <span class="n">System</span><span class="p">.</span><span class="n">Drawing</span><span class="p">.</span><span class="n">ColorTranslator</span><span class="p">.</span><span class="nf">FromHtml</span><span class="p">(</span><span class="s">"#ff6230"</span><span class="p">);</span>
+            <span class="n">lblUserId</span><span class="p">.</span><span class="n">ForeColor</span> <span class="p">=</span> <span class="n">System</span><span class="p">.</span><span class="n">Drawing</span><span class="p">.</span><span class="n">ColorTranslator</span><span class="p">.</span><span class="nf">FromHtml</span><span class="p">(</span><span class="s">"#ff6230"</span><span class="p">);</span>
+        <span class="p">}</span>
+ 
+    <span class="p">}</span>
+<span class="p">}</span></code></pre></figure>
+
+<p>Yukarıdaki yazdığımız kodun ekran görüntüsü aşağıdaki gibi olacaktır.</p>
+
+<p><img src="/Images/2014/12/Repeater-Preview.png" alt="enter image description here" /></p>
+
+<p>Evet arkadaşlar biraz uzun soluklu bir yazı oldu, sizlere Repeater kontrolünün Section, OnItemDataBound ve diğer birkaç özelliğini umarım anlatabilmişimdir. Bir hata veya sorularınız için her zaman bana yazabilirsiniz.</p>
+
+<iframe width="420" height="315" src="https://www.youtube.com/embed/yKNxeF4KMsY?ecver=1" frameborder="0" allowfullscreen=""></iframe>
+
+<p>İyi dinlemeler.  :smile:</p>
+
+
+  </div>
+    <a href="https://twitter.com/rootturk?ref_src=twsrc%5Etfw" data-url ="http://www.akinabdullahoglu.com/Repeater-Kontrolunun-Detaylarina-Giris/" class="twitter-follow-button" data-show-count="false">Follow @rootturk</a><script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+  
+    
+  
+</article>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">Akın Abdullahoğlu - Software Developer</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li>
+            
+              Akın Abdullahoğlu - Software Developer
+            
+            </li>
+            
+            <li><a href="mailto:akin@akinabdullahoglu.com">akin@akinabdullahoglu.com</a></li>
+            
+        </ul>
+      </div>
+
+      <div class="footer-col footer-col-2">
+        <ul class="social-media-list">
+          
+          <li>
+            <a href="https://github.com/rootturk"><span class="icon icon--github"><svg viewBox="0 0 16 16" width="16px" height="16px"><path fill="#828282" d="M7.999,0.431c-4.285,0-7.76,3.474-7.76,7.761 c0,3.428,2.223,6.337,5.307,7.363c0.388,0.071,0.53-0.168,0.53-0.374c0-0.184-0.007-0.672-0.01-1.32 c-2.159,0.469-2.614-1.04-2.614-1.04c-0.353-0.896-0.862-1.135-0.862-1.135c-0.705-0.481,0.053-0.472,0.053-0.472 c0.779,0.055,1.189,0.8,1.189,0.8c0.692,1.186,1.816,0.843,2.258,0.645c0.071-0.502,0.271-0.843,0.493-1.037 C4.86,11.425,3.049,10.76,3.049,7.786c0-0.847,0.302-1.54,0.799-2.082C3.768,5.507,3.501,4.718,3.924,3.65 c0,0,0.652-0.209,2.134,0.796C6.677,4.273,7.34,4.187,8,4.184c0.659,0.003,1.323,0.089,1.943,0.261 c1.482-1.004,2.132-0.796,2.132-0.796c0.423,1.068,0.157,1.857,0.077,2.054c0.497,0.542,0.798,1.235,0.798,2.082 c0,2.981-1.814,3.637-3.543,3.829c0.279,0.24,0.527,0.713,0.527,1.437c0,1.037-0.01,1.874-0.01,2.129 c0,0.208,0.14,0.449,0.534,0.373c3.081-1.028,5.302-3.935,5.302-7.362C15.76,3.906,12.285,0.431,7.999,0.431z"/></svg>
+</span><span class="username">rootturk</span></a>
+
+          </li>
+          
+
+          
+          <li>
+            <a href="https://twitter.com/rootturk"><span class="icon icon--twitter"><svg viewBox="0 0 16 16" width="16px" height="16px"><path fill="#828282" d="M15.969,3.058c-0.586,0.26-1.217,0.436-1.878,0.515c0.675-0.405,1.194-1.045,1.438-1.809c-0.632,0.375-1.332,0.647-2.076,0.793c-0.596-0.636-1.446-1.033-2.387-1.033c-1.806,0-3.27,1.464-3.27,3.27 c0,0.256,0.029,0.506,0.085,0.745C5.163,5.404,2.753,4.102,1.14,2.124C0.859,2.607,0.698,3.168,0.698,3.767 c0,1.134,0.577,2.135,1.455,2.722C1.616,6.472,1.112,6.325,0.671,6.08c0,0.014,0,0.027,0,0.041c0,1.584,1.127,2.906,2.623,3.206 C3.02,9.402,2.731,9.442,2.433,9.442c-0.211,0-0.416-0.021-0.615-0.059c0.416,1.299,1.624,2.245,3.055,2.271 c-1.119,0.877-2.529,1.4-4.061,1.4c-0.264,0-0.524-0.015-0.78-0.046c1.447,0.928,3.166,1.469,5.013,1.469 c6.015,0,9.304-4.983,9.304-9.304c0-0.142-0.003-0.283-0.009-0.423C14.976,4.29,15.531,3.714,15.969,3.058z"/></svg>
+</span><span class="username">rootturk</span></a>
+
+          </li>
+          
+        </ul>
+      </div>
+
+      <div class="footer-col footer-col-3">
+        <p>Yazılım Geliştiricisi, Blogger, Open-Source Lover</p>
+      </div>
+    </div>
+
+  </div>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+      <script>window.twttr = (function(d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0],
+      t = window.twttr || {};
+      if (d.getElementById(id)) return t;
+      js = d.createElement(s);
+      js.id = id;
+      js.src = "https://platform.twitter.com/widgets.js";
+      fjs.parentNode.insertBefore(js, fjs);
+
+      t._e = [];
+      t.ready = function(f) {
+      t._e.push(f);
+      };
+
+      return t;
+      }(document, "script", "twitter-wjs"));
+  </script>
+  <div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v2.10";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+</footer>
+
+  </body>
+
+</html>

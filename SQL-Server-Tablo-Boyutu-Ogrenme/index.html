@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <link rel="canonical" href=" http://localhost:4000">
   <title>
-     ben
+     SQL Server Tablo Boyutunu Öğrenme
     
   </title>
   <meta name="description" content="Yazılım Geliştiricisi, Blogger, Open-Source Lover">
@@ -72,20 +72,42 @@
 
     <main class="page-content" aria-label="Content">
       <div class="wrapper">
-        <article class="post">
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
 
   <header class="post-header">
-    <h1 class="post-title">ben</h1>
-  </header>
 
-  <div class="post-content">
-    <p>Merhaba Arkadaş!</p>
+    <h1 class="post-title" itemprop="name headline">SQL Server Tablo Boyutunu Öğrenme</h1>
+      <div class="js-social-button pull-right">
+      <a class="twitter-share-button" data-via="rootturk" 
+      data-lang="tr" data-url ="http://www.akinabdullahoglu.com/SQL-Server-Tablo-Boyutu-Ogrenme/" data-size="large"
+        href="https://twitter.com/share">
+      </a></a>
+      </div>
+    <p class="post-meta">
+      <time datetime="2016-01-18T16:35:41+02:00" itemprop="datePublished">
+        
+        Jan 18, 2016
+      </time>
+      </p>
+  </header>
+  <div class="post-content" itemprop="articleBody">
+    <p>Merhaba arkadaşlar, bu yazımda Sql server üzerindeki bir tablomuzun veri boyutunu nasıl öğreneceğimizi kısaca anlatacağım. Bunun için SQL Server 2012 sürümünün bize sunduğu bir store procedure var bu prosedürü kullanarak tablomuzun detaylı boyutlarını alabiliyoruz. Kullanım olarak aşağıdaki örnek üzerinden yola çıkabilirsiniz.</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sp_spaceused 'tblExceptions'
+</code></pre></div></div>
+
+<p>Yukarıdaki gibi sp_spaceused store prosedürü ile tblExceptions tablosunun detaylarını getirmeyi amaçlıyoruz. Yukarıdaki sorguyu SQL Server üzerinde Yeni Sorgu penceresi açıp yapıştırdıktan sonra tablo adınızı girip çalıştırdığınızda aşağıdaki gibi  bir sonuç penceresi gelecektir.</p>
+
+<p><img src="/Images/2015/03/store_procedure.png" alt="enter image description here" /></p>
 
 
   </div>
+    <a href="https://twitter.com/rootturk?ref_src=twsrc%5Etfw" data-url ="http://www.akinabdullahoglu.com/SQL-Server-Tablo-Boyutu-Ogrenme/" class="twitter-follow-button" data-show-count="false">Follow @rootturk</a><script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
 
+  
+    
+  
 </article>
-
       </div>
     </main>
 
