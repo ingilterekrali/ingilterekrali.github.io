@@ -20,8 +20,8 @@
 <title>Gitignore Nasıl Oluşturulur ve Kullanılır? | Akın Abdullahoğlu.</title>
 <meta property="og:title" content="Gitignore Nasıl Oluşturulur ve Kullanılır?" />
 <meta property="og:locale" content="en_US" />
-<meta name="description" content="Programlama,NoSql, programlama hakkında yazılar,Java, C#,Git ,Açık kaynak, Kişisel Yazılar, Software Developer, Full Stack Developer" />
-<meta property="og:description" content="Programlama,NoSql, programlama hakkında yazılar,Java, C#,Git ,Açık kaynak, Kişisel Yazılar, Software Developer, Full Stack Developer" />
+<meta name="description" content="Merhaba arkadaşlar, .git ile ilgili yazılarımın devamı olarak bu yazımda yine birlikteyiz. Öncelikle Git conflict problemi ile ilgili 2 önceki yazımda bir örnek vermiştim. Öncelikle conflict nedir onu tanımlayalım. Kendi lokal repomuz ile sunucuya aktardığımız repomuzun ikisinin aynı anda farklı değişikliklere gebe kalması durumunda oluşan dosya çakışmaları, eksik dosyalar ve buna benzer durumlar conflict hatasına neden olur. Bu tabii ki kullanım aksiyonuna göre değişkenlik gösterebilmektedir, ekip olarak kullanımlarda pull yapılmadan gönderilme durumları ve benzer durumlar conflict problemine yol açar. Bu durum da bizim projenin hataya düşmesine, eksik dosya oluşmasına ve buna benzer birçok problemin çıkmasına sebebiyet vermektedir. Genellikle Derlenen programlama dillerinde her build işlemi sonrasında geçici dosyalar oluşmaktadır. Örnek verecek olursak .NET Platformu üzerinde geliştirme yapanlar bilirler kod her derlendiğinde temporary yani geçici dosyalar oluşur ve bu dosyalar hep farklı isimlerde tutulmaktadır. Böyle bir durum oluşması da bizim git server üzerinde tutulan dosya yapımızda bozukluklara karışıklıklara yol açabilir. İşte bu yüzden .git server diğer source-control sistemlerinde olduğu gibi bir filtreleme mekanizması olan .gitignore dosyasını tanımlamıştır. Bu dosya içerisine projenin mimari yapısını etkilemeyecek (geçici dosyalar, sisteme bağımlı olmayan dosyalar, gönderilmesine gerek olmayan dizinler vb.) klasörler ya da dosyalar eklenerek filtreleme yapılır ve oluşturduğumuz repository altına bu dosyaların gitmesi engellenir. Bu da temiz bir repo yapısını ve conflict durumlarını en aza indirir. Sağlıklı bir şekilde push ve pull işlemleri yapıyorsak bir problem ile karşılaşma durumumuz çok aza indirgenmiş olacaktır." />
+<meta property="og:description" content="Merhaba arkadaşlar, .git ile ilgili yazılarımın devamı olarak bu yazımda yine birlikteyiz. Öncelikle Git conflict problemi ile ilgili 2 önceki yazımda bir örnek vermiştim. Öncelikle conflict nedir onu tanımlayalım. Kendi lokal repomuz ile sunucuya aktardığımız repomuzun ikisinin aynı anda farklı değişikliklere gebe kalması durumunda oluşan dosya çakışmaları, eksik dosyalar ve buna benzer durumlar conflict hatasına neden olur. Bu tabii ki kullanım aksiyonuna göre değişkenlik gösterebilmektedir, ekip olarak kullanımlarda pull yapılmadan gönderilme durumları ve benzer durumlar conflict problemine yol açar. Bu durum da bizim projenin hataya düşmesine, eksik dosya oluşmasına ve buna benzer birçok problemin çıkmasına sebebiyet vermektedir. Genellikle Derlenen programlama dillerinde her build işlemi sonrasında geçici dosyalar oluşmaktadır. Örnek verecek olursak .NET Platformu üzerinde geliştirme yapanlar bilirler kod her derlendiğinde temporary yani geçici dosyalar oluşur ve bu dosyalar hep farklı isimlerde tutulmaktadır. Böyle bir durum oluşması da bizim git server üzerinde tutulan dosya yapımızda bozukluklara karışıklıklara yol açabilir. İşte bu yüzden .git server diğer source-control sistemlerinde olduğu gibi bir filtreleme mekanizması olan .gitignore dosyasını tanımlamıştır. Bu dosya içerisine projenin mimari yapısını etkilemeyecek (geçici dosyalar, sisteme bağımlı olmayan dosyalar, gönderilmesine gerek olmayan dizinler vb.) klasörler ya da dosyalar eklenerek filtreleme yapılır ve oluşturduğumuz repository altına bu dosyaların gitmesi engellenir. Bu da temiz bir repo yapısını ve conflict durumlarını en aza indirir. Sağlıklı bir şekilde push ve pull işlemleri yapıyorsak bir problem ile karşılaşma durumumuz çok aza indirgenmiş olacaktır." />
 <link rel="canonical" href="http://www.akinabdullahoglu.com/Gitignore-Nasil-Olusturulur-ve-Kullanilir/" />
 <meta property="og:url" content="http://www.akinabdullahoglu.com/Gitignore-Nasil-Olusturulur-ve-Kullanilir/" />
 <meta property="og:site_name" content="Akın Abdullahoğlu." />
@@ -30,7 +30,7 @@
 <meta name="twitter:card" content="summary" />
 <meta name="twitter:site" content="@rootturk" />
 <script type="application/ld+json">
-{"name":null,"description":"Programlama,NoSql, programlama hakkında yazılar,Java, C#,Git ,Açık kaynak, Kişisel Yazılar, Software Developer, Full Stack Developer","author":null,"@type":"BlogPosting","url":"http://www.akinabdullahoglu.com/Gitignore-Nasil-Olusturulur-ve-Kullanilir/","publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"http://www.akinabdullahoglu.com/Images/2016/02/akin-abdullahoglu.png"}},"image":null,"headline":"Gitignore Nasıl Oluşturulur ve Kullanılır?","dateModified":"2016-10-22T17:35:41+03:00","datePublished":"2016-10-22T17:35:41+03:00","sameAs":null,"mainEntityOfPage":{"@type":"WebPage","@id":"http://www.akinabdullahoglu.com/Gitignore-Nasil-Olusturulur-ve-Kullanilir/"},"@context":"http://schema.org"}</script>
+{"name":null,"description":"Merhaba arkadaşlar, .git ile ilgili yazılarımın devamı olarak bu yazımda yine birlikteyiz. Öncelikle Git conflict problemi ile ilgili 2 önceki yazımda bir örnek vermiştim. Öncelikle conflict nedir onu tanımlayalım. Kendi lokal repomuz ile sunucuya aktardığımız repomuzun ikisinin aynı anda farklı değişikliklere gebe kalması durumunda oluşan dosya çakışmaları, eksik dosyalar ve buna benzer durumlar conflict hatasına neden olur. Bu tabii ki kullanım aksiyonuna göre değişkenlik gösterebilmektedir, ekip olarak kullanımlarda pull yapılmadan gönderilme durumları ve benzer durumlar conflict problemine yol açar. Bu durum da bizim projenin hataya düşmesine, eksik dosya oluşmasına ve buna benzer birçok problemin çıkmasına sebebiyet vermektedir. Genellikle Derlenen programlama dillerinde her build işlemi sonrasında geçici dosyalar oluşmaktadır. Örnek verecek olursak .NET Platformu üzerinde geliştirme yapanlar bilirler kod her derlendiğinde temporary yani geçici dosyalar oluşur ve bu dosyalar hep farklı isimlerde tutulmaktadır. Böyle bir durum oluşması da bizim git server üzerinde tutulan dosya yapımızda bozukluklara karışıklıklara yol açabilir. İşte bu yüzden .git server diğer source-control sistemlerinde olduğu gibi bir filtreleme mekanizması olan .gitignore dosyasını tanımlamıştır. Bu dosya içerisine projenin mimari yapısını etkilemeyecek (geçici dosyalar, sisteme bağımlı olmayan dosyalar, gönderilmesine gerek olmayan dizinler vb.) klasörler ya da dosyalar eklenerek filtreleme yapılır ve oluşturduğumuz repository altına bu dosyaların gitmesi engellenir. Bu da temiz bir repo yapısını ve conflict durumlarını en aza indirir. Sağlıklı bir şekilde push ve pull işlemleri yapıyorsak bir problem ile karşılaşma durumumuz çok aza indirgenmiş olacaktır.","author":null,"@type":"BlogPosting","url":"http://www.akinabdullahoglu.com/Gitignore-Nasil-Olusturulur-ve-Kullanilir/","publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"http://www.akinabdullahoglu.com/Images/2016/02/akin-abdullahoglu.png"}},"image":null,"headline":"Gitignore Nasıl Oluşturulur ve Kullanılır?","dateModified":"2016-10-22T17:35:41+03:00","datePublished":"2016-10-22T17:35:41+03:00","sameAs":null,"mainEntityOfPage":{"@type":"WebPage","@id":"http://www.akinabdullahoglu.com/Gitignore-Nasil-Olusturulur-ve-Kullanilir/"},"@context":"http://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 </head>
@@ -62,24 +62,45 @@
         </label>
 
         <div class="trigger">
+      
+          <!--
+            my_page.autogen is populated by the pagination logic for all pages
+                            that are automatically created by the gem. Check for non-existence to exclude pagination pages from site.pages iterators
+          -->
           
-            
-            
+        
+          <!--
+            my_page.autogen is populated by the pagination logic for all pages
+                            that are automatically created by the gem. Check for non-existence to exclude pagination pages from site.pages iterators
+          -->
           
-            
-            
-            <a class="page-link" href="/hakkimda/">Hakkımda</a>
-            
+          <a class="page-link" href="/hakkimda/">Hakkımda</a>
           
-            
-            
+        
+          <!--
+            my_page.autogen is populated by the pagination logic for all pages
+                            that are automatically created by the gem. Check for non-existence to exclude pagination pages from site.pages iterators
+          -->
           
-            
-            
+        
+          <!--
+            my_page.autogen is populated by the pagination logic for all pages
+                            that are automatically created by the gem. Check for non-existence to exclude pagination pages from site.pages iterators
+          -->
           
-            
-            
+        
+          <!--
+            my_page.autogen is populated by the pagination logic for all pages
+                            that are automatically created by the gem. Check for non-existence to exclude pagination pages from site.pages iterators
+          -->
           
+        
+          <!--
+            my_page.autogen is populated by the pagination logic for all pages
+                            that are automatically created by the gem. Check for non-existence to exclude pagination pages from site.pages iterators
+          -->
+          
+        
         <a target="_blank" class="page-link" href="http://www.twitter.com/rootturk">twitter</a>
                 <a target="_blank" class="page-link" href="mailto:akin@akinabdullahoglu.com">email</a>
                         <a target="_blank" class="page-link" href="https://docs.google.com/forms/d/e/1FAIpQLSebtzndGQg9M_w_LEx17PhaN2MD61Ay9a96aJpuYh38Q-RE-g/viewform?embedded=true">iletişim</a>
@@ -109,9 +130,7 @@
       </p>
   </header>
   <div class="post-content" itemprop="articleBody">
-    <p><img src="/Images/2016/02/git_logo.png" width="200" height="150" /></p>
-
-<p>Merhaba arkadaşlar, .git ile ilgili yazılarımın devamı olarak bu yazımda yine birlikteyiz. Öncelikle Git conflict problemi ile ilgili 2 önceki yazımda bir örnek vermiştim. Öncelikle conflict nedir onu tanımlayalım. Kendi lokal repomuz ile sunucuya aktardığımız repomuzun ikisinin aynı anda farklı değişikliklere gebe kalması durumunda oluşan dosya çakışmaları, eksik dosyalar ve buna benzer durumlar conflict hatasına neden olur. Bu tabii ki kullanım aksiyonuna göre değişkenlik gösterebilmektedir, ekip olarak kullanımlarda pull yapılmadan gönderilme durumları ve benzer durumlar conflict problemine yol açar. Bu durum da bizim projenin hataya düşmesine, eksik dosya oluşmasına ve buna benzer birçok problemin çıkmasına sebebiyet vermektedir. Genellikle Derlenen programlama dillerinde her build işlemi sonrasında geçici dosyalar oluşmaktadır. Örnek verecek olursak .NET Platformu üzerinde geliştirme yapanlar bilirler kod her derlendiğinde temporary yani geçici dosyalar oluşur ve bu dosyalar hep farklı isimlerde tutulmaktadır. Böyle bir durum oluşması da bizim git server üzerinde tutulan dosya yapımızda bozukluklara karışıklıklara yol açabilir. İşte bu yüzden .git server diğer source-control sistemlerinde olduğu gibi bir filtreleme mekanizması olan .gitignore dosyasını tanımlamıştır. Bu dosya içerisine projenin mimari yapısını etkilemeyecek (geçici dosyalar, sisteme bağımlı olmayan dosyalar, gönderilmesine gerek olmayan dizinler vb.) klasörler ya da dosyalar eklenerek filtreleme yapılır ve oluşturduğumuz repository altına bu dosyaların gitmesi engellenir. Bu da temiz bir repo yapısını ve conflict durumlarını en aza indirir. Sağlıklı bir şekilde push ve pull işlemleri yapıyorsak bir problem ile karşılaşma durumumuz çok aza indirgenmiş olacaktır.</p>
+    <p>Merhaba arkadaşlar, <strong>.git</strong> ile ilgili yazılarımın devamı olarak bu yazımda yine birlikteyiz. Öncelikle Git conflict problemi ile ilgili 2 önceki yazımda bir örnek vermiştim. Öncelikle conflict nedir onu tanımlayalım. Kendi lokal repomuz ile sunucuya aktardığımız repomuzun ikisinin aynı anda farklı değişikliklere gebe kalması durumunda oluşan dosya çakışmaları, eksik dosyalar ve buna benzer durumlar conflict hatasına neden olur. Bu tabii ki kullanım aksiyonuna göre değişkenlik gösterebilmektedir, ekip olarak kullanımlarda pull yapılmadan gönderilme durumları ve benzer durumlar conflict problemine yol açar. Bu durum da bizim projenin hataya düşmesine, eksik dosya oluşmasına ve buna benzer birçok problemin çıkmasına sebebiyet vermektedir. Genellikle Derlenen programlama dillerinde her build işlemi sonrasında geçici dosyalar oluşmaktadır. Örnek verecek olursak .NET Platformu üzerinde geliştirme yapanlar bilirler kod her derlendiğinde temporary yani geçici dosyalar oluşur ve bu dosyalar hep farklı isimlerde tutulmaktadır. Böyle bir durum oluşması da bizim git server üzerinde tutulan dosya yapımızda bozukluklara karışıklıklara yol açabilir. İşte bu yüzden .git server diğer source-control sistemlerinde olduğu gibi bir filtreleme mekanizması olan .gitignore dosyasını tanımlamıştır. Bu dosya içerisine projenin mimari yapısını etkilemeyecek (geçici dosyalar, sisteme bağımlı olmayan dosyalar, gönderilmesine gerek olmayan dizinler vb.) klasörler ya da dosyalar eklenerek filtreleme yapılır ve oluşturduğumuz repository altına bu dosyaların gitmesi engellenir. Bu da temiz bir repo yapısını ve conflict durumlarını en aza indirir. Sağlıklı bir şekilde push ve pull işlemleri yapıyorsak bir problem ile karşılaşma durumumuz çok aza indirgenmiş olacaktır.</p>
 
 <p>Ben sizlere kendimin de kullandığı bir servisi önereceğim.
 <strong>https://www.gitignore.io/</strong> linkinden servisi açtıktan sonra örnek olarak <strong>VisualStudio</strong> girelim.</p>

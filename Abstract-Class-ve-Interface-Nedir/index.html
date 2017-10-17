@@ -62,24 +62,45 @@
         </label>
 
         <div class="trigger">
+      
+          <!--
+            my_page.autogen is populated by the pagination logic for all pages
+                            that are automatically created by the gem. Check for non-existence to exclude pagination pages from site.pages iterators
+          -->
           
-            
-            
+        
+          <!--
+            my_page.autogen is populated by the pagination logic for all pages
+                            that are automatically created by the gem. Check for non-existence to exclude pagination pages from site.pages iterators
+          -->
           
-            
-            
-            <a class="page-link" href="/hakkimda/">Hakkımda</a>
-            
+          <a class="page-link" href="/hakkimda/">Hakkımda</a>
           
-            
-            
+        
+          <!--
+            my_page.autogen is populated by the pagination logic for all pages
+                            that are automatically created by the gem. Check for non-existence to exclude pagination pages from site.pages iterators
+          -->
           
-            
-            
+        
+          <!--
+            my_page.autogen is populated by the pagination logic for all pages
+                            that are automatically created by the gem. Check for non-existence to exclude pagination pages from site.pages iterators
+          -->
           
-            
-            
+        
+          <!--
+            my_page.autogen is populated by the pagination logic for all pages
+                            that are automatically created by the gem. Check for non-existence to exclude pagination pages from site.pages iterators
+          -->
           
+        
+          <!--
+            my_page.autogen is populated by the pagination logic for all pages
+                            that are automatically created by the gem. Check for non-existence to exclude pagination pages from site.pages iterators
+          -->
+          
+        
         <a target="_blank" class="page-link" href="http://www.twitter.com/rootturk">twitter</a>
                 <a target="_blank" class="page-link" href="mailto:akin@akinabdullahoglu.com">email</a>
                         <a target="_blank" class="page-link" href="https://docs.google.com/forms/d/e/1FAIpQLSebtzndGQg9M_w_LEx17PhaN2MD61Ay9a96aJpuYh38Q-RE-g/viewform?embedded=true">iletişim</a>
@@ -111,11 +132,13 @@
   <div class="post-content" itemprop="articleBody">
     <p>Merhaba arkadaşlar, bugün sizlerle paylaşmak istediğim konu C# programlama dili içerisinde bulunan <strong>Class</strong> ve <strong>Interface</strong> yapıları ve aralarındaki farklar hakkında olacak. Öncelikle <strong>Class</strong>(Sınıf) nedir bu konuya değinelim, Class içerisinde metotlar, değişkenler hatta yine sınıf tanımlarının yapılabildiği Object Oriented Programlama dilinin temelini oluşturan bir yapıdır. Aşağıdaki örnekte bir Users adında bir sınıfımız ve içerisinde <strong>getter</strong> ve <strong>setter</strong> tanımlı olan iki public değişkenimiz var.</p>
 
-<figure class="highlight"><pre><code class="language-csharp" data-lang="csharp"> <span class="k">public</span> <span class="k">class</span> <span class="nc">Users</span> <span class="p">{</span>
+<figure class="highlight"><pre><code class="language-csharp" data-lang="csharp"> 
 
-<span class="k">public</span> <span class="kt">string</span> <span class="n">userName</span> <span class="p">{</span><span class="k">get</span><span class="p">;</span><span class="k">set</span><span class="p">;}</span>
+<span class="k">public</span> <span class="k">class</span> <span class="nc">Users</span> <span class="p">{</span>
 
-<span class="k">public</span> <span class="kt">string</span> <span class="n">userEmail</span> <span class="p">{</span><span class="k">get</span><span class="p">;</span><span class="k">set</span><span class="p">;}</span>
+    <span class="k">public</span> <span class="kt">string</span> <span class="n">userName</span> <span class="p">{</span><span class="k">get</span><span class="p">;</span><span class="k">set</span><span class="p">;}</span>
+
+    <span class="k">public</span> <span class="kt">string</span> <span class="n">userEmail</span> <span class="p">{</span><span class="k">get</span><span class="p">;</span><span class="k">set</span><span class="p">;}</span>
 
 <span class="p">}</span></code></pre></figure>
 
@@ -123,13 +146,13 @@
 
 <figure class="highlight"><pre><code class="language-csharp" data-lang="csharp"> 
 
-<span class="k">public</span> <span class="n">Interface</span> <span class="n">IUsers</span><span class="p">{</span>
+<span class="k">public</span> <span class="n">Interface</span> <span class="n">IUsers</span> <span class="p">{</span>
 
-<span class="n">User</span> <span class="nf">getUsersByName</span><span class="p">(</span><span class="kt">string</span> <span class="n">name</span><span class="p">);</span>
+    <span class="n">User</span> <span class="nf">getUsersByName</span><span class="p">(</span><span class="kt">string</span> <span class="n">name</span><span class="p">);</span>
 
-<span class="n">User</span> <span class="nf">getUsersByEmail</span><span class="p">(</span><span class="kt">string</span> <span class="n">email</span><span class="p">);</span>
+    <span class="n">User</span> <span class="nf">getUsersByEmail</span><span class="p">(</span><span class="kt">string</span> <span class="n">email</span><span class="p">);</span>
 
-<span class="n">User</span> <span class="nf">getUsersById</span><span class="p">(</span><span class="kt">int</span> <span class="n">id</span><span class="p">)</span>
+    <span class="n">User</span> <span class="nf">getUsersById</span><span class="p">(</span><span class="kt">int</span> <span class="n">id</span><span class="p">)</span>
 
 <span class="p">}</span></code></pre></figure>
 
@@ -157,11 +180,13 @@
 
 <p>Yukarıdaki örnekte <strong>IUser</strong> ve <strong>IUserLogs</strong> interface(arayüzleri) UserService class’ına <strong>implement</strong> edilmiştir. Interface tanımlarken ilk harf olarak <strong>I</strong> harfini kod zorunlu kılmaz fakat geliştirici kuralları açısından doğru kullanım bu şekildedir. <strong>Interface ile ilgili basit bir örnek :</strong></p>
 
-<figure class="highlight"><pre><code class="language-csharp" data-lang="csharp"> <span class="k">interface</span> <span class="nc">IUser</span>
+<figure class="highlight"><pre><code class="language-csharp" data-lang="csharp"> 
+    <span class="k">interface</span> <span class="nc">IUser</span>
     <span class="p">{</span>
         <span class="k">void</span> <span class="nf">getUsers</span><span class="p">(</span><span class="kt">string</span> <span class="n">name</span><span class="p">);</span>
         <span class="kt">string</span> <span class="nf">getUserEmailById</span><span class="p">(</span><span class="kt">string</span> <span class="n">id</span><span class="p">);</span>
     <span class="p">}</span>
+
     <span class="k">interface</span> <span class="nc">IUserLogs</span>
     <span class="p">{</span>
         <span class="kt">int</span> <span class="nf">getUserEntryCountById</span><span class="p">(</span><span class="kt">int</span> <span class="n">id</span><span class="p">);</span>
@@ -170,6 +195,7 @@
     <span class="k">class</span> <span class="nc">UserService</span><span class="p">:</span><span class="n">IUser</span><span class="p">,</span> <span class="n">IUserLogs</span>
     <span class="p">{</span>
         <span class="n">DBEntities</span> <span class="n">db</span> <span class="p">=</span> <span class="k">new</span> <span class="nf">DBEntities</span><span class="p">();</span>
+
         <span class="k">public</span> <span class="k">void</span> <span class="nf">getUsers</span><span class="p">(</span><span class="kt">string</span> <span class="n">name</span><span class="p">)</span>
         <span class="p">{</span>
 
