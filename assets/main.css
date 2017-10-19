@@ -178,11 +178,10 @@ table {
 .site-header {
   border-top: 5px solid #424242;
   border-bottom: 1px solid #e8e8e8;
-  min-height: 55.95px;
   position: relative; }
 
 .site-title {
-  font-size: 17.4px;
+  font-size: 20px;
   line-height: 40.5px;
   letter-spacing: -1px;
   margin-bottom: 0;
