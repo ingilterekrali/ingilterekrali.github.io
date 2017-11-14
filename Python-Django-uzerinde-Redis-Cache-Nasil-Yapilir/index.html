@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <link rel="canonical" href=" http://www.akinabdullahoglu.com">
   <title>
-     Yoğun Çalışma Dönemine Girdim
+     Python Django Üzerinde Redis Cache Nasıl Yapılır?
     
   </title>
   <meta name="description" content="Yazılım geliştiricisi, blogger, gamer">
@@ -17,20 +17,20 @@
   <link rel="alternate" type="application/rss+xml" title="Akin Abdullahoglu" href="/feed.xml">
 
   <!-- Begin Jekyll SEO tag v2.3.0 -->
-<title>Yoğun Çalışma Dönemine Girdim | Akın Abdullahoğlu.</title>
-<meta property="og:title" content="Yoğun Çalışma Dönemine Girdim" />
+<title>Python Django Üzerinde Redis Cache Nasıl Yapılır? | Akın Abdullahoğlu.</title>
+<meta property="og:title" content="Python Django Üzerinde Redis Cache Nasıl Yapılır?" />
 <meta property="og:locale" content="en_US" />
-<meta name="description" content="Merhaba arkadaşlar, uzun zamandır yazı yazamıyorum. Bunun birkaç sebebi olsa da genel olarak çalışma olarak yoğun bir dönem geçirdiğim ve biraz kendime zaman ayırmam gerektiğini düşünüyordum. Gerçekten insan çok büyük bir yoğunluk içerisine girdiğinde günlerin nasıl geçtiğini, zamanın nasıl aktığını ve haftada hangi günde olduğunu dahi unutabiliyor. Fakat insan en büyük tecrübelerini de bu dönemlerde ediniyor diye düşünüyorum. Bu yoğunlukta bana kız arkadaşım ve arkadaşlarım çok destek oldular. Gerçekten insanın kendisine destek veren arkadaşlarının olması çok güzel bir şey diye düşünüyorum. Yazılarıma gelince en kısa zamanda yazılarıma başlayacağım ve edindiğim tecrübeleri ve kişisel paylaşımlarımı yayınlamaya başlayacağım." />
-<meta property="og:description" content="Merhaba arkadaşlar, uzun zamandır yazı yazamıyorum. Bunun birkaç sebebi olsa da genel olarak çalışma olarak yoğun bir dönem geçirdiğim ve biraz kendime zaman ayırmam gerektiğini düşünüyordum. Gerçekten insan çok büyük bir yoğunluk içerisine girdiğinde günlerin nasıl geçtiğini, zamanın nasıl aktığını ve haftada hangi günde olduğunu dahi unutabiliyor. Fakat insan en büyük tecrübelerini de bu dönemlerde ediniyor diye düşünüyorum. Bu yoğunlukta bana kız arkadaşım ve arkadaşlarım çok destek oldular. Gerçekten insanın kendisine destek veren arkadaşlarının olması çok güzel bir şey diye düşünüyorum. Yazılarıma gelince en kısa zamanda yazılarıma başlayacağım ve edindiğim tecrübeleri ve kişisel paylaşımlarımı yayınlamaya başlayacağım." />
-<link rel="canonical" href="http://www.akinabdullahoglu.com/Yogun-Calisma-Donemine-Girdim/" />
-<meta property="og:url" content="http://www.akinabdullahoglu.com/Yogun-Calisma-Donemine-Girdim/" />
+<meta name="description" content="Merhaba arkadaşlar, yakın zamanlarda Python programlama dilini kullanarak bir projeye başladım ve Django framework kullanma deneyimi elde ettim. Bu yazımda Django uygulaması üzerinde Redis ile nasıl haberleşebiliriz bu konuyu aktarmaya çalışacağım." />
+<meta property="og:description" content="Merhaba arkadaşlar, yakın zamanlarda Python programlama dilini kullanarak bir projeye başladım ve Django framework kullanma deneyimi elde ettim. Bu yazımda Django uygulaması üzerinde Redis ile nasıl haberleşebiliriz bu konuyu aktarmaya çalışacağım." />
+<link rel="canonical" href="http://www.akinabdullahoglu.com/Python-Django-uzerinde-Redis-Cache-Nasil-Yapilir/" />
+<meta property="og:url" content="http://www.akinabdullahoglu.com/Python-Django-uzerinde-Redis-Cache-Nasil-Yapilir/" />
 <meta property="og:site_name" content="Akın Abdullahoğlu." />
 <meta property="og:type" content="article" />
-<meta property="article:published_time" content="2015-05-13T17:35:41+03:00" />
+<meta property="article:published_time" content="2017-11-14T05:52:41+03:00" />
 <meta name="twitter:card" content="summary" />
 <meta name="twitter:site" content="@rootturk" />
 <script type="application/ld+json">
-{"name":null,"description":"Merhaba arkadaşlar, uzun zamandır yazı yazamıyorum. Bunun birkaç sebebi olsa da genel olarak çalışma olarak yoğun bir dönem geçirdiğim ve biraz kendime zaman ayırmam gerektiğini düşünüyordum. Gerçekten insan çok büyük bir yoğunluk içerisine girdiğinde günlerin nasıl geçtiğini, zamanın nasıl aktığını ve haftada hangi günde olduğunu dahi unutabiliyor. Fakat insan en büyük tecrübelerini de bu dönemlerde ediniyor diye düşünüyorum. Bu yoğunlukta bana kız arkadaşım ve arkadaşlarım çok destek oldular. Gerçekten insanın kendisine destek veren arkadaşlarının olması çok güzel bir şey diye düşünüyorum. Yazılarıma gelince en kısa zamanda yazılarıma başlayacağım ve edindiğim tecrübeleri ve kişisel paylaşımlarımı yayınlamaya başlayacağım.","author":null,"@type":"BlogPosting","url":"http://www.akinabdullahoglu.com/Yogun-Calisma-Donemine-Girdim/","publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"http://www.akinabdullahoglu.com/Images/2016/02/akin-abdullahoglu.png"}},"image":null,"headline":"Yoğun Çalışma Dönemine Girdim","dateModified":"2015-05-13T17:35:41+03:00","datePublished":"2015-05-13T17:35:41+03:00","sameAs":null,"mainEntityOfPage":{"@type":"WebPage","@id":"http://www.akinabdullahoglu.com/Yogun-Calisma-Donemine-Girdim/"},"@context":"http://schema.org"}</script>
+{"name":null,"description":"Merhaba arkadaşlar, yakın zamanlarda Python programlama dilini kullanarak bir projeye başladım ve Django framework kullanma deneyimi elde ettim. Bu yazımda Django uygulaması üzerinde Redis ile nasıl haberleşebiliriz bu konuyu aktarmaya çalışacağım.","author":null,"@type":"BlogPosting","url":"http://www.akinabdullahoglu.com/Python-Django-uzerinde-Redis-Cache-Nasil-Yapilir/","publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"http://www.akinabdullahoglu.com/Images/2016/02/akin-abdullahoglu.png"}},"image":null,"headline":"Python Django Üzerinde Redis Cache Nasıl Yapılır?","dateModified":"2017-11-14T05:52:41+03:00","datePublished":"2017-11-14T05:52:41+03:00","sameAs":null,"mainEntityOfPage":{"@type":"WebPage","@id":"http://www.akinabdullahoglu.com/Python-Django-uzerinde-Redis-Cache-Nasil-Yapilir/"},"@context":"http://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 </head>
@@ -101,28 +101,121 @@
 
   <header class="post-header">
 
-    <h1 class="post-title" itemprop="name headline">Yoğun Çalışma Dönemine Girdim</h1>
+    <h1 class="post-title" itemprop="name headline">Python Django Üzerinde Redis Cache Nasıl Yapılır?</h1>
       <div class="js-social-button pull-right">
       <a class="twitter-share-button" data-via="rootturk" 
-      data-lang="tr" data-url ="http://www.akinabdullahoglu.com/Yogun-Calisma-Donemine-Girdim/" data-size="large"
+      data-lang="tr" data-url ="http://www.akinabdullahoglu.com/Python-Django-uzerinde-Redis-Cache-Nasil-Yapilir/" data-size="large"
         href="https://twitter.com/share">
       </a></a>
       </div>
     <p class="post-meta">
-      <time datetime="2015-05-13T17:35:41+03:00" itemprop="datePublished">
+      <time datetime="2017-11-14T05:52:41+03:00" itemprop="datePublished">
         
-        May 13, 2015
+        Nov 14, 2017
       </time>
       </p>
   </header>
   <div class="post-content" itemprop="articleBody">
-    <p>Merhaba arkadaşlar, uzun zamandır yazı yazamıyorum. Bunun birkaç sebebi olsa da genel olarak çalışma olarak yoğun bir dönem geçirdiğim ve biraz kendime zaman ayırmam gerektiğini düşünüyordum. Gerçekten insan çok büyük bir yoğunluk içerisine girdiğinde günlerin nasıl geçtiğini, zamanın nasıl aktığını ve haftada hangi günde olduğunu dahi unutabiliyor. Fakat insan en büyük tecrübelerini de bu dönemlerde ediniyor diye düşünüyorum. Bu yoğunlukta bana kız arkadaşım ve arkadaşlarım çok destek oldular. Gerçekten insanın kendisine destek veren arkadaşlarının olması çok güzel bir şey diye düşünüyorum. Yazılarıma gelince en kısa zamanda yazılarıma başlayacağım ve edindiğim tecrübeleri ve kişisel paylaşımlarımı yayınlamaya başlayacağım.</p>
+    <p>Merhaba arkadaşlar, yakın zamanlarda <strong>Python</strong> programlama dilini kullanarak bir projeye başladım ve <strong>Django framework</strong> kullanma deneyimi elde ettim. Bu yazımda <strong>Django</strong> uygulaması üzerinde <strong>Redis</strong> ile nasıl haberleşebiliriz bu konuyu aktarmaya çalışacağım.</p>
 
-<p>Saygı ve sevgiyle.</p>
+<p><img src="/Images/django-redis-cache.png" alt="enter image description here" /></p>
 
+<p>Bir önceki yazımda <strong>OS-X</strong> üzerinde <strong>Redis</strong> kurulumunu aktarmıştım, bu yazımda yine OS-X üzerinden ilerleyeceğim, eğer kurulu değil ise onu okuyarak başlangıç yapabilirsiniz.</p>
+
+<p>Eğer zaten kurulu ise konsol da <strong>redis-cli</strong> <strong>ping</strong> komutunu yazıp <strong>PONG</strong> döndüğünü görürseniz devam edebilirsiniz.</p>
+
+<p><strong><a href="https://tutorial.djangogirls.org/tr/installation/#bir-virtualenv-kurun-ve-djangoyu-y%C3%BCkleyin">Virtual Enviroment nedir?</a></strong> bu kaynaktan okuyarak anlayabilirsiniz.</p>
+
+<p><strong>Temel gereksinimler:</strong></p>
+
+<ul>
+  <li>Redis</li>
+  <li>Python</li>
+  <li>Virtual Enviroment (Zorunlu olmasa da kurulu olması iyi olur.)</li>
+</ul>
+
+<p>Projenizin de oluşturulduğunu düşünürsek <strong>virtualenv</strong> ile  devam edebiliriz.</p>
+
+<p>Aşağıdaki komutta bulunan <strong>eskvenv</strong> yerine sizin verdiğiniz <strong>enviroment</strong> isminiz olacak.</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>source eskvenv/bin/activate
+</code></pre></div></div>
+
+<p>Proje kaynak klasörünüzde yukarıdaki komutu çalıştırın. Çalıştırdıktan sonra aşağıdaki gibi bir dönüş olacaktır.</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>(eskvenv) ➜
+</code></pre></div></div>
+
+<p>sonrasında aşağıdaki komutu kullanarak, python django için geliştirilen, django redis ekletisini kuracağız.</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ pip install django-redis-cache 
+</code></pre></div></div>
+
+<p>bu komutu yazdıktan sonra redis cache eklentisi eskvenv  bağımlılığında bir kurulum yapacaktır geneli etkilemeyecektir. Kurulum bittikten sonra, projemizde bulunan settings.py dosyamıza aşağıdaki tanımı yapalım.</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>CACHES = {
+"default": {
+    "BACKEND": "django_redis.cache.RedisCache",
+    "LOCATION": "redis://127.0.0.1:6379",
+    "OPTIONS": {
+        "CLIENT_CLASS": "django_redis.client.DefaultClient",
+    }
+  }
+}
+</code></pre></div></div>
+
+<p><strong>LOCATION</strong> özelliğindeki sunucu adresi farklılık gösterebilir bunun için konsolda aşağıda ki komutu yazalım.</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>redis-cli
+</code></pre></div></div>
+
+<p>Konsolda bizim geçerli olan redis sunucu konsolumuza geçiş yapacaktır. Birden fazla client varsa aşağıdaki komut işe yarayabilir.</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>redis-cli client list
+</code></pre></div></div>
+
+<p><strong>CACHES</strong> tanımını yaptıktan sonra kod kısmında nasıl kullanacağımıza geçelim.</p>
+
+<p><strong>cacheUtils.py</strong> dosyamızın olduğunu varsayarsak aşağıda ki gibi bir aşagıdaki fonksyinlar basit olarak işimizi görecektir.</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>--&gt; cache sınıfını import edelim.
+from django.core.cache import cache
+
+Key-Value bir cache tutmak istiyorsak direk set komutunu kullanabiliriz.
+cache.set('cache-key', 'bu bir cache key değeridir..')
+
+Key-Value tanımlanan değeri redis üzerinden almak için
+cache.get('cache-key') # eğer cache var ise değerini getirecektir.
+
+Birden fazla değer set etmek için:
+cache.set_many({'yellow': 250, 'blue': 350, 'white': 450})
+
+Birden fazla değeri getirmek için:
+cache.get_many(['blue', 'yellow', 'white']) 
+# dönecek değerler {'blue': 350, 'yellow': 250, 'white': 450}
+
+Complex tipleri tutmak için:
+cache.set('cache-key', {
+    'string'    : 'elma bir meyvedir.',
+    'int'       : 9876,
+    'list'      : [32, 23, 35, 65],
+    'dict'      : {'Y': 9, 'X' : 5, 'Z':98},
+    'tuple'     : (9, 8, 7, 6),
+   
+})
+</code></pre></div></div>
+
+<p>Kısaca size Python ve Django kullanarak Redis üzerine veri yazmayı ve okumayı basit olarak aktarmaya çalıştım.</p>
+
+<p>Umarım faydalı bir içerik olmuştur.</p>
+
+<p>Sevgilerle.
+Akın.</p>
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/XfAW4KpyWQo" frameborder="0" allowfullscreen=""></iframe>
 
   </div>
-    <a href="https://twitter.com/rootturk?ref_src=twsrc%5Etfw" data-url ="http://www.akinabdullahoglu.com/Yogun-Calisma-Donemine-Girdim/" class="twitter-follow-button" data-show-count="false">Follow @rootturk</a><script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+    <a href="https://twitter.com/rootturk?ref_src=twsrc%5Etfw" data-url ="http://www.akinabdullahoglu.com/Python-Django-uzerinde-Redis-Cache-Nasil-Yapilir/" class="twitter-follow-button" data-show-count="false">Follow @rootturk</a><script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
 
   
     
@@ -130,8 +223,8 @@
   <div id="disqus_thread"></div>
   <script>
     var disqus_config = function () {
-      this.page.url = 'http://www.akinabdullahoglu.com/Yogun-Calisma-Donemine-Girdim/';
-      this.page.identifier = 'http://www.akinabdullahoglu.com/Yogun-Calisma-Donemine-Girdim/';
+      this.page.url = 'http://www.akinabdullahoglu.com/Python-Django-uzerinde-Redis-Cache-Nasil-Yapilir/';
+      this.page.identifier = 'http://www.akinabdullahoglu.com/Python-Django-uzerinde-Redis-Cache-Nasil-Yapilir/';
     };
     (function() {
       var d = document, s = d.createElement('script');

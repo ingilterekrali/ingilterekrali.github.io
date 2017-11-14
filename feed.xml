@@ -1,4 +1,100 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.6.2">Jekyll</generator><link href="http://www.akinabdullahoglu.com/feed.xml" rel="self" type="application/atom+xml" /><link href="http://www.akinabdullahoglu.com/" rel="alternate" type="text/html" /><updated>2017-11-14T05:52:13+03:00</updated><id>http://www.akinabdullahoglu.com/</id><title type="html">Akın Abdullahoğlu.</title><subtitle>Programlama,NoSql, programlama hakkında yazılar,Java, C#,Git ,Açık kaynak, Kişisel Yazılar, Software Developer, Full Stack Developer</subtitle><entry><title type="html">OS-X Üzerinde Redis Server Kurulumu</title><link href="http://www.akinabdullahoglu.com/OS-X-Uzerinde-Redis-Server-Kurulumu/" rel="alternate" type="text/html" title="OS-X Üzerinde Redis Server Kurulumu" /><published>2017-11-09T04:19:41+03:00</published><updated>2017-11-09T04:19:41+03:00</updated><id>http://www.akinabdullahoglu.com/%20OS-X-Uzerinde-Redis-Server-Kurulumu</id><content type="html" xml:base="http://www.akinabdullahoglu.com/OS-X-Uzerinde-Redis-Server-Kurulumu/">&lt;p&gt;Merhaba arkadaşlar, eğer bu konuya ulaştıysanız redis’in az çok ne yaptığı hakkında bilginiz vardır diye düşünüyorum. Redis, Memcache, Hazelcast genel olarak data cache sunucusu olarak kullanılan teknolojilerdir. Hepsinin birbirine göre birçok farkı vardır size en uygun olanını probleminize göre seçeceğiniz için bu kısmı size bırakıyorum. Biz &lt;strong&gt;OS X&lt;/strong&gt; üzerinde &lt;strong&gt;package manager&lt;/strong&gt; olarak kullanılan &lt;strong&gt;homebrew&lt;/strong&gt; ile sistemimize &lt;strong&gt;Redis Server&lt;/strong&gt; kurulumunu gerçekleştireceğiz.&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.6.2">Jekyll</generator><link href="http://www.akinabdullahoglu.com/feed.xml" rel="self" type="application/atom+xml" /><link href="http://www.akinabdullahoglu.com/" rel="alternate" type="text/html" /><updated>2017-11-14T06:00:12+03:00</updated><id>http://www.akinabdullahoglu.com/</id><title type="html">Akın Abdullahoğlu.</title><subtitle>Programlama,NoSql, programlama hakkında yazılar,Java, C#,Git ,Açık kaynak, Kişisel Yazılar, Software Developer, Full Stack Developer</subtitle><entry><title type="html">Python Django Üzerinde Redis Cache Nasıl Yapılır?</title><link href="http://www.akinabdullahoglu.com/Python-Django-uzerinde-Redis-Cache-Nasil-Yapilir/" rel="alternate" type="text/html" title="Python Django Üzerinde Redis Cache Nasıl Yapılır?" /><published>2017-11-14T05:52:41+03:00</published><updated>2017-11-14T05:52:41+03:00</updated><id>http://www.akinabdullahoglu.com/Python-Django-uzerinde-Redis-Cache-Nasil-Yapilir?%20</id><content type="html" xml:base="http://www.akinabdullahoglu.com/Python-Django-uzerinde-Redis-Cache-Nasil-Yapilir/">&lt;p&gt;Merhaba arkadaşlar, yakın zamanlarda &lt;strong&gt;Python&lt;/strong&gt; programlama dilini kullanarak bir projeye başladım ve &lt;strong&gt;Django framework&lt;/strong&gt; kullanma deneyimi elde ettim. Bu yazımda &lt;strong&gt;Django&lt;/strong&gt; uygulaması üzerinde &lt;strong&gt;Redis&lt;/strong&gt; ile nasıl haberleşebiliriz bu konuyu aktarmaya çalışacağım.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/Images/django-redis-cache.png&quot; alt=&quot;enter image description here&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Bir önceki yazımda &lt;strong&gt;OS-X&lt;/strong&gt; üzerinde &lt;strong&gt;Redis&lt;/strong&gt; kurulumunu aktarmıştım, bu yazımda yine OS-X üzerinden ilerleyeceğim, eğer kurulu değil ise onu okuyarak başlangıç yapabilirsiniz.&lt;/p&gt;
+
+&lt;p&gt;Eğer zaten kurulu ise konsol da &lt;strong&gt;redis-cli&lt;/strong&gt; &lt;strong&gt;ping&lt;/strong&gt; komutunu yazıp &lt;strong&gt;PONG&lt;/strong&gt; döndüğünü görürseniz devam edebilirsiniz.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;&lt;a href=&quot;https://tutorial.djangogirls.org/tr/installation/#bir-virtualenv-kurun-ve-djangoyu-y%C3%BCkleyin&quot;&gt;Virtual Enviroment nedir?&lt;/a&gt;&lt;/strong&gt; bu kaynaktan okuyarak anlayabilirsiniz.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Temel gereksinimler:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Redis&lt;/li&gt;
+  &lt;li&gt;Python&lt;/li&gt;
+  &lt;li&gt;Virtual Enviroment (Zorunlu olmasa da kurulu olması iyi olur.)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Projenizin de oluşturulduğunu düşünürsek &lt;strong&gt;virtualenv&lt;/strong&gt; ile  devam edebiliriz.&lt;/p&gt;
+
+&lt;p&gt;Aşağıdaki komutta bulunan &lt;strong&gt;eskvenv&lt;/strong&gt; yerine sizin verdiğiniz &lt;strong&gt;enviroment&lt;/strong&gt; isminiz olacak.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;source eskvenv/bin/activate
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Proje kaynak klasörünüzde yukarıdaki komutu çalıştırın. Çalıştırdıktan sonra aşağıdaki gibi bir dönüş olacaktır.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;(eskvenv) ➜
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;sonrasında aşağıdaki komutu kullanarak, python django için geliştirilen, django redis ekletisini kuracağız.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ pip install django-redis-cache 
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;bu komutu yazdıktan sonra redis cache eklentisi eskvenv  bağımlılığında bir kurulum yapacaktır geneli etkilemeyecektir. Kurulum bittikten sonra, projemizde bulunan settings.py dosyamıza aşağıdaki tanımı yapalım.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;CACHES = {
+&quot;default&quot;: {
+    &quot;BACKEND&quot;: &quot;django_redis.cache.RedisCache&quot;,
+    &quot;LOCATION&quot;: &quot;redis://127.0.0.1:6379&quot;,
+    &quot;OPTIONS&quot;: {
+        &quot;CLIENT_CLASS&quot;: &quot;django_redis.client.DefaultClient&quot;,
+    }
+  }
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;strong&gt;LOCATION&lt;/strong&gt; özelliğindeki sunucu adresi farklılık gösterebilir bunun için konsolda aşağıda ki komutu yazalım.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;redis-cli
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Konsolda bizim geçerli olan redis sunucu konsolumuza geçiş yapacaktır. Birden fazla client varsa aşağıdaki komut işe yarayabilir.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;redis-cli client list
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;strong&gt;CACHES&lt;/strong&gt; tanımını yaptıktan sonra kod kısmında nasıl kullanacağımıza geçelim.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;cacheUtils.py&lt;/strong&gt; dosyamızın olduğunu varsayarsak aşağıda ki gibi bir aşagıdaki fonksyinlar basit olarak işimizi görecektir.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;--&amp;gt; cache sınıfını import edelim.
+from django.core.cache import cache
+
+Key-Value bir cache tutmak istiyorsak direk set komutunu kullanabiliriz.
+cache.set('cache-key', 'bu bir cache key değeridir..')
+
+Key-Value tanımlanan değeri redis üzerinden almak için
+cache.get('cache-key') # eğer cache var ise değerini getirecektir.
+
+Birden fazla değer set etmek için:
+cache.set_many({'yellow': 250, 'blue': 350, 'white': 450})
+
+Birden fazla değeri getirmek için:
+cache.get_many(['blue', 'yellow', 'white']) 
+# dönecek değerler {'blue': 350, 'yellow': 250, 'white': 450}
+
+Complex tipleri tutmak için:
+cache.set('cache-key', {
+    'string'    : 'elma bir meyvedir.',
+    'int'       : 9876,
+    'list'      : [32, 23, 35, 65],
+    'dict'      : {'Y': 9, 'X' : 5, 'Z':98},
+    'tuple'     : (9, 8, 7, 6),
+   
+})
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Kısaca size Python ve Django kullanarak Redis üzerine veri yazmayı ve okumayı basit olarak aktarmaya çalıştım.&lt;/p&gt;
+
+&lt;p&gt;Umarım faydalı bir içerik olmuştur.&lt;/p&gt;
+
+&lt;p&gt;Sevgilerle.
+Akın.&lt;/p&gt;
+
+&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/XfAW4KpyWQo&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;</content><author><name></name></author><summary type="html">Merhaba arkadaşlar, yakın zamanlarda Python programlama dilini kullanarak bir projeye başladım ve Django framework kullanma deneyimi elde ettim. Bu yazımda Django uygulaması üzerinde Redis ile nasıl haberleşebiliriz bu konuyu aktarmaya çalışacağım.</summary></entry><entry><title type="html">OS-X Üzerinde Redis Server Kurulumu</title><link href="http://www.akinabdullahoglu.com/OS-X-Uzerinde-Redis-Server-Kurulumu/" rel="alternate" type="text/html" title="OS-X Üzerinde Redis Server Kurulumu" /><published>2017-11-09T04:19:41+03:00</published><updated>2017-11-09T04:19:41+03:00</updated><id>http://www.akinabdullahoglu.com/%20OS-X-Uzerinde-Redis-Server-Kurulumu</id><content type="html" xml:base="http://www.akinabdullahoglu.com/OS-X-Uzerinde-Redis-Server-Kurulumu/">&lt;p&gt;Merhaba arkadaşlar, eğer bu konuya ulaştıysanız redis’in az çok ne yaptığı hakkında bilginiz vardır diye düşünüyorum. Redis, Memcache, Hazelcast genel olarak data cache sunucusu olarak kullanılan teknolojilerdir. Hepsinin birbirine göre birçok farkı vardır size en uygun olanını probleminize göre seçeceğiniz için bu kısmı size bırakıyorum. Biz &lt;strong&gt;OS X&lt;/strong&gt; üzerinde &lt;strong&gt;package manager&lt;/strong&gt; olarak kullanılan &lt;strong&gt;homebrew&lt;/strong&gt; ile sistemimize &lt;strong&gt;Redis Server&lt;/strong&gt; kurulumunu gerçekleştireceğiz.&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;https://upload.wikimedia.org/wikipedia/en/thumb/6/6b/Redis_Logo.svg/1200px-Redis_Logo.svg.png&quot; style=&quot;width:50%&quot; /&gt;&lt;/p&gt;
 
@@ -727,11 +823,4 @@ https://msdn.microsoft.com/en-us/library/dd264741.aspx&lt;/p&gt;
 &lt;iframe width=&quot;420&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/DozVdtbMuM8?ecver=1&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
 
 &lt;p&gt;&lt;strong&gt;Alıntı yaptığım kaynaklar.&lt;/strong&gt;
-&lt;a href=&quot;http://www.codeproject.com/Tips/460614/Difference-between-var-and-dynamic-in-Csharp&quot;&gt;Code Project : Var Type Vs Dynamic Type&lt;/a&gt;&lt;/p&gt;</content><author><name></name></author><summary type="html">Merhabalar arkadaşlar, bugün ki yazımda C# Programlama dilinde kullanılan Var ve Dynamic tipleri arasında bir karşılaştırma yaparak özelliklerine bakacağız. Var keyword u C# 3.0 sürümünde kazanılmış bir tiptir. Dynamic tipi ise C# 4.0 sürümünde kazanılmıştır. Var tipi ile dynamic tipinin farkını aşağıdaki örnek üzerinde anlaşılabileceğini düşünüyorum. var tipinde olan data değişkenine “Text” metni string formatında atanıyor ve data değişkeni artık string türünden bir değişken oluyor fakat sonraki satırda data değişkenine integer 5 atamaya çalıştığımızda hataya düşüyor, sebebi ise derleme anında var tipi aldığı tipi bilmek zorundadır. Dynamic tipine baktığımızda ilk olarak string “Text” metnini alıyor ve sonrasında integer 5 alıyor, en son da string tipinden list atanarak hatasız bir şekilde derlenecek hale geliyor. Sebebi dynamic tipi dinamik olarak gelen değer türüne dönüşmektedir ve bu özellikte bir çok yerde gerçekten kullanışlı olmaktadır.</summary></entry><entry><title type="html">SQL Server Tablo Boyutunu Öğrenme</title><link href="http://www.akinabdullahoglu.com/SQL-Server-Tablo-Boyutu-Ogrenme/" rel="alternate" type="text/html" title="SQL Server Tablo Boyutunu Öğrenme" /><published>2016-01-18T16:35:41+02:00</published><updated>2016-01-18T16:35:41+02:00</updated><id>http://www.akinabdullahoglu.com/SQL%20Server%20Tablo%20Boyutu%20Ogrenme</id><content type="html" xml:base="http://www.akinabdullahoglu.com/SQL-Server-Tablo-Boyutu-Ogrenme/">&lt;p&gt;Merhaba arkadaşlar, bu yazımda Sql server üzerindeki bir tablomuzun veri boyutunu nasıl öğreneceğimizi kısaca anlatacağım. Bunun için SQL Server 2012 sürümünün bize sunduğu bir store procedure var bu prosedürü kullanarak tablomuzun detaylı boyutlarını alabiliyoruz. Kullanım olarak aşağıdaki örnek üzerinden yola çıkabilirsiniz.&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;sp_spaceused 'tblExceptions'
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;Yukarıdaki gibi sp_spaceused store prosedürü ile tblExceptions tablosunun detaylarını getirmeyi amaçlıyoruz. Yukarıdaki sorguyu SQL Server üzerinde Yeni Sorgu penceresi açıp yapıştırdıktan sonra tablo adınızı girip çalıştırdığınızda aşağıdaki gibi  bir sonuç penceresi gelecektir.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/Images/2015/03/store_procedure.png&quot; alt=&quot;enter image description here&quot; /&gt;&lt;/p&gt;</content><author><name></name></author><summary type="html">Merhaba arkadaşlar, bu yazımda Sql server üzerindeki bir tablomuzun veri boyutunu nasıl öğreneceğimizi kısaca anlatacağım. Bunun için SQL Server 2012 sürümünün bize sunduğu bir store procedure var bu prosedürü kullanarak tablomuzun detaylı boyutlarını alabiliyoruz. Kullanım olarak aşağıdaki örnek üzerinden yola çıkabilirsiniz.</summary></entry></feed>
+&lt;a href=&quot;http://www.codeproject.com/Tips/460614/Difference-between-var-and-dynamic-in-Csharp&quot;&gt;Code Project : Var Type Vs Dynamic Type&lt;/a&gt;&lt;/p&gt;</content><author><name></name></author><summary type="html">Merhabalar arkadaşlar, bugün ki yazımda C# Programlama dilinde kullanılan Var ve Dynamic tipleri arasında bir karşılaştırma yaparak özelliklerine bakacağız. Var keyword u C# 3.0 sürümünde kazanılmış bir tiptir. Dynamic tipi ise C# 4.0 sürümünde kazanılmıştır. Var tipi ile dynamic tipinin farkını aşağıdaki örnek üzerinde anlaşılabileceğini düşünüyorum. var tipinde olan data değişkenine “Text” metni string formatında atanıyor ve data değişkeni artık string türünden bir değişken oluyor fakat sonraki satırda data değişkenine integer 5 atamaya çalıştığımızda hataya düşüyor, sebebi ise derleme anında var tipi aldığı tipi bilmek zorundadır. Dynamic tipine baktığımızda ilk olarak string “Text” metnini alıyor ve sonrasında integer 5 alıyor, en son da string tipinden list atanarak hatasız bir şekilde derlenecek hale geliyor. Sebebi dynamic tipi dinamik olarak gelen değer türüne dönüşmektedir ve bu özellikte bir çok yerde gerçekten kullanışlı olmaktadır.</summary></entry></feed>
