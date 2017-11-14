@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="canonical" href=" http://www.akinabdullahoglu.com">
+  <title>
+     Bitbucket kullanarak git repository oluşturma ve commit işlemleri 
+    
+  </title>
+  <meta name="description" content="Yazılım geliştiricisi, blogger, gamer">
+  <meta name="keywords" content="Java, C#, Concurrency, Açık kaynak,Javascript, MongoDb, Linux-Unix sistemler, Kişisel yazılar, Software Developer, Multi-Thread, Dağıtıĸ Sistemler, Kemaliye">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="/assets/main.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="alternate" type="application/rss+xml" title="Akin Abdullahoglu" href="/feed.xml">
+
+  <!-- Begin Jekyll SEO tag v2.3.0 -->
+<title>Bitbucket kullanarak git repository oluşturma ve commit işlemleri | Akın Abdullahoğlu.</title>
+<meta property="og:title" content="Bitbucket kullanarak git repository oluşturma ve commit işlemleri" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Merhaba arkadaşlar önceki yazım olan Bitbucket Nedir? yazısının serisine devam olan bu yazımda Bitbucket üzerinde bir repository oluşturup ilk projemizi bu repomuza göndereceğiz. Öncelikle izlenilmesi gereken adımları tekrar hatırlayalım." />
+<meta property="og:description" content="Merhaba arkadaşlar önceki yazım olan Bitbucket Nedir? yazısının serisine devam olan bu yazımda Bitbucket üzerinde bir repository oluşturup ilk projemizi bu repomuza göndereceğiz. Öncelikle izlenilmesi gereken adımları tekrar hatırlayalım." />
+<link rel="canonical" href="http://www.akinabdullahoglu.com/Bitbucket-u-zerinde-Repository-Olus-turma-ve-Commit-I-s-lemleri/" />
+<meta property="og:url" content="http://www.akinabdullahoglu.com/Bitbucket-u-zerinde-Repository-Olus-turma-ve-Commit-I-s-lemleri/" />
+<meta property="og:site_name" content="Akın Abdullahoğlu." />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2016-04-03T17:35:41+03:00" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:site" content="@rootturk" />
+<script type="application/ld+json">
+{"name":null,"description":"Merhaba arkadaşlar önceki yazım olan Bitbucket Nedir? yazısının serisine devam olan bu yazımda Bitbucket üzerinde bir repository oluşturup ilk projemizi bu repomuza göndereceğiz. Öncelikle izlenilmesi gereken adımları tekrar hatırlayalım.","author":null,"@type":"BlogPosting","url":"http://www.akinabdullahoglu.com/Bitbucket-u-zerinde-Repository-Olus-turma-ve-Commit-I-s-lemleri/","publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"http://www.akinabdullahoglu.com/Images/2016/02/akin-abdullahoglu.png"}},"image":null,"headline":"Bitbucket kullanarak git repository oluşturma ve commit işlemleri","dateModified":"2016-04-03T17:35:41+03:00","datePublished":"2016-04-03T17:35:41+03:00","sameAs":null,"mainEntityOfPage":{"@type":"WebPage","@id":"http://www.akinabdullahoglu.com/Bitbucket-u-zerinde-Repository-Olus-turma-ve-Commit-I-s-lemleri/"},"@context":"http://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+</head>
+
+
+
+
+
+  <body>
+
+    <header class="site-header" role="banner">
+
+  <div class="wrapper">
+    
+    
+    <a class="site-title" href="/">Akın Abdullahoğlu.</a>
+
+    
+      <nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path fill="#424242" d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.031C17.335,0,18,0.665,18,1.484L18,1.484z"/>
+              <path fill="#424242" d="M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0c0-0.82,0.665-1.484,1.484-1.484 h15.031C17.335,6.031,18,6.696,18,7.516L18,7.516z"/>
+              <path fill="#424242" d="M18,13.516C18,14.335,17.335,15,16.516,15H1.484C0.665,15,0,14.335,0,13.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.031C17.335,12.031,18,12.696,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger">
+          
+            
+            
+          
+            
+            
+            <a class="page-link" href="/hakkimda/">hakkımda</a>
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+            
+            
+          
+        <a target="_blank" class="page-link" href="http://www.twitter.com/rootturk">twitter</a>
+                <a target="_blank" class="page-link" href="mailto:akin@akinabdullahoglu.com">email</a>
+                        <a target="_blank" class="page-link" href="https://docs.google.com/forms/d/e/1FAIpQLSebtzndGQg9M_w_LEx17PhaN2MD61Ay9a96aJpuYh38Q-RE-g/viewform?embedded=true">iletişim</a>
+        </div>
+      </nav>
+    
+  </div>
+</header>
+
+    <main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+
+    <h1 class="post-title" itemprop="name headline">Bitbucket kullanarak git repository oluşturma ve commit işlemleri </h1>
+      <div class="js-social-button pull-right">
+      <a class="twitter-share-button" data-via="rootturk" 
+      data-lang="tr" data-url ="http://www.akinabdullahoglu.com/Bitbucket-u-zerinde-Repository-Olus-turma-ve-Commit-I-s-lemleri/" data-size="large"
+        href="https://twitter.com/share">
+      </a></a>
+      </div>
+    <p class="post-meta">
+      <time datetime="2016-04-03T17:35:41+03:00" itemprop="datePublished">
+        
+        Apr 3, 2016
+      </time>
+      </p>
+  </header>
+  <div class="post-content" itemprop="articleBody">
+    <p>Merhaba arkadaşlar önceki yazım olan Bitbucket Nedir? yazısının serisine devam olan bu yazımda Bitbucket üzerinde bir repository oluşturup ilk projemizi bu repomuza göndereceğiz. Öncelikle izlenilmesi gereken adımları tekrar hatırlayalım.</p>
+
+<p><img src="/Images/2016/03/bitbucket.gif" alt="Bitbucket logo" /></p>
+
+<ul>
+  <li>Bitbucket’a üye olmak</li>
+  <li>Bitbucket üyeliğinin aktif edilmesi</li>
+  <li>Bitbucket’a giriş yapılması</li>
+</ul>
+
+<p><strong>Dashboard</strong> ekranına giriş yaptıktan sonra <strong>Repositories</strong> menüsünden Create Repository sekmesine tıklıyoruz.</p>
+
+<p>Aşağıdaki gibi bir pencere karşımıza çıkıyor.</p>
+
+<p><img src="/Images/2016/04/first-training-1.png" alt="Create Repository Screen" /></p>
+
+<p><strong>Owner</strong> : bu oluşturacağımız repository’e yani projemizin kaynak kodlarının sahibini seçiyoruz. Kaldırma ve ana konfigürasyonları yapabilecek kullanıcı yada kullanıcıları. Çoğul kullanıcı seçimi yapılacaksa Team oluşturulması gerekmektedir.</p>
+
+<p><strong>Repository Name</strong> : Kaynak kodlarımızın tutulacağı deponun adı yani aslında projemizin adı diyebiliriz. Buraya verilen isim alias olarak unique bir şekilde kullanılacaktır. Örn : <code class="highlighter-rouge">rootturk@bitbucket.org/test-project.git</code></p>
+
+<p>Access level : This is a private repository 
+Bu seçenek işaretlenirse repomuz gizli olur ve sadece owner grubunda olanlar ya da sonradan erişim verdiğimiz kullanıcılar projemize erişim sağlayabilir.</p>
+
+<p>Repository Type : Tutulacak repository’nin .git mi yoksa mercurial mi olacağının seçimini yapıyoruz. Ben .git kullanıyorum ve bu yazımda .git üzerinden örneklendirerek devam edeceğim. Mercurial hakkında bilgiler için https://www.mercurial-scm.org/ kendi sitesinden detaylarına bakabilirsiniz. Bu da TFS, SVN, GIT, Sub-Version gibi bir source-control management aracıdır.</p>
+
+<p>Description : Projemiz hakkında açıklama alanı.</p>
+
+<p><strong>Forking</strong> :</p>
+
+<p><strong>Allow Only Private Forking</strong> : Yetkili kullanıcıların projeyi kendi kullanıcı adı altındaki projelere kopya olarak oluşturulmasına izin verir.
+<strong>Allow Forks</strong> : Tüm erişim izni olan ya da olmayan kullanıcıların projeyi kendi kullanıcı adı altındaki repository’e kopyasının oluşturabilmesine izin verir.
+No Forks : Kopyalama erişimi sağlamaz</p>
+
+<p><strong>Project Management</strong> :</p>
+
+<p><strong>Issue Tracking</strong> : Oluşturulan projenin JIRA tarzı bir bug-tracking özelliğini aktif ederek hata yönetiminin yapılmasına olanak sağlar.
+Wiki : Projenin dökümantasyonunu ve yapısının yazılı olarak sağlanabileceği bir döküman yönetimi modülüdür.</p>
+
+<p><strong>Language</strong> : Projenin yazıldığı programlama dili seçimi, sanırım proje detayında açıklama olarak gösterilmesini sağlamakta.</p>
+
+<p><strong>Enable HipChat notifications</strong> : bu seçim işaretlenirse Atlassian ürünü olan HipChat mesajlaşma uygulamasına bu projeyi entegre ederek üzerinde Conversation(Sohbet) tarzı bir yaklaşım uygulanabilir.</p>
+
+<p>Alanları kendimize göre doldurup Create butonuna bastıktan sonra eğer eksik ya da yanlış bilgi girişi olmamış ise aşağıdaki şekilde bir ekran karşımıza çıkacaktır.</p>
+
+<p><img src="/Images/2016/04/first-training-2.png" alt="enter image description here" /></p>
+
+<p>Görüldüğü gibi artık kendi kullanıcı adımız altında bir .git repomuz oldu. Artık bilgisayarımızda bulunan kaynak kodlarımızı bu repo’ya yükleyebiliriz. Ama tabii ki bunu yapmamız için öncelikle Windows için Git eklentisini kurmamız gerekmektedir.</p>
+
+<p>Aşağıdaki link’e giderek işletim sisteminiz için uyumlu olan .git sürümünü indirebilirsiniz.</p>
+
+<p>https://git-scm.com/downloads</p>
+
+<p>Kurulumu basit olduğundan dolayı bu detaya girmiyorum. Kurulumu yaptıktan sonra artık bilgisayarımıza .git server üzerinde tutulan repo’ları çekip- gönderebiliriz. Şimdi sıra geldi kodlarımızı nasıl göndereceğimiz sorusuna.</p>
+
+<p>Bunun için çeşitli <strong>GUI(Graphic User Interface)</strong> yani görsel arayüzü olan uygulamalar ya da konsol uygulamaları mevcut. Bitbucket‘ın kendi ürünü olan SourceTree entegre bir şekilde başarıyla çalışmaktadır. Fakat bana cmder.exe uygulaması ya da git yükledikten sonra çalışabileceğimiz konsol uygulaması pratik geliyor ve harici bir programa henüz gereksinim duymadım. Zaten çoğu IDE için .git eklentisi uygulama içerisinde başarıyla çalışmaktadır. Intellij olsun Visual Studio olsun hepsinde çalışabilirsiniz ama temel mantığı öğrenmek ve daha detaylı işlemlerde ya da hatalı durumlarda düzeltme yapmak konsol kullanımında kolayca çözülebiliyor.</p>
+
+<p><strong>CMDER Nedir?</strong></p>
+
+<p>CMDER.exe bir konsol emülator uygulamasıdır, kendi içerisinde windows’un konsol uygulamasından özelleştirilmiş bir çok özelliğini barındırır ve özelleştirilebilir yapısıyla kullanıcıya pratiklik kazandırır.</p>
+
+<p><strong>http://cmder.net/</strong> linki üzerinden daha detaylı olarak bakabilirsiniz. .git repolarinizi bu konsol uygulaması içerisinden rahat bir şekilde kullanabilirsiniz.</p>
+
+<p>Örnek olarak aşağıdaki gibi bir proje üzerinden ilerleyelim.</p>
+
+<p><img src="/Images/2016/04/first-training-3.png" alt="enter image description here" /></p>
+
+<p><strong>CMDER.exe</strong>‘yi indirdiğimizi düşünerek ilerliyorum. <strong>Standart konsol komutları + unix</strong> komutlarını da kullanabiliyorsunuz. <strong>CMDER.exe</strong>‘yi çalıştırdıktan sonra aşağıdaki gibi bir ekran ile karşılaşıyoruz. cd komutu ile projemin bulunduğu dizine gidiyorum.</p>
+
+<p><img src="/Images/2016/04/first-training-4.png" alt="enter image description here" /></p>
+
+<p>Sonrasında yapmamız gerek local bir git reposu oluşturmak olacaktır. Bunu yapmak için yazmamız gereken komut.</p>
+
+<p><code class="highlighter-rouge">git init</code> komutudur.</p>
+
+<p>Aşağıdaki resim uzantılıdır hareketli olarak görmek için yeni pencerede açınız.</p>
+
+<p><img src="/Images/2016/04/bitbucket-gif-1.gif" alt="enter image description here" /></p>
+
+<p>Komutu yazdıktan sonra proje klasörüne gittiğimizde .git isimli bir klasör oluştuğunu görürüz.
+<img src="/Images/2016/04/bitbucket-gif-2.gif" alt="enter image description here" /></p>
+
+<p><code class="highlighter-rouge">git init</code> yaptıktan sonra kendi sistem dosyalarını repository altına oluşturur ve bu kısımdan sonra her şey bu dosyalara bağımlı bir şekilde ilerler. Şimdi yapmamız gereken ise bu oluşturduğumuz repomuzun uzak sunucudaki alanını tanıtmak olacaktır. Bunu ise şu komut ile yapıyor olacağız, Bitbucket ekranında ilk repo ekledikten sonra açılan pencerede görebiliriz.</p>
+
+<p><img src="/Images/2016/04/bitbucket-remote-add.png" alt="enter image description here" /></p>
+
+<p><strong>Komut</strong> : git remote add origin <code class="highlighter-rouge">https://rootturk@bitbucket.org/rootturk/first-bitbucket-project.git</code> şeklindedir. Her kullanıcının kendi repository ve kullanıcı adına göre değişkenlik gösterir.</p>
+
+<p>Bu komutu çalıştırdıktan sonra bitbucket üzerindeki etki alanımızı lokalde bulunan git etki alanımıza tanıtmış oluyoruz ve artık kaynak kod dosyalarımızı repomuza ekleyip commit ve push işlemlerini gerçekleştirebiliriz.(Detaylarını <strong>.git config</strong> içerisinden görebilirsiniz.)</p>
+
+<p><code class="highlighter-rouge">git add .</code> ya da <code class="highlighter-rouge">git add *</code> kullanarak kaynak kodlarımızı lokal repository’mize ekliyoruz.</p>
+
+<p>sonrasında <code class="highlighter-rouge">git commit -m “yaptığımız değişiklik detayı”</code> kendinize göre bir mesaj yazarak komutu çalıştırıyoruz. Artık dosyalarımız gönderilmeye hazır ve son kalan komut <code class="highlighter-rouge">push</code> komutunu kullanmak olacaktır.</p>
+
+<p><code class="highlighter-rouge">git push origin master</code> komutunu yazarak kaynak kodlarımızı bitbucket hesabımız altındaki repository’mize gönderme isteğini iletiyoruz. Sonrasında bize bir mesaj ile <code class="highlighter-rouge">remote-add</code> yaptığımız için şifremizi soruyor. Şifremizi de girdikten sonra kendi compress işlemlerinden sonra kaynak kodlarımız artık bitbucket üzerindeki repository’mize gönderiliyor.</p>
+
+<p><img src="/Images/2016/04/bitbucket-add-commit-push.gif" alt="enter image description here" /></p>
+
+<p>Şimdi bitbucket hesabımızdan repository’mize bakalım ki kodlarımız gitmiş mi? :D</p>
+
+<p><img src="/Images/2016/04/bitbucket-source-commits.gif" alt="enter image description here" /></p>
+
+<p>Gördüğümüz gibi kaynak kodlarımız artık bitbucket hesabımız üzerinde.</p>
+
+<p>Genel olarak ilk yazının devamı olan bu yazımda bir repository oluşturmayı ve kaynak kodlarımızı bu repository altına göndermeyi işlemeye çalıştım.Sonraki yazı serilerimde yine bitbucket’a devam edeceğim. Umarım yararlı bir yazı olmuştur. Her türlü yanlış kullanım, hatalı gördüğünüz yerlerle ilgili bilgi ve istekleri, sorularınızı yorum ya da email olarak iletebilirsiniz.</p>
+
+<p>Okuduğunuz için teşekkür ederim.</p>
+
+<iframe width="420" height="315" src="https://www.youtube.com/embed/79vCiXg3njY?ecver=1" frameborder="0" allowfullscreen=""></iframe>
+
+  </div>
+    <a href="https://twitter.com/rootturk?ref_src=twsrc%5Etfw" data-url ="http://www.akinabdullahoglu.com/Bitbucket-u-zerinde-Repository-Olus-turma-ve-Commit-I-s-lemleri/" class="twitter-follow-button" data-show-count="false">Follow @rootturk</a><script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+  
+    
+
+  <div id="disqus_thread"></div>
+  <script>
+    var disqus_config = function () {
+      this.page.url = 'http://www.akinabdullahoglu.com/Bitbucket-u-zerinde-Repository-Olus-turma-ve-Commit-I-s-lemleri/';
+      this.page.identifier = 'http://www.akinabdullahoglu.com/Bitbucket-u-zerinde-Repository-Olus-turma-ve-Commit-I-s-lemleri/';
+    };
+    (function() {
+      var d = document, s = d.createElement('script');
+      s.src = 'https://akinabdullahoglu.disqus.com/embed.js';
+      s.setAttribute('data-timestamp', +new Date());
+      (d.head || d.body).appendChild(s);
+    })();
+  </script>
+  <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+
+  
+</article>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">Akın Abdullahoğlu.</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li>
+            
+              Akın Abdullahoğlu.
+            
+            </li>
+            
+            <li><a href="mailto:akin@akinabdullahoglu.com">akin@akinabdullahoglu.com</a></li>
+            
+        </ul>
+      </div>
+
+      <div class="footer-col footer-col-2">
+        <ul class="social-media-list">
+          
+          <li>
+            <a href="https://github.com/rootturk"><span class="icon icon--github"><svg viewBox="0 0 16 16" width="16px" height="16px"><path fill="#828282" d="M7.999,0.431c-4.285,0-7.76,3.474-7.76,7.761 c0,3.428,2.223,6.337,5.307,7.363c0.388,0.071,0.53-0.168,0.53-0.374c0-0.184-0.007-0.672-0.01-1.32 c-2.159,0.469-2.614-1.04-2.614-1.04c-0.353-0.896-0.862-1.135-0.862-1.135c-0.705-0.481,0.053-0.472,0.053-0.472 c0.779,0.055,1.189,0.8,1.189,0.8c0.692,1.186,1.816,0.843,2.258,0.645c0.071-0.502,0.271-0.843,0.493-1.037 C4.86,11.425,3.049,10.76,3.049,7.786c0-0.847,0.302-1.54,0.799-2.082C3.768,5.507,3.501,4.718,3.924,3.65 c0,0,0.652-0.209,2.134,0.796C6.677,4.273,7.34,4.187,8,4.184c0.659,0.003,1.323,0.089,1.943,0.261 c1.482-1.004,2.132-0.796,2.132-0.796c0.423,1.068,0.157,1.857,0.077,2.054c0.497,0.542,0.798,1.235,0.798,2.082 c0,2.981-1.814,3.637-3.543,3.829c0.279,0.24,0.527,0.713,0.527,1.437c0,1.037-0.01,1.874-0.01,2.129 c0,0.208,0.14,0.449,0.534,0.373c3.081-1.028,5.302-3.935,5.302-7.362C15.76,3.906,12.285,0.431,7.999,0.431z"/></svg>
+</span><span class="username">rootturk</span></a>
+
+          </li>
+          
+
+          
+          <li>
+            <a href="https://twitter.com/rootturk"><span class="icon icon--twitter"><svg viewBox="0 0 16 16" width="16px" height="16px"><path fill="#828282" d="M15.969,3.058c-0.586,0.26-1.217,0.436-1.878,0.515c0.675-0.405,1.194-1.045,1.438-1.809c-0.632,0.375-1.332,0.647-2.076,0.793c-0.596-0.636-1.446-1.033-2.387-1.033c-1.806,0-3.27,1.464-3.27,3.27 c0,0.256,0.029,0.506,0.085,0.745C5.163,5.404,2.753,4.102,1.14,2.124C0.859,2.607,0.698,3.168,0.698,3.767 c0,1.134,0.577,2.135,1.455,2.722C1.616,6.472,1.112,6.325,0.671,6.08c0,0.014,0,0.027,0,0.041c0,1.584,1.127,2.906,2.623,3.206 C3.02,9.402,2.731,9.442,2.433,9.442c-0.211,0-0.416-0.021-0.615-0.059c0.416,1.299,1.624,2.245,3.055,2.271 c-1.119,0.877-2.529,1.4-4.061,1.4c-0.264,0-0.524-0.015-0.78-0.046c1.447,0.928,3.166,1.469,5.013,1.469 c6.015,0,9.304-4.983,9.304-9.304c0-0.142-0.003-0.283-0.009-0.423C14.976,4.29,15.531,3.714,15.969,3.058z"/></svg>
+</span><span class="username">rootturk</span></a>
+
+          </li>
+          
+        </ul>
+      </div>
+
+      <div class="footer-col footer-col-3">
+        <p>Yazılım geliştiricisi, blogger, gamer</p>
+      </div>
+    </div>
+
+  </div>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+      <script>window.twttr = (function(d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0],
+      t = window.twttr || {};
+      if (d.getElementById(id)) return t;
+      js = d.createElement(s);
+      js.id = id;
+      js.src = "https://platform.twitter.com/widgets.js";
+      fjs.parentNode.insertBefore(js, fjs);
+
+      t._e = [];
+      t.ready = function(f) {
+      t._e.push(f);
+      };
+
+      return t;
+      }(document, "script", "twitter-wjs"));
+  </script>
+  <div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v2.10";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+<!-- Global Site Tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-45419250-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-45419250-1');
+</script>
+
+</footer>
+
+  </body>
+
+</html>
