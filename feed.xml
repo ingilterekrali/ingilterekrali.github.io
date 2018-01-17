@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.6.2">Jekyll</generator><link href="http://www.akinabdullahoglu.com/feed.xml" rel="self" type="application/atom+xml" /><link href="http://www.akinabdullahoglu.com/" rel="alternate" type="text/html" /><updated>2018-01-10T05:03:03+03:00</updated><id>http://www.akinabdullahoglu.com/</id><title type="html">Akın Abdullahoğlu.</title><subtitle>Programlama,NoSql, programlama hakkında yazılar,Java ,C# ,Git ,Açık kaynak, Kişisel Yazılar, Software Developer</subtitle><entry><title type="html">Python Django Üzerinde Redis Cache Nasıl Yapılır?</title><link href="http://www.akinabdullahoglu.com/Python-Django-uzerinde-Redis-Cache-Nasil-Yapilir/" rel="alternate" type="text/html" title="Python Django Üzerinde Redis Cache Nasıl Yapılır?" /><published>2017-11-14T05:52:41+03:00</published><updated>2017-11-14T05:52:41+03:00</updated><id>http://www.akinabdullahoglu.com/Python-Django-uzerinde-Redis-Cache-Nasil-Yapilir?%20</id><content type="html" xml:base="http://www.akinabdullahoglu.com/Python-Django-uzerinde-Redis-Cache-Nasil-Yapilir/">&lt;p&gt;Merhaba arkadaşlar, yakın zamanlarda &lt;strong&gt;Python&lt;/strong&gt; programlama dilini kullanarak bir projeye başladım ve &lt;strong&gt;Django framework&lt;/strong&gt; kullanma deneyimi elde ettim. Bu yazımda &lt;strong&gt;Django&lt;/strong&gt; uygulaması üzerinde &lt;strong&gt;Redis&lt;/strong&gt; ile nasıl haberleşebiliriz bu konuyu aktarmaya çalışacağım.&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.6.2">Jekyll</generator><link href="http://www.akinabdullahoglu.com/feed.xml" rel="self" type="application/atom+xml" /><link href="http://www.akinabdullahoglu.com/" rel="alternate" type="text/html" /><updated>2018-01-17T05:44:18+03:00</updated><id>http://www.akinabdullahoglu.com/</id><title type="html">Akın Abdullahoğlu.</title><subtitle>Programlama,NoSql, programlama hakkında yazılar,Java ,C# ,Git ,Açık kaynak, Kişisel Yazılar, Software Developer</subtitle><entry><title type="html">Python Django Üzerinde Redis Cache Nasıl Yapılır?</title><link href="http://www.akinabdullahoglu.com/Python-Django-uzerinde-Redis-Cache-Nasil-Yapilir/" rel="alternate" type="text/html" title="Python Django Üzerinde Redis Cache Nasıl Yapılır?" /><published>2017-11-14T05:52:41+03:00</published><updated>2017-11-14T05:52:41+03:00</updated><id>http://www.akinabdullahoglu.com/Python-Django-uzerinde-Redis-Cache-Nasil-Yapilir?%20</id><content type="html" xml:base="http://www.akinabdullahoglu.com/Python-Django-uzerinde-Redis-Cache-Nasil-Yapilir/">&lt;p&gt;Merhaba arkadaşlar, yakın zamanlarda &lt;strong&gt;Python&lt;/strong&gt; programlama dilini kullanarak bir projeye başladım ve &lt;strong&gt;Django framework&lt;/strong&gt; kullanma deneyimi elde ettim. Bu yazımda &lt;strong&gt;Django&lt;/strong&gt; uygulaması üzerinde &lt;strong&gt;Redis&lt;/strong&gt; ile nasıl haberleşebiliriz bu konuyu aktarmaya çalışacağım.&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;/Images/django-redis-cache.png&quot; alt=&quot;enter image description here&quot; /&gt;&lt;/p&gt;
 
@@ -175,7 +175,42 @@ https://pages.github.com/&lt;/p&gt;
 
 &lt;p&gt;Yeni yazılarda görüşmek dileğiyle.&lt;/p&gt;
 
-&lt;iframe width=&quot;450&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/z33tH-JdPDg&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;</content><author><name></name></author><summary type="html"></summary></entry><entry><title type="html">Abstract Class ve Interface Arasındaki Fark?</title><link href="http://www.akinabdullahoglu.com/Abstract-Class-ve-Interface-Nedir/" rel="alternate" type="text/html" title="Abstract Class ve Interface Arasındaki Fark?" /><published>2016-10-22T17:35:41+03:00</published><updated>2016-10-22T17:35:41+03:00</updated><id>http://www.akinabdullahoglu.com/Abstract%20Class%20ve%20Interface%20Nedir</id><content type="html" xml:base="http://www.akinabdullahoglu.com/Abstract-Class-ve-Interface-Nedir/">&lt;p&gt;Merhaba arkadaşlar, bugün sizlerle paylaşmak istediğim konu C# programlama dili içerisinde bulunan &lt;strong&gt;Class&lt;/strong&gt; ve &lt;strong&gt;Interface&lt;/strong&gt; yapıları ve aralarındaki farklar hakkında olacak. Öncelikle &lt;strong&gt;Class&lt;/strong&gt;(Sınıf) nedir bu konuya değinelim, Class içerisinde metotlar, değişkenler hatta yine sınıf tanımlarının yapılabildiği Object Oriented Programlama dilinin temelini oluşturan bir yapıdır. Aşağıdaki örnekte bir Users adında bir sınıfımız ve içerisinde &lt;strong&gt;getter&lt;/strong&gt; ve &lt;strong&gt;setter&lt;/strong&gt; tanımlı olan iki public değişkenimiz var.&lt;/p&gt;
+&lt;iframe width=&quot;450&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/z33tH-JdPDg&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;</content><author><name></name></author><summary type="html"></summary></entry><entry><title type="html">Iskalanmış Hayaller</title><link href="http://www.akinabdullahoglu.com/iskalanmis-hayaller/" rel="alternate" type="text/html" title="Iskalanmış Hayaller" /><published>2017-02-08T21:35:41+03:00</published><updated>2017-02-08T21:35:41+03:00</updated><id>http://www.akinabdullahoglu.com/iskalanmis-hayaller</id><content type="html" xml:base="http://www.akinabdullahoglu.com/iskalanmis-hayaller/">&lt;p&gt;Olur ya bir gün geçer bu zamanlar, biz bunlara da katlanırız..
+Uzaklara dalsak da derin derin, arayışta olsak da hep bir şeyleri..
+Her geçen gün daha da tüketiyor, daha da umutsuzlaştırıyor..
+Umut neydi sahi, her yıkılıştan, her dibe vuruştan sonra kalkacağımızı bilmek miydi? Yoksa aniden ansızın gelen güzel bir hayat cilvesi miydi?
+Ya dibe vurup bir gün kalkamazsak, ya hepten yıkılıp kalkamayacak olursak..
+Ama hayır böyle düşünmeyeceğim, bunca umutsuzluğa rağmen biz yine şarkılar söyleyip şiirler okuyacağız, bugün kablosuz olarak bağladığımız umutlarımızı belki bir gün tekrar gözlerimize, yüz yüze bakarak yeniden yeşerteceğiz..&lt;/p&gt;
+
+&lt;p&gt;Bir de çay içeceğiz, hep birlikte umutla, güneşli günlerde..&lt;/p&gt;
+
+&lt;p&gt;A.A.&lt;/p&gt;
+
+&lt;p&gt;08/02/2017 23:27 Aklımdan geçenler..&lt;/p&gt;
+
+&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/2oICpKQl6mE&quot; frameborder=&quot;0&quot; allow=&quot;autoplay; encrypted-media&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;</content><author><name></name></author><summary type="html">Olur ya bir gün geçer bu zamanlar, biz bunlara da katlanırız.. Uzaklara dalsak da derin derin, arayışta olsak da hep bir şeyleri.. Her geçen gün daha da tüketiyor, daha da umutsuzlaştırıyor.. Umut neydi sahi, her yıkılıştan, her dibe vuruştan sonra kalkacağımızı bilmek miydi? Yoksa aniden ansızın gelen güzel bir hayat cilvesi miydi? Ya dibe vurup bir gün kalkamazsak, ya hepten yıkılıp kalkamayacak olursak.. Ama hayır böyle düşünmeyeceğim, bunca umutsuzluğa rağmen biz yine şarkılar söyleyip şiirler okuyacağız, bugün kablosuz olarak bağladığımız umutlarımızı belki bir gün tekrar gözlerimize, yüz yüze bakarak yeniden yeşerteceğiz..</summary></entry><entry><title type="html">İyi ki Doğdun Barış Manço!</title><link href="http://www.akinabdullahoglu.com/iyi-ki-dogdun-baris-manco/" rel="alternate" type="text/html" title="İyi ki Doğdun Barış Manço!" /><published>2017-01-02T21:35:41+03:00</published><updated>2017-01-02T21:35:41+03:00</updated><id>http://www.akinabdullahoglu.com/iyi-ki-dogdun-baris-manco</id><content type="html" xml:base="http://www.akinabdullahoglu.com/iyi-ki-dogdun-baris-manco/">&lt;p&gt;&lt;img src=&quot;http://www.akinabdullahoglu.com/Images/2017/01/1188826_3500ab27ba42b8f526331bd6c1193c30-150x150.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Ülkemiz ve Evrensel çevrede fazlasıyla yer bırakmış, &lt;strong&gt;Türk Rock **tarihinin yapıtaşlarını oluşturmuş, her dönem herkeste bir iz bırakmış. Genel olarak tüm kesimlerin dinlemese bile saygı duyduğu, büyük bir sanatçı, gezip görüp bizlere anlattığı yerler ile modern evliya çelebi etiketini tamamen hak eden, ana diline yakın seviyede birden fazla dil bilen ve o diller üzerinde müzik üretmeyi başarmış büyük bir insan. Ben kendisini yaşım yettiğince televizyon yada kaset olarak çok az dinleyip yada görüp sonradan yaptığım araştırma ve ilgiyle kendisinin hayatı hakkında fazlasıyla bilgi sahibi olduğum bir kişi. Belki hiç tanımayan hiç dinlemeyen hiç görmeyen bir kişi bu yorum hakkında bu kadarı abartı diyebilir ama eminim ki dinleyen, tanıyan bir kişiye göre belki de bu hayatının çok ufak bir kısmının özetidir belki de. Bugün 74. yaş günü aramızdan ayrılışı ise neredeyse 17 yıl oldu, o hayatı boyunca bir şeyler üretme, ülkemizi evrensel alanda tanıtma gibi kendi kendine misyonlar yükledi ve başarıyla hedeflerine ulaşarak ülkemiz adına bir gurur kaynağı oldu. Ben onu son dönemlerde popüler olan şarkılarıyla değil de gerçekten gönülden sevenlerin eminim bildiği, **Halil İbrahim Sofrası&lt;/strong&gt;, &lt;strong&gt;Aynalı Kemer&lt;/strong&gt;, &lt;strong&gt;Little’Darlin&lt;/strong&gt;, &lt;strong&gt;Nick The Chopper&lt;/strong&gt;, &lt;strong&gt;Ne Ola Yar Ola&lt;/strong&gt; ve ismi yazılacak nice derin anlamlar, öğütler taşıyan şarkılarıyla sevdim. Kimi zaman Nick The Chopper parçası ile bir oduncunun hikayesinin hikayesini ingilizce olarak anlattı, kimi zaman Nane Limon Kabuğu ile sağlığın sıhhatin önemini vurguladı, kimi zaman Ahmet Beyin Ceketi‘nin anlamını bize öğütledi, kimi zaman Süleyman ile görgüsüzlüğün ne kadar acı olduğunu anlattı, kimi zaman Anahtar parçası ile paranın insanı ne kadar satın aldığını, Halil İbrahim Sofrası ile alın terinin, helal kazancın önemine dem vurdu ve 2023 parçası ile de geleceği gördü belki de gelecekten beklediği, istediği, umutlarını aktardı.. Bizler bu acı günlerde onun şarkılarıyla öğütleriyle moral bulmaya çalışıyoruz ve hala anlıyoruz ki bu  seviyeye gelebilmek ne denli zor ne denli emek isteyen bir işmiş, içinde sevgi olmayan hiç bir iş asla kimse tarafından önemsenmiyormuş.  İyi ki doğdun Barış abi, iyi ki bu hayat katarının bu çizgisinde seni tanıdım, dinledim ve dinlemeye örnek almaya devam edeceğim.  Bu yazıyı okuyan, sabreden ve sabrın sonuna geldiğinde selamet olmasını dilediğim bir kaç Barış Manço videosu paylaşacağım.&lt;/p&gt;
+
+&lt;p&gt;Barış Manço hayatını çiziyor&lt;/p&gt;
+
+&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/SYffTCXtsXQ&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
+
+&lt;p&gt;Para Nedir? Röportajından&lt;/p&gt;
+
+&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/G7tCGTcL02M&quot; frameborder=&quot;0&quot; allow=&quot;autoplay; encrypted-media&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
+
+&lt;p&gt;Son olarak Halil İbrahim Sofrası klibiyle..&lt;/p&gt;
+
+&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/ho87nPGKXnQ&quot; frameborder=&quot;0&quot; allow=&quot;autoplay; encrypted-media&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://www.akinabdullahoglu.com/Images/2017/01/C1JvprbXAAA18Nw-300x206.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Okuduğunuz için teşekkürler.&lt;/p&gt;
+
+&lt;p&gt;Sevgilerle…&lt;/p&gt;
+
+&lt;p&gt;Akın&lt;/p&gt;</content><author><name></name></author><summary type="html"></summary></entry><entry><title type="html">Abstract Class ve Interface Arasındaki Fark?</title><link href="http://www.akinabdullahoglu.com/Abstract-Class-ve-Interface-Nedir/" rel="alternate" type="text/html" title="Abstract Class ve Interface Arasındaki Fark?" /><published>2016-10-22T17:35:41+03:00</published><updated>2016-10-22T17:35:41+03:00</updated><id>http://www.akinabdullahoglu.com/Abstract%20Class%20ve%20Interface%20Nedir</id><content type="html" xml:base="http://www.akinabdullahoglu.com/Abstract-Class-ve-Interface-Nedir/">&lt;p&gt;Merhaba arkadaşlar, bugün sizlerle paylaşmak istediğim konu C# programlama dili içerisinde bulunan &lt;strong&gt;Class&lt;/strong&gt; ve &lt;strong&gt;Interface&lt;/strong&gt; yapıları ve aralarındaki farklar hakkında olacak. Öncelikle &lt;strong&gt;Class&lt;/strong&gt;(Sınıf) nedir bu konuya değinelim, Class içerisinde metotlar, değişkenler hatta yine sınıf tanımlarının yapılabildiği Object Oriented Programlama dilinin temelini oluşturan bir yapıdır. Aşağıdaki örnekte bir Users adında bir sınıfımız ve içerisinde &lt;strong&gt;getter&lt;/strong&gt; ve &lt;strong&gt;setter&lt;/strong&gt; tanımlı olan iki public değişkenimiz var.&lt;/p&gt;
 
 &lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-csharp&quot; data-lang=&quot;csharp&quot;&gt; &lt;span class=&quot;k&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Users&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
 
@@ -699,128 +734,4 @@ Wiki : Projenin dökümantasyonunu ve yapısının yazılı olarak sağlanabilec
 
 &lt;p&gt;Umarım faydalı bir yazı olmuştur.&lt;/p&gt;
 
-&lt;iframe width=&quot;420&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/0W3MpOU3OUU?ecver=1&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;</content><author><name></name></author><summary type="html"></summary></entry><entry><title type="html">C# Override ve Overloading Nedir?</title><link href="http://www.akinabdullahoglu.com/Csharp-Override-ve-Overloading-Nedir/" rel="alternate" type="text/html" title="C# Override ve Overloading Nedir?" /><published>2016-01-19T16:35:41+02:00</published><updated>2016-01-19T16:35:41+02:00</updated><id>http://www.akinabdullahoglu.com/Csharp%20Override%20ve%20Overloading%20Nedir</id><content type="html" xml:base="http://www.akinabdullahoglu.com/Csharp-Override-ve-Overloading-Nedir/">&lt;p&gt;Merhaba arkadaşlar, bugün ki yazımda &lt;strong&gt;C#&lt;/strong&gt; Programlama dili üzerinde Method Overloading(Metotların aşırı yüklenmesi) ve Override edilmesi ile ilgili bir şeyler aktarmaya çalışacağım. Öncelikle &lt;strong&gt;Method Overloading&lt;/strong&gt; ile başlayalım. Bir tane Class düşünün içerisinde bir tane method tanımlamışsınız ve bunu kullanıyorsunuz fakat bir tane daha method yazmanız gerekli oldu ve isimlendirme olarak aynı method ismini kullanmanız gerekiyor. İşte burada Method Overloading devreye giriyor aşağıdaki örnek üzerinden ilerleyecek olursak.&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-csharp&quot; data-lang=&quot;csharp&quot;&gt; 
-&lt;span class=&quot;k&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Member&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
- 
-&lt;span class=&quot;k&quot;&gt;protected&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;User&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;getUserDetail&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;id&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-  &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;db&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;where&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;id&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
- 
-&lt;span class=&quot;k&quot;&gt;protected&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;User&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;getUserDetail&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;string&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-  &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;db&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;where&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;Yukarıda görüldüğü gibi Member isimli &lt;strong&gt;Class&lt;/strong&gt;’ımızda iki tane aynı isimden, farklı tipte parametreler alan methodumuz oldu.&lt;/p&gt;
-
-&lt;p&gt;Burada dikkat etmemiz gereken ana hususlar.&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Metotların dönüş tipleri aynı olmalıdır.&lt;/li&gt;
-  &lt;li&gt;Metotlar farklı tipte parametreler almalıdır.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Genel olarak Method Overloading‘i bu şekilde tanımlayabiliriz.&lt;/p&gt;
-
-&lt;p&gt;Şimdi Method Override anlatımına geçelim. Yine bir tane Class’ımız olsun ve bu Class’a base(temel) bir Class inherit edelim yani temel işlemleri yapmak için tasarladığımız bir tane alt Class olsun ve bu Class içerisinde getDetail isimli bir tane methodumuz olsun. Ama bu base Class’ı base olarak aldığımız Class’ta da getDetail() isimli bir method’da tanımlamamız gerektiğini varsayalım. Kod olarak yazarsam daha açıklayıcı olacaktır. Çünkü bu anlatımlar ve kullanımlar genelde çok soyut kalıyor örneklendirmekte kolay olmuyor, belki kod üzerinden devam edersem daha açıklayıcı olabilirim.&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-csharp&quot; data-lang=&quot;csharp&quot;&gt; 
-&lt;span class=&quot;k&quot;&gt;public&lt;/span&gt;  &lt;span class=&quot;k&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;BaseMethods&lt;/span&gt;
-    &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-        &lt;span class=&quot;k&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;getDetail&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
-        &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
- 
-    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-   &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;Yukarıda göreceğiniz üzere bir tane Class tanımım ve içerisinde de bir adet getDetail isimli void dönüş tipli metodum var. Bu  Class’ı başka bir class’a inherit edelim.&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-csharp&quot; data-lang=&quot;csharp&quot;&gt; 
-&lt;span class=&quot;k&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Users&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;BaseMethods&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
- 
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;Göreceğiniz üzere Users isimli sınıfımıza BaseMethods sınıfımızı inherit ettik. Şu anda ana problemimize dönecek olursak iki sınıf içerisinde de getDetail isimli method tanımlaması yapmamız gerekmektedir.Bunu yapmak için bize gerekli olan virtual anahtarıdır. virtual anahlarını atadığımız metot sanal olur ve aynı isimde farklı bir metot tarafından override edilebilir.&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-csharp&quot; data-lang=&quot;csharp&quot;&gt; 
-&lt;span class=&quot;k&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Users&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;BaseMethods&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;override&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;void&lt;/span&gt;  &lt;span class=&quot;nf&quot;&gt;getDetail&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
-    &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-        
-    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-     
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
- 
-&lt;span class=&quot;k&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;BaseMethods&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;virtual&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;getDetail&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
-    &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
- 
-    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;Yukarıda ki örnekte gördüğünüz üzere &lt;strong&gt;BaseMethods&lt;/strong&gt; sınıfını miras alan Users sınıfı BaseMethods sınıfındaki &lt;strong&gt;getDetail&lt;/strong&gt; isimli metodu kendi metoduna atadığı override anahtarı ile ezmektedir. Yani kendi içerisinde tanımladığı getDetail artık geçerli bir method olmuş &lt;strong&gt;BaseMethods&lt;/strong&gt;’daki &lt;strong&gt;getDetail&lt;/strong&gt; metodu bu sınıfta ezilmiştir. Bu konu biraz soyut olabilir ve belki benim örneğim kafa karıştırabilir bunun için daha farklı kaynaklara bakmanızda fayda da var. Ben genel olarak açıklamaya çalıştım, umarım kafanızda bir şeyler oluşturabilmişimdir. Eğer gördüğünüz hatalı yerler veya sorularınız var ise her zaman yorumlarınızı bekliyorum.&lt;/p&gt;
-
-&lt;p&gt;Son olarak bir resimde eklemek istedim.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;http://www.akinabdullahoglu.com/Images/2016/01/metod.png&quot; alt=&quot;enter image description here&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Bu yazıya veda ederken sizlere Badfinger’dan bir parça armağan ediyorum.&lt;/p&gt;
-
-&lt;iframe width=&quot;420&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/-btv-7GkVk0?ecver=1&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;</content><author><name></name></author><summary type="html">Merhaba arkadaşlar, bugün ki yazımda C# Programlama dili üzerinde Method Overloading(Metotların aşırı yüklenmesi) ve Override edilmesi ile ilgili bir şeyler aktarmaya çalışacağım. Öncelikle Method Overloading ile başlayalım. Bir tane Class düşünün içerisinde bir tane method tanımlamışsınız ve bunu kullanıyorsunuz fakat bir tane daha method yazmanız gerekli oldu ve isimlendirme olarak aynı method ismini kullanmanız gerekiyor. İşte burada Method Overloading devreye giriyor aşağıdaki örnek üzerinden ilerleyecek olursak.</summary></entry><entry><title type="html">C# Var vs Dynamic Tiplerinin Karşılaştırması</title><link href="http://www.akinabdullahoglu.com/Csharp-Var-vs-Dynamic-Tiplerinin-Karsilastirilmasi/" rel="alternate" type="text/html" title="C# Var vs Dynamic Tiplerinin Karşılaştırması" /><published>2016-01-18T16:35:41+02:00</published><updated>2016-01-18T16:35:41+02:00</updated><id>http://www.akinabdullahoglu.com/Csharp%20Var-vs-Dynamic-Tiplerinin-Karsilastirilmasi</id><content type="html" xml:base="http://www.akinabdullahoglu.com/Csharp-Var-vs-Dynamic-Tiplerinin-Karsilastirilmasi/">&lt;p&gt;Merhabalar arkadaşlar, bugün ki yazımda &lt;strong&gt;C#&lt;/strong&gt; Programlama dilinde kullanılan &lt;strong&gt;Var&lt;/strong&gt; ve &lt;strong&gt;Dynamic&lt;/strong&gt; tipleri arasında bir karşılaştırma yaparak özelliklerine bakacağız. &lt;strong&gt;Var&lt;/strong&gt; keyword u &lt;strong&gt;C# 3.0&lt;/strong&gt; sürümünde kazanılmış bir tiptir. &lt;strong&gt;Dynamic&lt;/strong&gt; tipi ise &lt;strong&gt;C# 4.0&lt;/strong&gt; sürümünde kazanılmıştır. &lt;strong&gt;Var&lt;/strong&gt; tipi ile dynamic tipinin farkını aşağıdaki örnek üzerinde anlaşılabileceğini düşünüyorum. var tipinde olan data değişkenine “&lt;strong&gt;Text&lt;/strong&gt;” metni string formatında atanıyor ve data değişkeni artık &lt;strong&gt;string&lt;/strong&gt; türünden bir değişken oluyor fakat sonraki satırda data değişkenine &lt;strong&gt;integer&lt;/strong&gt; 5 atamaya çalıştığımızda hataya düşüyor, sebebi ise derleme anında var tipi aldığı tipi bilmek zorundadır. &lt;strong&gt;Dynamic&lt;/strong&gt; tipine baktığımızda ilk olarak string “&lt;strong&gt;Text&lt;/strong&gt;” metnini alıyor ve sonrasında &lt;strong&gt;integer&lt;/strong&gt; 5 alıyor, en son da string tipinden list atanarak hatasız bir şekilde derlenecek hale geliyor. Sebebi dynamic tipi dinamik olarak gelen değer türüne dönüşmektedir ve bu özellikte bir çok yerde gerçekten kullanışlı olmaktadır.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/Images/2016/01/dynamic-var.png&quot; alt=&quot;enter image description here&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Var Keyword :&lt;/strong&gt;
-https://msdn.microsoft.com/tr-tr/library/bb383973.aspx&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Dynamic Keyword :&lt;/strong&gt;
-https://msdn.microsoft.com/en-us/library/dd264741.aspx&lt;/p&gt;
-
-&lt;p&gt;Detaylı olarak Karşılaştırma:&lt;/p&gt;
-
-&lt;table class=&quot;ArticleTable&quot; style=&quot;height: 631px;&quot; width=&quot;747&quot;&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;td width=&quot;399&quot; valign=&quot;top&quot;&gt;var&lt;/td&gt;
-&lt;td width=&quot;399&quot; valign=&quot;top&quot;&gt;dynamic&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td&gt;C# 3.0 sürümünde gelmiştir.&lt;/td&gt;
-&lt;td&gt;C# 4.0 Sürümünde gelmiştir.&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;&lt;strong&gt;Statik bir tiptir.&lt;/strong&gt;&amp;nbsp;– Derlenme anında set edilen tipi bilir ve hafızada o tipe göre yer ayırır.&lt;/td&gt;
-&lt;td&gt;&lt;strong&gt;Dinamik bir tiptir.&lt;/strong&gt;&amp;nbsp;– Gelen tipi bilmese de çalışma zamanında set edilen tipi&amp;nbsp;belirler.&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td valign=&quot;top&quot;&gt;&lt;strong&gt;Değer set edilmeden tanımlanamaz hata verir.&lt;/strong&gt;&lt;p&gt;&lt;/p&gt;
-&lt;p&gt;var str = “Merhaba”;&lt;/p&gt;
-&lt;p&gt;str tipi string tipinden bir değer aldı ve artık hafızada string olarak tutulmaktadır. Sonradan değer ataması yapılır ise derleme anında hata verir.&lt;/p&gt;&lt;/td&gt;
-&lt;td&gt;&lt;strong&gt;Değer set edilmeden tanımlama yapılabilir.&lt;/strong&gt;&lt;p&gt;&lt;/p&gt;
-&lt;p&gt;dynamic str;&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;str = &quot;Merhaba&quot;;&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;&lt;span style=&quot;font-family: monospace;&quot;&gt;str = 2;&lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;&amp;nbsp;&lt;/p&gt;
-&lt;p&gt;Dynamic ilk olarak string değer alıp sonradan integer bir değişken alabilir. Derlenme anında hataya düşmez.&lt;/p&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-
-&lt;p&gt;Detaylı olarak farklarına ve kullanımlarını açıklamaya çalıştım. Kafanıza takılan bir yer olur ise ve yanlışlar var ise her zaman yorumlarınızı bekliyorum.&lt;/p&gt;
-
-&lt;p&gt;Bu yazıyı Yunanca bir parça ile sonlandırmak istiyorum.&lt;/p&gt;
-
-&lt;p&gt;Okuduğunuz için teşekkürler.&lt;/p&gt;
-
-&lt;iframe width=&quot;420&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/DozVdtbMuM8?ecver=1&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
-
-&lt;p&gt;&lt;strong&gt;Alıntı yaptığım kaynaklar.&lt;/strong&gt;
-&lt;a href=&quot;http://www.codeproject.com/Tips/460614/Difference-between-var-and-dynamic-in-Csharp&quot;&gt;Code Project : Var Type Vs Dynamic Type&lt;/a&gt;&lt;/p&gt;</content><author><name></name></author><summary type="html">Merhabalar arkadaşlar, bugün ki yazımda C# Programlama dilinde kullanılan Var ve Dynamic tipleri arasında bir karşılaştırma yaparak özelliklerine bakacağız. Var keyword u C# 3.0 sürümünde kazanılmış bir tiptir. Dynamic tipi ise C# 4.0 sürümünde kazanılmıştır. Var tipi ile dynamic tipinin farkını aşağıdaki örnek üzerinde anlaşılabileceğini düşünüyorum. var tipinde olan data değişkenine “Text” metni string formatında atanıyor ve data değişkeni artık string türünden bir değişken oluyor fakat sonraki satırda data değişkenine integer 5 atamaya çalıştığımızda hataya düşüyor, sebebi ise derleme anında var tipi aldığı tipi bilmek zorundadır. Dynamic tipine baktığımızda ilk olarak string “Text” metnini alıyor ve sonrasında integer 5 alıyor, en son da string tipinden list atanarak hatasız bir şekilde derlenecek hale geliyor. Sebebi dynamic tipi dinamik olarak gelen değer türüne dönüşmektedir ve bu özellikte bir çok yerde gerçekten kullanışlı olmaktadır.</summary></entry></feed>
+&lt;iframe width=&quot;420&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/0W3MpOU3OUU?ecver=1&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;</content><author><name></name></author><summary type="html"></summary></entry></feed>
