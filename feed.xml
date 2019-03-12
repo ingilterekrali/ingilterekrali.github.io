@@ -1,6 +1,51 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.6.2">Jekyll</generator><link href="http://www.akinabdullahoglu.com/feed.xml" rel="self" type="application/atom+xml" /><link href="http://www.akinabdullahoglu.com/" rel="alternate" type="text/html" /><updated>2018-01-17T05:44:18+03:00</updated><id>http://www.akinabdullahoglu.com/</id><title type="html">Akın Abdullahoğlu.</title><subtitle>Programlama,NoSql, programlama hakkında yazılar,Java ,C# ,Git ,Açık kaynak, Kişisel Yazılar, Software Developer</subtitle><entry><title type="html">Python Django Üzerinde Redis Cache Nasıl Yapılır?</title><link href="http://www.akinabdullahoglu.com/Python-Django-uzerinde-Redis-Cache-Nasil-Yapilir/" rel="alternate" type="text/html" title="Python Django Üzerinde Redis Cache Nasıl Yapılır?" /><published>2017-11-14T05:52:41+03:00</published><updated>2017-11-14T05:52:41+03:00</updated><id>http://www.akinabdullahoglu.com/Python-Django-uzerinde-Redis-Cache-Nasil-Yapilir?%20</id><content type="html" xml:base="http://www.akinabdullahoglu.com/Python-Django-uzerinde-Redis-Cache-Nasil-Yapilir/">&lt;p&gt;Merhaba arkadaşlar, yakın zamanlarda &lt;strong&gt;Python&lt;/strong&gt; programlama dilini kullanarak bir projeye başladım ve &lt;strong&gt;Django framework&lt;/strong&gt; kullanma deneyimi elde ettim. Bu yazımda &lt;strong&gt;Django&lt;/strong&gt; uygulaması üzerinde &lt;strong&gt;Redis&lt;/strong&gt; ile nasıl haberleşebiliriz bu konuyu aktarmaya çalışacağım.&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.6.2">Jekyll</generator><link href="http://www.akinabdullahoglu.com/feed.xml" rel="self" type="application/atom+xml" /><link href="http://www.akinabdullahoglu.com/" rel="alternate" type="text/html" /><updated>2019-03-12T03:07:11+03:00</updated><id>http://www.akinabdullahoglu.com/</id><title type="html">Akın Abdullahoğlu.</title><subtitle>Programlama,NoSql, programlama hakkında yazılar,Java ,C# ,Git ,Açık kaynak, Kişisel Yazılar, Software Developer</subtitle><entry><title type="html">Kafamdakiler ve Genel Gündem</title><link href="http://www.akinabdullahoglu.com/Kafamdakiler/" rel="alternate" type="text/html" title="Kafamdakiler ve Genel Gündem" /><published>2019-03-10T03:30:22+03:00</published><updated>2019-03-10T03:30:22+03:00</updated><id>http://www.akinabdullahoglu.com/Kafamdakiler</id><content type="html" xml:base="http://www.akinabdullahoglu.com/Kafamdakiler/">&lt;p&gt;Merhabalar, aylar ayları devirdi ve hiç bir blog yazısı yazamadım. Kafamda bir çok konuyla ilgili yazı yazmak vardı hepsini parça parça kenara köşeye kaydettim, bunları hayata geçirmeye yeni yeni başladım aslında. Öncelikle ülkemizin ihtiyacı olan sıcaklığı ve sevgiyi ve barış’ı neden kaybettiği sorusu ara sıra aklıma gelmekte ve bunda da en büyük payın popüler kültürün insanlara dayattığı tüketim olgusunun, insanları mutsuzluğa itmeye sebep olarak görüyorum. Her kesimden insanın bu kadar birbirinden nefret edebilmesini ya da bir konuda verdiği emeğin hiçe sayılıp o emek sonucunu nasıl en vurucu biçimde eleştirebilirim sorusunun şeytani zihinlerde oluşmasını anlayamıyorum. Bu tür insanlara yabancı lugatta hater(nefret eden kimseler) deniliyor ve twitter’da bunlara bolca rastlamak mümkün, her konu hakkında sadece trollük kovalamak, eleştirmek ya da her şeyi mizaha vurmak bunları hepsini beğeni kazanma kaygısı ve popüler olmak uğruna yapmaları gerçekten acı bir durum diye düşünüyorum.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/Images/django-redis-cache.png&quot; alt=&quot;enter image description here&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;Gündem olarak nedense sürekli olumsuz konuların sosyal medya ortamlarını işgal etmesi ve instagram içerisinde de sadece seks, yemek yeme ve cinsellik vurgusunun insanlara pompalanmasından dolayı rahatsız olup sosyal medya hesaplarıma bir süreliğine ara verdim. Twitter’ı zaten yukarıda kısaca anlattım ve bu gündem konuları beni biraz yordu, sürekli olumsuz haber görmekten ve kimseye de bir şey anlatamamaktan bıktım. Yaklaşık 4 aydan fazladır kapalı olan hesapları açıkçası hiç aramıyorum ve bu bana daha bol zaman bırakıyor bunları spora ve kitap okumaya ayırarak kendime bir şeyler katmaya çalışıyorum. Bu süreçte biraz da kitap okudum bunlardan en beğendiklerimi sizinle de paylaşmak istedim..&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Beyaz Zambaklar Ülkesinde&lt;/li&gt;
+  &lt;li&gt;İnsanın Anlam Arayışı&lt;/li&gt;
+  &lt;li&gt;Semaver&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Nostalji sever bir insan olduğumdan dolayı yaklaşık 2016 yılının içerisinden itibaren geliştirmek istediğim bir proje vardı bunu ve daha yeni bunu hayata gerçirdim.  Amacı nostaljik  değerde ya da kültür sanat alanında içerik oluşturmak isteyen insanları bir araya getiren bir sosyal platform diyebilirim. Burada çok başarılı olmasa da UI/UX, Front-End ve Back-End developer olarak uçtan uca yer aldım. Programlama dili olarak Python kullandım, Veritabanı olarak Mysql, ön yüzde Bootstrap, Google Material Framework kullandım. Eğer ziyaret etmek isterseniz http://www.eskimeyeneskiler.com üzerinden ziyaret edebilirsiniz.&lt;/p&gt;
+
+&lt;p&gt;Genel olarak bu yazımda kısaca değindiğim dağınık konular oldu, eğer okumaya değer bulup sonuna geldiyseniz teşekkür ederim. Anlatım ve kelime hatalarım için lütfen geri dönüş sağlayabilirseniz mutlu olurum.&lt;/p&gt;
+
+&lt;p&gt;İyi günler!
+Akın.&lt;/p&gt;
+
+&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/mtapbslpYIk&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;</content><author><name></name></author><summary type="html">Merhabalar, aylar ayları devirdi ve hiç bir blog yazısı yazamadım. Kafamda bir çok konuyla ilgili yazı yazmak vardı hepsini parça parça kenara köşeye kaydettim, bunları hayata geçirmeye yeni yeni başladım aslında. Öncelikle ülkemizin ihtiyacı olan sıcaklığı ve sevgiyi ve barış’ı neden kaybettiği sorusu ara sıra aklıma gelmekte ve bunda da en büyük payın popüler kültürün insanlara dayattığı tüketim olgusunun, insanları mutsuzluğa itmeye sebep olarak görüyorum. Her kesimden insanın bu kadar birbirinden nefret edebilmesini ya da bir konuda verdiği emeğin hiçe sayılıp o emek sonucunu nasıl en vurucu biçimde eleştirebilirim sorusunun şeytani zihinlerde oluşmasını anlayamıyorum. Bu tür insanlara yabancı lugatta hater(nefret eden kimseler) deniliyor ve twitter’da bunlara bolca rastlamak mümkün, her konu hakkında sadece trollük kovalamak, eleştirmek ya da her şeyi mizaha vurmak bunları hepsini beğeni kazanma kaygısı ve popüler olmak uğruna yapmaları gerçekten acı bir durum diye düşünüyorum.</summary></entry><entry><title type="html">Doğum günün kutlu olsun Barış Manço</title><link href="http://www.akinabdullahoglu.com/Dogum-gunun-kutlu-olsun-baris-manco/" rel="alternate" type="text/html" title="Doğum günün kutlu olsun Barış Manço" /><published>2019-01-02T03:30:22+03:00</published><updated>2019-01-02T03:30:22+03:00</updated><id>http://www.akinabdullahoglu.com/Dogum-gunun-kutlu-olsun-baris-manco</id><content type="html" xml:base="http://www.akinabdullahoglu.com/Dogum-gunun-kutlu-olsun-baris-manco/">&lt;hr /&gt;
+&lt;p&gt;“Bir kişinin adı en son ne zaman telaffuz edilirse o gün ölmüş oluyor insan. Yani fizik olarak bu dünyayı terk etmek çok da önemli bir şey değil. Nasıl olsa günün birinde hepimiz terk edeceğimiz için ve milyarlar terk ettiği için… Ama adınız anılmadığı gün gerçek anlamda bu dünyayı terk etmiş oluyorsunuz.” demiştin.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://www.akinabdullahoglu.com/Images/26167642_10156072748872052_2002096257303538440_n.jpg&quot; alt=&quot;Barış Manço Resmi&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Sen bir modern halk ozanı olarak, sanatçı kelimesinin karşılığını fazlasıyla veren güzel insan olarak, hep bizim şarkılarımızı söyledin. Bizdeki yerin şarkılarınla, sözlerinle ve hikayelerinle unutulmadan devam edecek güzel insan..&lt;/p&gt;
+
+&lt;p&gt;Bilinenler ve bilinmeyenlerden birkaç parça ile..&lt;/p&gt;
+
+&lt;hr /&gt;
+&lt;p&gt;&lt;strong&gt;Baykoca Destanı&lt;/strong&gt;
+https://www.youtube.com/watch?v=P7QAH2OhoA0&lt;/p&gt;
+
+&lt;hr /&gt;
+&lt;p&gt;&lt;strong&gt;Gamzedeyim Deva Bulmam&lt;/strong&gt; : 
+https://www.youtube.com/watch?v=t-lIFKo-RoI&lt;/p&gt;
+
+&lt;hr /&gt;
+&lt;p&gt;&lt;strong&gt;Sarı Çizmeli Mehmet Ağa&lt;/strong&gt; : 
+https://www.youtube.com/watch?v=Dlp0FdBYubw&lt;/p&gt;
+
+&lt;hr /&gt;
+&lt;p&gt;&lt;strong&gt;Eğri Eğri Doğru Doğru&lt;/strong&gt; :
+https://www.youtube.com/watch?v=VWxwMs4T7fc
+***&lt;/p&gt;
+
+&lt;p&gt;Unutmadan “İnsanın öğrenmesi gereken ilk dil, tatlı dildir.” :)&lt;/p&gt;
+
+&lt;p&gt;Saygı, sevgi ve rahmetle..&lt;/p&gt;</content><author><name></name></author><summary type="html">“Bir kişinin adı en son ne zaman telaffuz edilirse o gün ölmüş oluyor insan. Yani fizik olarak bu dünyayı terk etmek çok da önemli bir şey değil. Nasıl olsa günün birinde hepimiz terk edeceğimiz için ve milyarlar terk ettiği için… Ama adınız anılmadığı gün gerçek anlamda bu dünyayı terk etmiş oluyorsunuz.” demiştin.</summary></entry><entry><title type="html">Python Django Üzerinde Redis Cache Nasıl Yapılır?</title><link href="http://www.akinabdullahoglu.com/Python-Django-uzerinde-Redis-Cache-Nasil-Yapilir/" rel="alternate" type="text/html" title="Python Django Üzerinde Redis Cache Nasıl Yapılır?" /><published>2017-11-14T05:52:41+03:00</published><updated>2017-11-14T05:52:41+03:00</updated><id>http://www.akinabdullahoglu.com/Python-Django-uzerinde-Redis-Cache-Nasil-Yapilir?%20</id><content type="html" xml:base="http://www.akinabdullahoglu.com/Python-Django-uzerinde-Redis-Cache-Nasil-Yapilir/">&lt;p&gt;Merhaba arkadaşlar, yakın zamanlarda &lt;strong&gt;Python&lt;/strong&gt; programlama dilini kullanarak bir projeye başladım ve &lt;strong&gt;Django framework&lt;/strong&gt; kullanma deneyimi elde ettim. Bu yazımda &lt;strong&gt;Django&lt;/strong&gt; uygulaması üzerinde &lt;strong&gt;Redis&lt;/strong&gt; ile nasıl haberleşebiliriz bu konuyu aktarmaya çalışacağım.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/Images/django-redis-cache.png&quot; alt=&quot;Redis logo&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Bir önceki yazımda &lt;strong&gt;OS-X&lt;/strong&gt; üzerinde &lt;strong&gt;Redis&lt;/strong&gt; kurulumunu aktarmıştım, bu yazımda yine OS-X üzerinden ilerleyeceğim, eğer kurulu değil ise onu okuyarak başlangıç yapabilirsiniz.&lt;/p&gt;
 
@@ -600,138 +645,4 @@ paket-files/
 
 &lt;p&gt;Yazımı sevdiğim bir Barış Manço parçası ile sonlandırıyorum.&lt;/p&gt;
 
-&lt;iframe width=&quot;420&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/DxCLKJE7FVU?ecver=1&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;</content><author><name></name></author><summary type="html">Merhaba arkadaşlar, git yazılarımın devamı olan bu yazımda yine sizlere ufak bilgiler aktarmaya çalışacağım. Hatırlarsanız önceki yazı serilerimde bitbucket üzerinde repository oluşturmayı, bir proje örneğini git server üzerine aktarmayı ve gitignore tanımlamasının nasıl yapıldığına dair yazılar paylaşmıştım. Bugün ise daha önceden sunucuya aktarılmış olan bir git repository’sini kendi bilgisayarımıza nasıl aktarılacağını inceleyeceğiz. Öncelikle bitbucket üzerinde çalışma yapıyorsak eğer repository detayındaki clone menüsüne tıkladığımızda bize bir git clone linki veriyor ve her oluşturduğumuz repo içinde bir .git uzantılı benzersiz bir link oluşturuyor. Önceki projemizden bir ekran görüntüsü olan linki aşağıdaki şekilde görebilirsiniz.</summary></entry><entry><title type="html">Bitbucket kullanarak git repository oluşturma ve commit işlemleri</title><link href="http://www.akinabdullahoglu.com/Bitbucket-u-zerinde-Repository-Olus-turma-ve-Commit-I-s-lemleri/" rel="alternate" type="text/html" title="Bitbucket kullanarak git repository oluşturma ve commit işlemleri " /><published>2016-04-03T17:35:41+03:00</published><updated>2016-04-03T17:35:41+03:00</updated><id>http://www.akinabdullahoglu.com/Bitbucket%20%C3%BCzerinde%20Repository%20Olu%C5%9Fturma%20ve%20Commit%20%C4%B0%C5%9Flemleri</id><content type="html" xml:base="http://www.akinabdullahoglu.com/Bitbucket-u-zerinde-Repository-Olus-turma-ve-Commit-I-s-lemleri/">&lt;p&gt;Merhaba arkadaşlar önceki yazım olan Bitbucket Nedir? yazısının serisine devam olan bu yazımda Bitbucket üzerinde bir repository oluşturup ilk projemizi bu repomuza göndereceğiz. Öncelikle izlenilmesi gereken adımları tekrar hatırlayalım.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/Images/2016/03/bitbucket.gif&quot; alt=&quot;Bitbucket logo&quot; /&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Bitbucket’a üye olmak&lt;/li&gt;
-  &lt;li&gt;Bitbucket üyeliğinin aktif edilmesi&lt;/li&gt;
-  &lt;li&gt;Bitbucket’a giriş yapılması&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;strong&gt;Dashboard&lt;/strong&gt; ekranına giriş yaptıktan sonra &lt;strong&gt;Repositories&lt;/strong&gt; menüsünden Create Repository sekmesine tıklıyoruz.&lt;/p&gt;
-
-&lt;p&gt;Aşağıdaki gibi bir pencere karşımıza çıkıyor.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/Images/2016/04/first-training-1.png&quot; alt=&quot;Create Repository Screen&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Owner&lt;/strong&gt; : bu oluşturacağımız repository’e yani projemizin kaynak kodlarının sahibini seçiyoruz. Kaldırma ve ana konfigürasyonları yapabilecek kullanıcı yada kullanıcıları. Çoğul kullanıcı seçimi yapılacaksa Team oluşturulması gerekmektedir.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Repository Name&lt;/strong&gt; : Kaynak kodlarımızın tutulacağı deponun adı yani aslında projemizin adı diyebiliriz. Buraya verilen isim alias olarak unique bir şekilde kullanılacaktır. Örn : &lt;code class=&quot;highlighter-rouge&quot;&gt;rootturk@bitbucket.org/test-project.git&lt;/code&gt;&lt;/p&gt;
-
-&lt;p&gt;Access level : This is a private repository 
-Bu seçenek işaretlenirse repomuz gizli olur ve sadece owner grubunda olanlar ya da sonradan erişim verdiğimiz kullanıcılar projemize erişim sağlayabilir.&lt;/p&gt;
-
-&lt;p&gt;Repository Type : Tutulacak repository’nin .git mi yoksa mercurial mi olacağının seçimini yapıyoruz. Ben .git kullanıyorum ve bu yazımda .git üzerinden örneklendirerek devam edeceğim. Mercurial hakkında bilgiler için https://www.mercurial-scm.org/ kendi sitesinden detaylarına bakabilirsiniz. Bu da TFS, SVN, GIT, Sub-Version gibi bir source-control management aracıdır.&lt;/p&gt;
-
-&lt;p&gt;Description : Projemiz hakkında açıklama alanı.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Forking&lt;/strong&gt; :&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Allow Only Private Forking&lt;/strong&gt; : Yetkili kullanıcıların projeyi kendi kullanıcı adı altındaki projelere kopya olarak oluşturulmasına izin verir.
-&lt;strong&gt;Allow Forks&lt;/strong&gt; : Tüm erişim izni olan ya da olmayan kullanıcıların projeyi kendi kullanıcı adı altındaki repository’e kopyasının oluşturabilmesine izin verir.
-No Forks : Kopyalama erişimi sağlamaz&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Project Management&lt;/strong&gt; :&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Issue Tracking&lt;/strong&gt; : Oluşturulan projenin JIRA tarzı bir bug-tracking özelliğini aktif ederek hata yönetiminin yapılmasına olanak sağlar.
-Wiki : Projenin dökümantasyonunu ve yapısının yazılı olarak sağlanabileceği bir döküman yönetimi modülüdür.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Language&lt;/strong&gt; : Projenin yazıldığı programlama dili seçimi, sanırım proje detayında açıklama olarak gösterilmesini sağlamakta.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Enable HipChat notifications&lt;/strong&gt; : bu seçim işaretlenirse Atlassian ürünü olan HipChat mesajlaşma uygulamasına bu projeyi entegre ederek üzerinde Conversation(Sohbet) tarzı bir yaklaşım uygulanabilir.&lt;/p&gt;
-
-&lt;p&gt;Alanları kendimize göre doldurup Create butonuna bastıktan sonra eğer eksik ya da yanlış bilgi girişi olmamış ise aşağıdaki şekilde bir ekran karşımıza çıkacaktır.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/Images/2016/04/first-training-2.png&quot; alt=&quot;enter image description here&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Görüldüğü gibi artık kendi kullanıcı adımız altında bir .git repomuz oldu. Artık bilgisayarımızda bulunan kaynak kodlarımızı bu repo’ya yükleyebiliriz. Ama tabii ki bunu yapmamız için öncelikle Windows için Git eklentisini kurmamız gerekmektedir.&lt;/p&gt;
-
-&lt;p&gt;Aşağıdaki link’e giderek işletim sisteminiz için uyumlu olan .git sürümünü indirebilirsiniz.&lt;/p&gt;
-
-&lt;p&gt;https://git-scm.com/downloads&lt;/p&gt;
-
-&lt;p&gt;Kurulumu basit olduğundan dolayı bu detaya girmiyorum. Kurulumu yaptıktan sonra artık bilgisayarımıza .git server üzerinde tutulan repo’ları çekip- gönderebiliriz. Şimdi sıra geldi kodlarımızı nasıl göndereceğimiz sorusuna.&lt;/p&gt;
-
-&lt;p&gt;Bunun için çeşitli &lt;strong&gt;GUI(Graphic User Interface)&lt;/strong&gt; yani görsel arayüzü olan uygulamalar ya da konsol uygulamaları mevcut. Bitbucket‘ın kendi ürünü olan SourceTree entegre bir şekilde başarıyla çalışmaktadır. Fakat bana cmder.exe uygulaması ya da git yükledikten sonra çalışabileceğimiz konsol uygulaması pratik geliyor ve harici bir programa henüz gereksinim duymadım. Zaten çoğu IDE için .git eklentisi uygulama içerisinde başarıyla çalışmaktadır. Intellij olsun Visual Studio olsun hepsinde çalışabilirsiniz ama temel mantığı öğrenmek ve daha detaylı işlemlerde ya da hatalı durumlarda düzeltme yapmak konsol kullanımında kolayca çözülebiliyor.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;CMDER Nedir?&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;CMDER.exe bir konsol emülator uygulamasıdır, kendi içerisinde windows’un konsol uygulamasından özelleştirilmiş bir çok özelliğini barındırır ve özelleştirilebilir yapısıyla kullanıcıya pratiklik kazandırır.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;http://cmder.net/&lt;/strong&gt; linki üzerinden daha detaylı olarak bakabilirsiniz. .git repolarinizi bu konsol uygulaması içerisinden rahat bir şekilde kullanabilirsiniz.&lt;/p&gt;
-
-&lt;p&gt;Örnek olarak aşağıdaki gibi bir proje üzerinden ilerleyelim.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/Images/2016/04/first-training-3.png&quot; alt=&quot;enter image description here&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;CMDER.exe&lt;/strong&gt;‘yi indirdiğimizi düşünerek ilerliyorum. &lt;strong&gt;Standart konsol komutları + unix&lt;/strong&gt; komutlarını da kullanabiliyorsunuz. &lt;strong&gt;CMDER.exe&lt;/strong&gt;‘yi çalıştırdıktan sonra aşağıdaki gibi bir ekran ile karşılaşıyoruz. cd komutu ile projemin bulunduğu dizine gidiyorum.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/Images/2016/04/first-training-4.png&quot; alt=&quot;enter image description here&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Sonrasında yapmamız gerek local bir git reposu oluşturmak olacaktır. Bunu yapmak için yazmamız gereken komut.&lt;/p&gt;
-
-&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;git init&lt;/code&gt; komutudur.&lt;/p&gt;
-
-&lt;p&gt;Aşağıdaki resim uzantılıdır hareketli olarak görmek için yeni pencerede açınız.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/Images/2016/04/bitbucket-gif-1.gif&quot; alt=&quot;enter image description here&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Komutu yazdıktan sonra proje klasörüne gittiğimizde .git isimli bir klasör oluştuğunu görürüz.
-&lt;img src=&quot;/Images/2016/04/bitbucket-gif-2.gif&quot; alt=&quot;enter image description here&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;git init&lt;/code&gt; yaptıktan sonra kendi sistem dosyalarını repository altına oluşturur ve bu kısımdan sonra her şey bu dosyalara bağımlı bir şekilde ilerler. Şimdi yapmamız gereken ise bu oluşturduğumuz repomuzun uzak sunucudaki alanını tanıtmak olacaktır. Bunu ise şu komut ile yapıyor olacağız, Bitbucket ekranında ilk repo ekledikten sonra açılan pencerede görebiliriz.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/Images/2016/04/bitbucket-remote-add.png&quot; alt=&quot;enter image description here&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Komut&lt;/strong&gt; : git remote add origin &lt;code class=&quot;highlighter-rouge&quot;&gt;https://rootturk@bitbucket.org/rootturk/first-bitbucket-project.git&lt;/code&gt; şeklindedir. Her kullanıcının kendi repository ve kullanıcı adına göre değişkenlik gösterir.&lt;/p&gt;
-
-&lt;p&gt;Bu komutu çalıştırdıktan sonra bitbucket üzerindeki etki alanımızı lokalde bulunan git etki alanımıza tanıtmış oluyoruz ve artık kaynak kod dosyalarımızı repomuza ekleyip commit ve push işlemlerini gerçekleştirebiliriz.(Detaylarını &lt;strong&gt;.git config&lt;/strong&gt; içerisinden görebilirsiniz.)&lt;/p&gt;
-
-&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;git add .&lt;/code&gt; ya da &lt;code class=&quot;highlighter-rouge&quot;&gt;git add *&lt;/code&gt; kullanarak kaynak kodlarımızı lokal repository’mize ekliyoruz.&lt;/p&gt;
-
-&lt;p&gt;sonrasında &lt;code class=&quot;highlighter-rouge&quot;&gt;git commit -m “yaptığımız değişiklik detayı”&lt;/code&gt; kendinize göre bir mesaj yazarak komutu çalıştırıyoruz. Artık dosyalarımız gönderilmeye hazır ve son kalan komut &lt;code class=&quot;highlighter-rouge&quot;&gt;push&lt;/code&gt; komutunu kullanmak olacaktır.&lt;/p&gt;
-
-&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;git push origin master&lt;/code&gt; komutunu yazarak kaynak kodlarımızı bitbucket hesabımız altındaki repository’mize gönderme isteğini iletiyoruz. Sonrasında bize bir mesaj ile &lt;code class=&quot;highlighter-rouge&quot;&gt;remote-add&lt;/code&gt; yaptığımız için şifremizi soruyor. Şifremizi de girdikten sonra kendi compress işlemlerinden sonra kaynak kodlarımız artık bitbucket üzerindeki repository’mize gönderiliyor.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/Images/2016/04/bitbucket-add-commit-push.gif&quot; alt=&quot;enter image description here&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Şimdi bitbucket hesabımızdan repository’mize bakalım ki kodlarımız gitmiş mi? :D&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/Images/2016/04/bitbucket-source-commits.gif&quot; alt=&quot;enter image description here&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Gördüğümüz gibi kaynak kodlarımız artık bitbucket hesabımız üzerinde.&lt;/p&gt;
-
-&lt;p&gt;Genel olarak ilk yazının devamı olan bu yazımda bir repository oluşturmayı ve kaynak kodlarımızı bu repository altına göndermeyi işlemeye çalıştım.Sonraki yazı serilerimde yine bitbucket’a devam edeceğim. Umarım yararlı bir yazı olmuştur. Her türlü yanlış kullanım, hatalı gördüğünüz yerlerle ilgili bilgi ve istekleri, sorularınızı yorum ya da email olarak iletebilirsiniz.&lt;/p&gt;
-
-&lt;p&gt;Okuduğunuz için teşekkür ederim.&lt;/p&gt;
-
-&lt;iframe width=&quot;420&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/79vCiXg3njY?ecver=1&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;</content><author><name></name></author><summary type="html">Merhaba arkadaşlar önceki yazım olan Bitbucket Nedir? yazısının serisine devam olan bu yazımda Bitbucket üzerinde bir repository oluşturup ilk projemizi bu repomuza göndereceğiz. Öncelikle izlenilmesi gereken adımları tekrar hatırlayalım.</summary></entry><entry><title type="html">C# Erişim Belirleyicileri (Access Modifiers)</title><link href="http://www.akinabdullahoglu.com/Csharp-Erisim-Belirleyicileri/" rel="alternate" type="text/html" title="C# Erişim Belirleyicileri (Access Modifiers)" /><published>2016-01-20T16:35:41+02:00</published><updated>2016-01-20T16:35:41+02:00</updated><id>http://www.akinabdullahoglu.com/Csharp%20Erisim%20Belirleyicileri</id><content type="html" xml:base="http://www.akinabdullahoglu.com/Csharp-Erisim-Belirleyicileri/">&lt;p&gt;&lt;img src=&quot;/Images/2016/01/image12.png&quot; alt=&quot;enter image description here&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Merhabalar arkadaşlar bugün ki yazımda &lt;strong&gt;C#&lt;/strong&gt; Programlama dilinin yapısında bulunan erişim belirleyiciler hakkında konuşacağız. Öncelikle ne demek bu erişim belirleyicisi? sorusu ile başlayabiliriz. Erişim belirleyicileri dilin yapısında kullanılan tüm tanımlı yapılara uygulanabilen bir özelliktir. Amacı tanımlanan bir varlığın(&lt;strong&gt;variable&lt;/strong&gt;, &lt;strong&gt;object&lt;/strong&gt;, &lt;strong&gt;struct&lt;/strong&gt;,  &lt;strong&gt;method&lt;/strong&gt; etc.) erişimini kontrol ederek dil yapısını en rahat ve düzenli şekilde kullanmayı amaçlayan ve daha güvenli bir uygulama geliştirmemizi sağlayan bir özellik bütünüdür.&lt;/p&gt;
-
-&lt;p&gt;Nedir bu erişim belirleyicileri?&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Public&lt;/strong&gt;, &lt;strong&gt;Private&lt;/strong&gt;, &lt;strong&gt;Protected&lt;/strong&gt;, &lt;strong&gt;Internal&lt;/strong&gt;, Sealed şimdi kafanızda bir şeyler oluştuğuna eminim. Çünkü kesinlikle bir yazılım geliştirirken bu erişim belirleyicilerinden yardım almaktayız ve kendimize göre bu değerlere göre yapılar oluşturmaktayız.&lt;/p&gt;
-
-&lt;p&gt;Şimdi sırasına göre gidecek olursak.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Public&lt;/strong&gt; :  Tanımlanan değer o Class‘ı çağıran(instance eden) her yerden erişime açık olacaktır.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Private&lt;/strong&gt; : Sadece tanımlanan class içerisinde erişime açıktır.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Protected&lt;/strong&gt; : Kullanılan sınıf içerisinde ve bulunduğu sınıfı türeten yani base olarak tanımlayan sınıf içerisinde erişilebilir durumdadır.(Önceki yazımda detaylı olarak anlatılmaktadır.)&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Internal&lt;/strong&gt; : Kullanılan proje içerisinde yani Assembly, Dll veya exe içerisinde erişilebilir durumdadır başka bir assembly tarafından erişilemez.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Protected Internal&lt;/strong&gt; : Bu tipte tanımlanmış değer aynı class içerisinde ve ondan türetilen sınıfların içerisinden erişilebilir durumdadır. Türetilen sınıfın aynı program içerisinde olmaması problem teşkil etmez.&lt;/p&gt;
-
-&lt;p&gt;Yararlandığım kaynaklar :&lt;/p&gt;
-
-&lt;p&gt;*http://aydinpolat.net/article/c-erisim-belirleyicileri-access-modifiers
-*http://bidb.itu.edu.tr/seyirdefteri/blog/2013/09/06/c-dilinde-eri%C5%9Fim-belirleyiciler-(access-modifiers)&lt;/p&gt;
-
-&lt;p&gt;Umarım faydalı bir yazı olmuştur.&lt;/p&gt;
-
-&lt;iframe width=&quot;420&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/0W3MpOU3OUU?ecver=1&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;</content><author><name></name></author><summary type="html"></summary></entry></feed>
+&lt;iframe width=&quot;420&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/DxCLKJE7FVU?ecver=1&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;</content><author><name></name></author><summary type="html">Merhaba arkadaşlar, git yazılarımın devamı olan bu yazımda yine sizlere ufak bilgiler aktarmaya çalışacağım. Hatırlarsanız önceki yazı serilerimde bitbucket üzerinde repository oluşturmayı, bir proje örneğini git server üzerine aktarmayı ve gitignore tanımlamasının nasıl yapıldığına dair yazılar paylaşmıştım. Bugün ise daha önceden sunucuya aktarılmış olan bir git repository’sini kendi bilgisayarımıza nasıl aktarılacağını inceleyeceğiz. Öncelikle bitbucket üzerinde çalışma yapıyorsak eğer repository detayındaki clone menüsüne tıkladığımızda bize bir git clone linki veriyor ve her oluşturduğumuz repo içinde bir .git uzantılı benzersiz bir link oluşturuyor. Önceki projemizden bir ekran görüntüsü olan linki aşağıdaki şekilde görebilirsiniz.</summary></entry></feed>
